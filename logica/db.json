@@ -1,0 +1,1902 @@
+{
+  "_note": "Template domande — formato flat. Per ogni domanda: compila 'question', 'sourcePage', 'category', il testo di ogni scelta, imposta 'soluzione: true' sulla risposta corretta e scrivi il 'feedback' per ogni scelta.",
+  "_format": {
+    "id": "Identificatore univoco della domanda (Q01, Q02, ...)",
+    "sourcePage": "Numero di pagina del libro da cui è tratta la domanda",
+    "question": "Testo della domanda",
+    "image": "Percorso immagine opzionale, es. 'images/q01.png', oppure null",
+    "category": "Categoria: logica | matematica | fisica | informatica | geometria | ...",
+    "choices": "Array di 5 scelte (A-E). Imposta soluzione:true solo sulla risposta corretta."
+  },
+  "questions": [
+    {
+      "id": "41",
+      "sourcePage": 67,
+      "question": "Nella Repubblica di Arraffa NON è vero che\nOgni parlamentare è persona onesta e competente.\nDunque, nella Repubblica di Arraffa:",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {"label": "A", "text": "qualche parlamentare non è onesto oppure non è competente", "soluzione": true, "feedback": "Se nella Repubblica di Arraffa è falso che tutti i parlamentari siano onesti e competenti è allora vero che esiste almeno un parlamentare che non è onesto oppure non è competente."},
+        {"label": "B", "text": "ogni parlamentare o è onesto, ma non competente, oppure è competente, ma non onesto", "soluzione": false, "feedback": "Dall’ipotesi\nNon è vero che ogni parlamentare è persona onesta e competente\ndeduciamo che possono esistere ad Arraffa parlamentari sia onesti sia competenti, né onesti né competenti, onesti ma non competenti, non onesti pur essendo competenti. Sicuramente, però, esiste almeno un parlamentare che non possiede almeno una delle due qualità! L’onestà non esclude la competenza e la competenza non impedisce l’onestà."},
+        {"label": "C", "text": "qualche parlamentare è onesto e competente", "solzuzione": false, "feedback": "Riformuliamo l’ipotesi.\nNon è vero che ogni parlamentare è persona onesta e competente\nequivale a dire che esiste almeno un parlamentare (non sappiamo quanti) che non è onesto oppure non è competente oppure non è né onesto né competente. Ad Arraffa possono esserci parlamentari onesti e competenti, ma non ne abbiamo la certezza."},
+        {"label": "D", "text": "le persone oneste e competenti non diventano mai parlamentari", "soluzione": false, "feedback": "La premessa non toglie la speranza che qualche persona onesta e competente esista, si candidi e diventi parlamentare!"},
+        {"label": "E", "text": "nessun parlamentare è onesto e competente", "soluzione": false, "feedback": "L’ipotesi\nNon è vero che ogni parlamentare è persona onesta e competente\nequivale a dire che\nè falso che tutti i parlamentari siano onesti e competenti\nsenza escludere, però, che possano esistere parlamentari onesti e competenti. Certamente esiste almeno un parlamentare che non possiede almeno una di queste due qualità: l’onestà o la competenza."}
+      ]
+    },
+    {
+      "id": "Q25",
+      "question": "La signora 𝑄𝐾𝑋 è stata strangolata nel proprio salotto. Il commissario 𝑍𝑌 𝑊 non crede che l’imputato di omicidio (il quale si difende vibratamente dichiarando la propria innocenza) non si sia recato a casa della vittima nell’intervallo di tempo nel quale la stessa ha perso la vita. Si può dedurre che:",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {"label": "A", "text": "sicuramente l’imputato non è colpevole", "soluzione": false, "feedback": "Dalle ipotesi del quesito sappiamo che l’imputato si difende vibratamente dichiarando la sua innocenza, ma non sappiamo se dice la verità oppure se mente!"},
+        {"label": "B", "text": "il commissario 𝑍𝑌 𝑊 è convinto che l’imputato non si sia recato a casa della vittima nell’intervallo di tempo nel quale la stessa ha perso la vita", "soluzione": false, "feedback": "Riformuliamo l’ipotesi. Dire che:\nIl commissario 𝑍𝑌 𝑊 non crede che l’imputato di omicidio non si sia recato a casa della vittima nell’intervallo di tempo in cui la stessa ha perso la vita\nequivale a dire che:\nil commissario 𝑍𝑌 𝑊 crede che l’imputato si sia recato a casa di 𝑄𝐾𝑋 nell’intervallo di tempo nel quale la stessa ha perso la vita."},
+        {"label": "C", "text": "per il commissario 𝑍𝑌 𝑊 l’imputato non è certamente colpevole", "soluzione": false, "feedback": "Il commissario 𝑍𝑌 𝑊 crede che l’imputato si sia recato a casa di 𝑄𝐾𝑋 nell’intervallo di tempo nel quale la stessa ha perso la vita.\nDalle ipotesi però non abbiamo informazioni per sapere se il commissario lo consideri lo strangolatore oppure no."},
+        {"label": "D", "text": "sicuramente l’imputato è colpevole", "soluzione": false, "feedback": "Riformuliamo l’ipotesi. Dire che:\n𝑍𝑌𝑊 non crede che l’imputato non si sia recato a casa della vittima…\nequivale a dire che:\nil commissario crede che l’imputato si sia recato a casa di 𝑄𝐾𝑋 proprio in quell’arco di tempo.\nDalle informazioni date non possiamo, però, dedurre se il commissario 𝑍𝑌 𝑊 sa se l’imputato è anche lo strangolatore!"},
+        {"label": "E", "text": "", "soluzione": false, "feedback": "Riformuliamo l’ipotesi. Affermare che:\nIl commissario 𝑍𝑌 𝑊 non crede che l’imputato di omicidio non si sia recato a casa della vittima…\nequivale a dire che:\nil commissario 𝑍𝑌 𝑊 crede che l’imputato si sia recato a casa di 𝑄𝐾𝑋 nell’arco di tempo in cui la stessa ha perso la vita.\n𝑍𝑌𝑊, quindi, prende anche in considerazione che l’imputato possa essere l’omicida."}
+      ]
+    },
+    {
+      "id": "Q27",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q30",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q04",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q15",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q36",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q34",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q07",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q26",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q09",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q22",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q11",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q47",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q48",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q49",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q31",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q08",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q02",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q51",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q21",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q44",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q42",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q45",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q46",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q03",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q23",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q29",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q12",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q10",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q43",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q40",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q38",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q18",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q05",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q28",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q35",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q16",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q14",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q37",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q39",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q13",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q20",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q33",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q24",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q19",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q01",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q50",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q32",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q06",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "id": "Q17",
+      "question": "",
+      "image": null,
+      "category": "logica",
+      "choices": [
+        {
+          "label": "A",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "B",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "C",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "D",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        },
+        {
+          "label": "E",
+          "text": "",
+          "soluzione": false,
+          "feedback": ""
+        }
+      ]
+    }
+  ]
+}

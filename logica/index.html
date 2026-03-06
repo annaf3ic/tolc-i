@@ -1,97 +1,206 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logica Mentor - Accesso</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TOLC Trainer — Accedi</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="container">
-        <h1>Mentor di Logica</h1>
-        <div class="auth-tabs">
-            <button class="tab-btn active" id="tabLogin">Accedi</button>
-            <button class="tab-btn" id="tabReg">Registrati</button>
+  <!-- Grid texture viene aggiunta da CSS body::before -->
+
+  <div class="auth-wrap fade-in">
+    <div class="auth-card">
+
+      <!-- Logo -->
+      <div class="auth-logo">
+        <div class="logo-mark">[TOLC]</div>
+        <div class="logo-sub">Trainer per Ingegneria &amp; Informatica</div>
+      </div>
+
+      <!-- Card principale -->
+      <div class="card card-accent">
+
+        <!-- Tab bar -->
+        <div class="tab-bar mb-lg" id="auth-tabs">
+          <button class="tab-btn active" data-tab="login">Login</button>
+          <button class="tab-btn" data-tab="register">Registrati</button>
         </div>
 
-        <!-- Login form -->
-        <form id="loginForm" class="auth-form">
-            <h2>Accedi</h2>
-            <input type="text" id="loginUsername" placeholder="Username" required>
-            <input type="password" id="loginPassword" placeholder="Password" required>
-            <button type="submit">Entra</button>
-            <p id="loginError" class="error"></p>
-        </form>
+        <!-- ── LOGIN ───────────────────────────────────────── -->
+        <div id="tab-login">
+          <div class="form-group">
+            <label for="login-username">Username</label>
+            <input type="text" id="login-username" placeholder="il tuo username" autocomplete="username" />
+          </div>
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" placeholder="••••••••" autocomplete="current-password" />
+          </div>
+          <button class="btn btn-primary btn-full mt-md" id="btn-login">→ Accedi</button>
+          <div class="alert" id="login-alert"></div>
+        </div>
 
-        <!-- Registration form -->
-        <form id="regForm" class="auth-form hidden">
-            <h2>Registrati</h2>
-            <input type="text" id="regUsername" placeholder="Username" required>
-            <input type="password" id="regPassword" placeholder="Password" required>
-            <input type="password" id="regConfirm" placeholder="Conferma password" required>
-            <button type="submit">Crea account</button>
-            <p id="regError" class="error"></p>
-        </form>
+        <!-- ── REGISTRAZIONE ───────────────────────────────── -->
+        <div id="tab-register" class="hidden">
+          <div class="form-group">
+            <label for="reg-username">Username</label>
+            <input type="text" id="reg-username" placeholder="scegli un username" autocomplete="username" />
+          </div>
+          <div class="form-group">
+            <label for="reg-password">Password</label>
+            <input type="password" id="reg-password" placeholder="almeno 6 caratteri" autocomplete="new-password" />
+          </div>
+          <div class="form-group">
+            <label for="reg-confirm">Conferma Password</label>
+            <input type="password" id="reg-confirm" placeholder="ripeti la password" autocomplete="new-password" />
+          </div>
+          <button class="btn btn-primary btn-full mt-md" id="btn-register">→ Crea account</button>
+          <div class="alert" id="register-alert"></div>
+        </div>
+
+      </div>
+
+      <!-- Footer info -->
+      <p class="text-center text-sm text-muted mt-md">
+        Dati salvati localmente · Nessun server
+      </p>
+
     </div>
+  </div>
 
-    <script src="js/auth.js"></script>
-    <script>
-        // UI switching
-        document.getElementById('tabLogin').addEventListener('click', () => {
-            document.getElementById('tabLogin').classList.add('active');
-            document.getElementById('tabReg').classList.remove('active');
-            document.getElementById('loginForm').classList.remove('hidden');
-            document.getElementById('regForm').classList.add('hidden');
-        });
-        document.getElementById('tabReg').addEventListener('click', () => {
-            document.getElementById('tabReg').classList.add('active');
-            document.getElementById('tabLogin').classList.remove('active');
-            document.getElementById('regForm').classList.remove('hidden');
-            document.getElementById('loginForm').classList.add('hidden');
-        });
+  <!-- Theme toggle (floating) -->
+  <button class="theme-toggle" id="theme-toggle" title="Cambia tema"
+          style="position:fixed;bottom:1.5rem;right:1.5rem;z-index:50">
+    ☀
+  </button>
 
-        // Login submission
-        document.getElementById('loginForm').addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const username = document.getElementById('loginUsername').value.trim();
-            const password = document.getElementById('loginPassword').value;
-            const errorEl = document.getElementById('loginError');
-            try {
-                const success = await login(username, password);
-                if (success) {
-                    window.location.href = 'app.html';
-                } else {
-                    errorEl.textContent = 'Username o password errati.';
-                }
-            } catch (err) {
-                errorEl.textContent = 'Errore: ' + err.message;
-            }
-        });
+  <script src="auth.js"></script>
+  <script>
+    'use strict';
 
-        // Registration submission
-        document.getElementById('regForm').addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const username = document.getElementById('regUsername').value.trim();
-            const password = document.getElementById('regPassword').value;
-            const confirm = document.getElementById('regConfirm').value;
-            const errorEl = document.getElementById('regError');
-            if (password !== confirm) {
-                errorEl.textContent = 'Le password non coincidono.';
-                return;
-            }
-            try {
-                const success = await register(username, password);
-                if (success) {
-                    // Auto-login after registration
-                    await login(username, password);
-                    window.location.href = 'app.html';
-                } else {
-                    errorEl.textContent = 'Username già esistente.';
-                }
-            } catch (err) {
-                errorEl.textContent = 'Errore: ' + err.message;
-            }
-        });
-    </script>
+    Auth.applyTheme();
+    Auth.redirectIfLoggedIn();
+
+    // ── Tab switching ─────────────────────────────────────
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const tab = btn.dataset.tab;
+        document.getElementById('tab-login').classList.toggle('hidden', tab !== 'login');
+        document.getElementById('tab-register').classList.toggle('hidden', tab !== 'register');
+      });
+    });
+
+    // ── Avviso contesto non-HTTPS ─────────────────────────
+    // crypto.subtle richiede HTTPS o localhost; su file:// usa fallback
+    if (!crypto || !crypto.subtle) {
+      const warn = document.createElement('div');
+      warn.className = 'alert alert-info show';
+      warn.style.maxWidth = '420px';
+      warn.style.margin = '0 auto 1rem';
+      warn.style.position = 'relative';
+      warn.style.zIndex = '10';
+      warn.textContent = '⚠ Stai usando file:// — la crittografia usa un fallback. Per sicurezza completa usa GitHub Pages (HTTPS).';
+      document.querySelector('.auth-wrap').insertAdjacentElement('beforebegin', warn);
+    }
+
+    // ── Login ─────────────────────────────────────────────
+    function showAlert(id, msg, type) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.className = `alert alert-${type} show`;
+      el.textContent = msg;
+    }
+
+    document.getElementById('btn-login').addEventListener('click', async () => {
+      const btn = document.getElementById('btn-login');
+      const username = document.getElementById('login-username').value;
+      const password = document.getElementById('login-password').value;
+
+      if (!username || !password) {
+        showAlert('login-alert', 'Inserisci username e password.', 'error');
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = 'Accesso…';
+
+      try {
+        const result = await Auth.login(username, password);
+        if (result.ok) {
+          window.location.href = 'app.html';
+        } else {
+          showAlert('login-alert', result.error, 'error');
+          btn.disabled = false;
+          btn.textContent = '→ Accedi';
+        }
+      } catch (err) {
+        showAlert('login-alert', 'Errore inatteso: ' + err.message, 'error');
+        btn.disabled = false;
+        btn.textContent = '→ Accedi';
+      }
+    });
+
+    // Invio con Enter
+    ['login-username', 'login-password'].forEach(id => {
+      document.getElementById(id).addEventListener('keydown', e => {
+        if (e.key === 'Enter') document.getElementById('btn-login').click();
+      });
+    });
+
+    // ── Registrazione ─────────────────────────────────────
+    document.getElementById('btn-register').addEventListener('click', async () => {
+      const btn = document.getElementById('btn-register');
+      const username = document.getElementById('reg-username').value;
+      const password = document.getElementById('reg-password').value;
+      const confirm  = document.getElementById('reg-confirm').value;
+
+      if (!username || !password) {
+        showAlert('register-alert', 'Compila tutti i campi.', 'error');
+        return;
+      }
+
+      if (password !== confirm) {
+        showAlert('register-alert', 'Le password non coincidono.', 'error');
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = 'Creazione…';
+
+      try {
+        const result = await Auth.register(username, password);
+        if (result.ok) {
+          window.location.href = 'app.html';
+        } else {
+          showAlert('register-alert', result.error, 'error');
+          btn.disabled = false;
+          btn.textContent = '→ Crea account';
+        }
+      } catch (err) {
+        showAlert('register-alert', 'Errore inatteso: ' + err.message, 'error');
+        btn.disabled = false;
+        btn.textContent = '→ Crea account';
+      }
+    });
+
+    ['reg-username', 'reg-password', 'reg-confirm'].forEach(id => {
+      document.getElementById(id).addEventListener('keydown', e => {
+        if (e.key === 'Enter') document.getElementById('btn-register').click();
+      });
+    });
+
+    // ── Theme ─────────────────────────────────────────────
+    document.getElementById('theme-toggle').addEventListener('click', () => {
+      Auth.toggleTheme();
+      document.getElementById('theme-toggle').textContent =
+        document.body.classList.contains('light') ? '☾' : '☀';
+    });
+    // Icona iniziale
+    document.getElementById('theme-toggle').textContent =
+      document.body.classList.contains('light') ? '☾' : '☀';
+  </script>
 </body>
 </html>
