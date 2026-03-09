@@ -13,7 +13,7 @@ const AppState = {
   review: { queue: [], index: 0 }
 };
 
-// UI references uguali a prima
+// UI references
 const UI = {
   welcome: document.getElementById('section-welcome'),
   quiz: document.getElementById('section-quiz'),
@@ -28,6 +28,8 @@ const UI = {
   choicesList: document.getElementById('choices-list'),
   explanationBox: document.getElementById('explanation-box'),
   explanationText: document.getElementById('explanation-text'),
+  explanationImage: document.getElementById('explanation-image'),
+  explanationImageWrap: document.getElementById('explanation-image-wrap'),
   btnContinue: document.getElementById('btn-continue'),
   btnSkip: document.getElementById('btn-skip'),
   timerWrap: document.getElementById('timer-wrap'),
@@ -95,6 +97,34 @@ function escapeHtml(str) {
   return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
 
+// Funzione per caricare e gestire immagini con fallback
+function setupImage(imgElement, src, fallbackMessage = 'Immagine non disponibile') {
+  if (!imgElement) return;
+  
+  if (!src) {
+    imgElement.style.display = 'none';
+    return;
+  }
+  
+  imgElement.onload = () => {
+    imgElement.style.display = 'inline-block';
+  };
+  
+  imgElement.onerror = () => {
+    imgElement.style.display = 'none';
+    // Opzionale: mostra un messaggio di fallback
+    const parent = imgElement.parentElement;
+    if (parent) {
+      const fallback = document.createElement('span');
+      fallback.className = 'text-sm text-muted';
+      fallback.textContent = fallbackMessage;
+      parent.appendChild(fallback);
+    }
+  };
+  
+  imgElement.src = src;
+}
+
 // Funzioni di aggiornamento statistiche (usano SUBJECT)
 function updateStats(isCorrect) {
   const user = Auth.getCurrentUser();
@@ -137,25 +167,25 @@ function updateProgressUI() {
     const { index, questions } = AppState.sim;
     const total = questions.length;
     const pct = total > 0 ? Math.round((index / total) * 100) : 0;
-    UI.questionCounter.textContent = `${index + 1} / ${total}`;
-    UI.progressFill.style.width = pct + '%';
-    UI.progressText.textContent = pct + '%';
+    if (UI.questionCounter) UI.questionCounter.textContent = `${index + 1} / ${total}`;
+    if (UI.progressFill) UI.progressFill.style.width = pct + '%';
+    if (UI.progressText) UI.progressText.textContent = pct + '%';
   } else if (AppState.mode === 'training') {
     const total = AppState.questions.length;
     const user = Auth.getCurrentUser();
     const sub = user?.data.stats[SUBJECT] || { total: 0 };
     const done = sub.total || 0;
     const pct = total > 0 ? Math.min(100, Math.round((done / total) * 100)) : 0;
-    UI.questionCounter.textContent = `pag. ${AppState.currentQuestion?.sourcePage || '?'}`;
-    UI.progressFill.style.width = pct + '%';
-    UI.progressText.textContent = `${pct}% completato`;
+    if (UI.questionCounter) UI.questionCounter.textContent = `pag. ${AppState.currentQuestion?.sourcePage || '?'}`;
+    if (UI.progressFill) UI.progressFill.style.width = pct + '%';
+    if (UI.progressText) UI.progressText.textContent = `${pct}% completato`;
   } else if (AppState.mode === 'review') {
     const total = AppState.review.queue.length;
     const idx = AppState.review.index;
     const pct = total > 0 ? Math.round((idx / total) * 100) : 0;
-    UI.questionCounter.textContent = `${idx + 1} / ${total}`;
-    UI.progressFill.style.width = pct + '%';
-    UI.progressText.textContent = `Errori: ${AppState.review.queue.length}`;
+    if (UI.questionCounter) UI.questionCounter.textContent = `${idx + 1} / ${total}`;
+    if (UI.progressFill) UI.progressFill.style.width = pct + '%';
+    if (UI.progressText) UI.progressText.textContent = `Errori: ${AppState.review.queue.length}`;
   }
 }
 
@@ -165,29 +195,56 @@ function renderQuestion(question) {
   if (!UI.quiz) return;
 
   const modeLabels = { training: '📖 Allenamento', review: '🔁 Ripasso', simulation: '⏱ Simulazione' };
-  UI.modeBadge.textContent = modeLabels[AppState.mode] || '';
-  UI.pageId.textContent = `pag. ${question.sourcePage}`;
-  UI.categoryBadge.textContent = question.category || 'generale';
-  UI.categoryBadge.className = 'badge badge-accent';
-  UI.questionText.textContent = question.question;
+  if (UI.modeBadge) UI.modeBadge.textContent = modeLabels[AppState.mode] || '';
+  if (UI.pageId) UI.pageId.textContent = `pag. ${question.sourcePage}`;
+  if (UI.categoryBadge) {
+    UI.categoryBadge.textContent = question.category || 'generale';
+    UI.categoryBadge.className = 'badge badge-accent';
+  }
+  if (UI.questionText) UI.questionText.textContent = question.question;
+
+  // Gestione immagine della domanda
+  const imgWrap = document.getElementById('question-image-wrap');
+  const imgEl = document.getElementById('question-image');
+  if (imgWrap && imgEl) {
+    if (question.image) {
+      imgWrap.classList.remove('hidden');
+      setupImage(imgEl, question.image, 'Immagine domanda non disponibile');
+    } else {
+      imgWrap.classList.add('hidden');
+    }
+  }
 
   updateProgressUI();
 
-  UI.choicesList.innerHTML = '';
-  (question.choices || []).forEach(choice => {
-    const li = document.createElement('li');
-    const btn = document.createElement('button');
-    btn.className = 'choice-btn';
-    btn.innerHTML = `<span class="choice-label">${choice.label}</span><span>${escapeHtml(choice.text)}</span>`;
-    btn.addEventListener('click', () => handleChoiceClick(btn, choice));
-    li.appendChild(btn);
-    UI.choicesList.appendChild(li);
-  });
+  if (UI.choicesList) {
+    UI.choicesList.innerHTML = '';
+    (question.choices || []).forEach(choice => {
+      const li = document.createElement('li');
+      const btn = document.createElement('button');
+      btn.className = 'choice-btn';
+      
+      // Costruisci il contenuto del bottone
+      let btnContent = `<span class="choice-label">${choice.label}</span>`;
+      
+      // Se c'è un'immagine nella scelta, mostrala
+      if (choice.image) {
+        btnContent += `<img src="${choice.image}" alt="Opzione ${choice.label}" class="choice-image" onerror="this.style.display='none'">`;
+      }
+      
+      btnContent += `<span>${escapeHtml(choice.text)}</span>`;
+      btn.innerHTML = btnContent;
+      
+      btn.addEventListener('click', () => handleChoiceClick(btn, choice));
+      li.appendChild(btn);
+      UI.choicesList.appendChild(li);
+    });
+  }
 
-  UI.explanationBox?.classList.add('hidden');
-  UI.btnContinue?.classList.add('hidden');
-  UI.timerWrap?.classList.toggle('hidden', AppState.mode !== 'simulation');
-  UI.btnSkip?.classList.toggle('hidden', AppState.mode !== 'simulation');
+  if (UI.explanationBox) UI.explanationBox.classList.add('hidden');
+  if (UI.btnContinue) UI.btnContinue.classList.add('hidden');
+  if (UI.timerWrap) UI.timerWrap.classList.toggle('hidden', AppState.mode !== 'simulation');
+  if (UI.btnSkip) UI.btnSkip.classList.toggle('hidden', AppState.mode !== 'simulation');
 
   if (UI.reviewCounter) {
     if (AppState.mode === 'review') {
@@ -228,11 +285,22 @@ function handleChoiceClick(btn, choice) {
     btn.classList.add('correct');
     updateStats(true);
     if (AppState.mode === 'review') updateReviewQueue(AppState.currentQuestion.id, true);
+    
+    // Mostra feedback e immagine spiegazione se presente
     if (UI.explanationBox && UI.explanationText) {
       UI.explanationText.textContent = feedback || 'Corretto! ✓';
+      
+      // Gestisci immagine spiegazione
+      if (UI.explanationImage && AppState.currentQuestion.imageExplanation) {
+        setupImage(UI.explanationImage, AppState.currentQuestion.imageExplanation, 'Immagine spiegazione non disponibile');
+        if (UI.explanationImageWrap) UI.explanationImageWrap.classList.remove('hidden');
+      } else if (UI.explanationImageWrap) {
+        UI.explanationImageWrap.classList.add('hidden');
+      }
+      
       UI.explanationBox.classList.remove('hidden');
     }
-    UI.btnContinue?.classList.remove('hidden');
+    if (UI.btnContinue) UI.btnContinue.classList.remove('hidden');
   } else {
     btn.classList.add('wrong');
     setTimeout(() => btn.classList.remove('wrong'), 300);
@@ -248,8 +316,19 @@ function handleChoiceClick(btn, choice) {
         Auth.updateCurrentUser({ stats: { [SUBJECT]: { ...sub, wrongAnswers: wrongs } } });
       }
     }
+    
+    // Mostra feedback di errore
     if (UI.explanationBox && UI.explanationText) {
       UI.explanationText.textContent = feedback || 'Sbagliato! Riprova.';
+      
+      // Anche in caso di errore, mostra l'immagine spiegazione se presente
+      if (UI.explanationImage && AppState.currentQuestion.imageExplanation) {
+        setupImage(UI.explanationImage, AppState.currentQuestion.imageExplanation, 'Immagine spiegazione non disponibile');
+        if (UI.explanationImageWrap) UI.explanationImageWrap.classList.remove('hidden');
+      } else if (UI.explanationImageWrap) {
+        UI.explanationImageWrap.classList.add('hidden');
+      }
+      
       UI.explanationBox.className = 'explanation-box wrong-expl';
       UI.explanationBox.classList.remove('hidden');
     }
@@ -408,33 +487,48 @@ function endSimulation() {
 }
 
 function renderResults({ correct, wrong, skipped, pct, totalTime, answers }) {
-  UI.resultPct.textContent = pct + '%';
-  UI.resultCorrect.textContent = correct;
-  UI.resultWrong.textContent = wrong;
-  UI.resultSkipped.textContent = skipped;
+  if (UI.resultPct) UI.resultPct.textContent = pct + '%';
+  if (UI.resultCorrect) UI.resultCorrect.textContent = correct;
+  if (UI.resultWrong) UI.resultWrong.textContent = wrong;
+  if (UI.resultSkipped) UI.resultSkipped.textContent = skipped;
   const mins = Math.floor(totalTime / 60);
   const secs = totalTime % 60;
-  UI.resultTime.textContent = `${mins}:${String(secs).padStart(2, '0')}`;
-  UI.resultList.innerHTML = '';
-  answers.forEach((a, i) => {
-    const q = AppState.sim.questions[i];
-    if (!q) return;
-    const div = document.createElement('div');
-    div.className = 'card mt-sm';
-    div.style.padding = '0.8rem 1rem';
-    div.style.borderLeft = `3px solid ${a.isCorrect ? 'var(--success)' : a.answered ? 'var(--danger)' : 'var(--text-dim)'}`;
-    const icon = a.isCorrect ? '✓' : (a.answered ? '✗' : '—');
-    const iconColor = a.isCorrect ? 'var(--success)' : (a.answered ? 'var(--danger)' : 'var(--text-dim)');
-    div.innerHTML = `
-      <div class="flex-between gap-sm">
-        <span class="text-sm text-mono text-muted">Q${i+1} · ${q.category || 'generale'}</span>
-        <span style="font-family:var(--font-mono);font-weight:700;color:${iconColor}">${icon}</span>
-      </div>
-      <p class="text-sm mt-sm" style="color:var(--text)">${escapeHtml(q.question.substring(0, 120))}${q.question.length > 120 ? '…' : ''}</p>
-      ${a.choiceLabel ? `<span class="badge badge-muted mt-sm">Risposta: ${a.choiceLabel}</span>` : '<span class="badge badge-muted mt-sm">Non risposta</span>'}
-    `;
-    UI.resultList.appendChild(div);
-  });
+  if (UI.resultTime) UI.resultTime.textContent = `${mins}:${String(secs).padStart(2, '0')}`;
+  
+  if (UI.resultList) {
+    UI.resultList.innerHTML = '';
+    answers.forEach((a, i) => {
+      const q = AppState.sim.questions[i];
+      if (!q) return;
+      const div = document.createElement('div');
+      div.className = 'card mt-sm';
+      div.style.padding = '0.8rem 1rem';
+      div.style.borderLeft = `3px solid ${a.isCorrect ? 'var(--success)' : a.answered ? 'var(--danger)' : 'var(--text-dim)'}`;
+      const icon = a.isCorrect ? '✓' : (a.answered ? '✗' : '—');
+      const iconColor = a.isCorrect ? 'var(--success)' : (a.answered ? 'var(--danger)' : 'var(--text-dim)');
+      
+      let answerPreview = '';
+      if (a.choiceLabel) {
+        const choice = q.choices.find(c => c.label === a.choiceLabel);
+        if (choice && choice.image) {
+          answerPreview = `<img src="${choice.image}" alt="Risposta ${a.choiceLabel}" class="choice-image-small" style="max-height:30px;margin-right:0.5rem;">`;
+        }
+      }
+      
+      div.innerHTML = `
+        <div class="flex-between gap-sm">
+          <span class="text-sm text-mono text-muted">Q${i+1} · ${q.category || 'generale'}</span>
+          <span style="font-family:var(--font-mono);font-weight:700;color:${iconColor}">${icon}</span>
+        </div>
+        <div class="flex align-center mt-sm" style="gap:0.5rem;">
+          ${answerPreview}
+          <p class="text-sm" style="color:var(--text);flex:1;">${escapeHtml(q.question.substring(0, 120))}${q.question.length > 120 ? '…' : ''}</p>
+        </div>
+        ${a.choiceLabel ? `<span class="badge badge-muted mt-sm">Risposta: ${a.choiceLabel}</span>` : '<span class="badge badge-muted mt-sm">Non risposta</span>'}
+      `;
+      UI.resultList.appendChild(div);
+    });
+  }
   UI.showSection(UI.result);
 }
 
@@ -468,15 +562,22 @@ document.addEventListener('DOMContentLoaded', async () => {
   document.getElementById('btn-sim')?.addEventListener('click', showSimConfig);
   document.getElementById('btn-sim-start')?.addEventListener('click', startSimulation);
   document.getElementById('btn-sim-cancel')?.addEventListener('click', () => UI.showSection(UI.welcome));
-  UI.btnContinue?.addEventListener('click', () => {
-    if (AppState.mode === 'training') advanceTraining();
-    else if (AppState.mode === 'review') { AppState.review.index++; renderReviewQuestion(); }
-  });
-  UI.btnSkip?.addEventListener('click', () => {
-    if (AppState.mode !== 'simulation') return;
-    AppState.sim.index++;
-    renderSimQuestion();
-  });
+  
+  if (UI.btnContinue) {
+    UI.btnContinue.addEventListener('click', () => {
+      if (AppState.mode === 'training') advanceTraining();
+      else if (AppState.mode === 'review') { AppState.review.index++; renderReviewQuestion(); }
+    });
+  }
+  
+  if (UI.btnSkip) {
+    UI.btnSkip.addEventListener('click', () => {
+      if (AppState.mode !== 'simulation') return;
+      AppState.sim.index++;
+      renderSimQuestion();
+    });
+  }
+  
   document.getElementById('btn-back-home')?.addEventListener('click', () => window.location.href = '../dashboard.html');
   document.getElementById('btn-logout')?.addEventListener('click', () => Auth.logout());
   document.getElementById('theme-toggle')?.addEventListener('click', () => Auth.toggleTheme());
