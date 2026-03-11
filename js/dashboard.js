@@ -28,19 +28,19 @@ function renderDashboard() {
     if (globalStatsEl) {
         globalStatsEl.innerHTML = `
       <div class="stat-grid">
-        <div class="stat-item">
+        <div class="stat-item blur">
           <div class="stat-value">${global.total}</div>
           <div class="stat-label">Totale risposte</div>
         </div>
-        <div class="stat-item">
+        <div class="stat-item blur">
           <div class="stat-value" style="color:var(--success)">${global.correct}</div>
           <div class="stat-label">Corrette</div>
         </div>
-        <div class="stat-item">
+        <div class="stat-item blur">
           <div class="stat-value" style="color:var(--danger)">${global.wrong}</div>
           <div class="stat-label">Errate</div>
         </div>
-        <div class="stat-item">
+        <div class="stat-item blur">
           <div class="stat-value text-accent">${pct}%</div>
           <div class="stat-label">Precisione</div>
         </div>
