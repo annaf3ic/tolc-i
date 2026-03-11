@@ -94,22 +94,36 @@
         <div class="flex-between mb-lg"><span id="progress-text" class="text-sm text-muted"></span></div>
         <div class="card card-accent fade-in" id="question-card">
             <p class="question-text" id="question-text">Caricamento domanda…</p>
-            <div id="question-image-wrap" class="question-image-wrap hidden">
+
+            <div id="question-image-wrap" class="question-image-wrap hidden"
+                style="margin: 1rem 0; text-align: center;">
                 <img id="question-image" class="question-image" alt="Immagine domanda"
-                    style="max-width:100%;margin:1rem 0;border-radius:var(--radius);">
+                    style="max-width:100%; max-height:300px; border-radius:var(--radius); background:var(--surface2); padding:0.5rem;">
             </div>
+
             <ul class="choices-list" id="choices-list"></ul>
+
             <div class="explanation-box hidden" id="explanation-box">
                 <p class="text-sm text-mono text-muted mb-md">📝 Spiegazione</p>
                 <p id="explanation-text" style="color:var(--text)"></p>
-                <div id="explanation-image-wrap" class="explanation-image-wrap hidden">
+
+                <div id="choice-image-container" class="choice-image-container hidden"
+                    style="margin-top:1rem; text-align: center; background: var(--surface); border-radius: var(--radius); padding: 0.5rem;">
+                    <img id="choice-image" class="choice-image-large" alt="Immagine risposta selezionata"
+                        style="max-width:100%; max-height:300px; object-fit: contain; border-radius: calc(var(--radius) - 2px);">
+                </div>
+
+                <div id="explanation-image-wrap" class="explanation-image-wrap hidden"
+                    style="margin-top:1rem; text-align: center; background: var(--surface); border-radius: var(--radius); padding: 0.5rem;">
                     <img id="explanation-image" class="explanation-image" alt="Immagine spiegazione"
-                        style="max-width:100%;margin-top:1rem;border-radius:var(--radius);">
+                        style="max-width:100%; max-height:200px; object-fit: contain; border-radius: calc(var(--radius) - 2px);">
                 </div>
             </div>
         </div>
-        <div class="flex gap-sm mt-md"><button class="btn btn-primary hidden" id="btn-continue">→
-                Continua</button><button class="btn btn-outline hidden" id="btn-skip">→ Salta</button></div>
+        <div class="flex gap-sm mt-md">
+            <button class="btn btn-primary hidden" id="btn-continue">→Continua</button>
+            <button class="btn btn-outline hidden" id="btn-skip">→ Salta</button>
+        </div>
     </section>
 
     <section id="section-result" class="container quiz-area hidden">
