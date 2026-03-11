@@ -149,68 +149,102 @@ const Auth = {
         return true;
     },
 
+    // Cambia password
     async changePassword(oldPassword, newPassword) {
         const user = this.getCurrentUser();
-        if (!user) return { ok: false, error: 'Non autenticato.' };
-        const oldHash = await sha256(oldPassword);
-        if (oldHash !== user.data.passwordHash) return { ok: false, error: 'Vecchia password errata.' };
-        if (!newPassword || newPassword.length < 6) return { ok: false, error: 'La nuova password deve avere almeno 6 caratteri.' };
-        const newHash = await sha256(newPassword);
+        if (!user) return { ok: false, error: 'Utente non trovato' };
+
         const users = getUsers();
-        users[user.username].passwordHash = newHash;
+        const userData = users[user.username];
+        if (!userData) return { ok: false, error: 'Utente non trovato' };
+
+        const oldHash = await sha256(oldPassword);
+        if (oldHash !== userData.passwordHash) {
+            return { ok: false, error: 'Password attuale errata' };
+        }
+
+        if (!newPassword || newPassword.length < 6) {
+            return { ok: false, error: 'La nuova password deve avere almeno 6 caratteri' };
+        }
+
+        const newHash = await sha256(newPassword);
+        userData.passwordHash = newHash;
         saveUsers(users);
+        
         return { ok: true };
     },
 
+    // Elimina account
     async deleteAccount(password) {
         const user = this.getCurrentUser();
-        if (!user) return { ok: false, error: 'Non autenticato.' };
-        const hash = await sha256(password);
-        if (hash !== user.data.passwordHash) return { ok: false, error: 'Password errata.' };
+        if (!user) return { ok: false, error: 'Utente non trovato' };
+
         const users = getUsers();
+        const userData = users[user.username];
+        if (!userData) return { ok: false, error: 'Utente non trovato' };
+
+        const hash = await sha256(password);
+        if (hash !== userData.passwordHash) {
+            return { ok: false, error: 'Password errata' };
+        }
+
         delete users[user.username];
         saveUsers(users);
         clearSession();
+        
         return { ok: true };
     },
 
-    resetProgress(subject) {
+    // Reset progresso
+    resetProgress() {
         const user = this.getCurrentUser();
-        if (!user) return;
+        if (!user) return false;
+
         const users = getUsers();
-        if (subject && users[user.username].stats[subject]) {
-            // Reset solo per una materia
-            const base = { total: 0, correct: 0, wrong: 0, progressPage: 1, wrongAnswers: [] };
-            users[user.username].stats[subject] = base;
-        } else {
-            // Reset completo
-            const base = { total: 0, correct: 0, wrong: 0, progressPage: 1, wrongAnswers: [] };
-            users[user.username].stats = {
-                global: { total: 0, correct: 0, wrong: 0 },
-                logica: { ...base },
-                matematica1: { ...base },
-                matematica2: { ...base },
-                scienze: { ...base }
-            };
-            users[user.username].history = [];
-        }
+        const userData = users[user.username];
+        if (!userData) return false;
+
+        const materiaBase = {
+            total: 0,
+            correct: 0,
+            wrong: 0,
+            progressPage: 1,
+            wrongAnswers: []
+        };
+
+        userData.stats = {
+            global: { total: 0, correct: 0, wrong: 0 },
+            logica: { ...materiaBase },
+            matematica1: { ...materiaBase },
+            matematica2: { ...materiaBase },
+            scienze: { ...materiaBase }
+        };
+        
+        userData.history = [];
+        
         saveUsers(users);
+        return true;
     },
 
-    resetWrongAnswers(subject) {
+    // Reset errori
+    resetWrongAnswers() {
         const user = this.getCurrentUser();
-        if (!user) return;
+        if (!user) return false;
+
         const users = getUsers();
-        if (subject && users[user.username].stats[subject]) {
-            users[user.username].stats[subject].wrongAnswers = [];
-        } else {
-            for (let key in users[user.username].stats) {
-                if (key !== 'global' && users[user.username].stats[key]?.wrongAnswers) {
-                    users[user.username].stats[key].wrongAnswers = [];
-                }
+        const userData = users[user.username];
+        if (!userData) return false;
+
+        const subjects = ['logica', 'matematica1', 'matematica2', 'scienze'];
+        
+        subjects.forEach(sub => {
+            if (userData.stats[sub]) {
+                userData.stats[sub].wrongAnswers = [];
             }
-        }
+        });
+        
         saveUsers(users);
+        return true;
     },
 
     requireAuth(redirectTo = 'index.html') {
