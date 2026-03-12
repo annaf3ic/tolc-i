@@ -1,0 +1,1183 @@
+{
+    "_note": "Domande originali per l'allenamento al TOLC-I — Matematica",
+    "_format": {
+        "id": "Identificatore univoco della domanda",
+        "sourcePage": "null",
+        "question": "Testo della domanda",
+        "image": "null",
+        "category": "matematica",
+        "choices": "Array di 5 scelte (A-E). Imposta soluzione:true solo sulla risposta corretta."
+    },
+    "questions": [
+        {
+            "id": "M01",
+            "question": "Qual è il valore di log₂(32)?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "4",
+                    "soluzione": false,
+                    "feedback": "2⁴ = 16, non 32. Ricorda che log₂(32) chiede l'esponente a cui elevare 2 per ottenere 32."
+                },
+                {
+                    "label": "B",
+                    "text": "5",
+                    "soluzione": true,
+                    "feedback": "Corretto! 2⁵ = 32, quindi log₂(32) = 5."
+                },
+                {
+                    "label": "C",
+                    "text": "6",
+                    "soluzione": false,
+                    "feedback": "2⁶ = 64 ≠ 32."
+                },
+                {
+                    "label": "D",
+                    "text": "16",
+                    "soluzione": false,
+                    "feedback": "16 è la radice quadrata di 256, non ha relazione con log₂(32)."
+                },
+                {
+                    "label": "E",
+                    "text": "3,5",
+                    "soluzione": false,
+                    "feedback": "2^3,5 = 2³ · 2^0,5 = 8√2 ≈ 11,3 ≠ 32."
+                }
+            ]
+        },
+        {
+            "id": "M02",
+            "question": "Qual è il dominio della funzione f(x) = √(x² - 4)?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "x ∈ ℝ",
+                    "soluzione": false,
+                    "feedback": "La radice quadrata è definita solo per argomenti non negativi. Per x = 0, l'argomento vale -4 < 0."
+                },
+                {
+                    "label": "B",
+                    "text": "x ∈ [-2, 2]",
+                    "soluzione": false,
+                    "feedback": "Attenzione: per x ∈ (-2, 2) si ha x² < 4, quindi x² - 4 < 0 e la radice non è definita."
+                },
+                {
+                    "label": "C",
+                    "text": "x ≤ -2 oppure x ≥ 2",
+                    "soluzione": true,
+                    "feedback": "Corretto! Si deve avere x² - 4 ≥ 0, ovvero x² ≥ 4, quindi |x| ≥ 2, cioè x ≤ -2 o x ≥ 2."
+                },
+                {
+                    "label": "D",
+                    "text": "x > 2",
+                    "soluzione": false,
+                    "feedback": "La condizione x² ≥ 4 include anche x ≤ -2."
+                },
+                {
+                    "label": "E",
+                    "text": "x ≥ 0",
+                    "soluzione": false,
+                    "feedback": "Per x = 1 (che è ≥ 0) si ha f(1) = √(1-4) = √(-3), non definita. La condizione è x² ≥ 4."
+                }
+            ]
+        },
+        {
+            "id": "M03",
+            "question": "Quanti sono i divisori interi positivi del numero 60?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "10",
+                    "soluzione": false,
+                    "feedback": "60 = 2² · 3 · 5. Il numero di divisori è (2+1)(1+1)(1+1) = 12, non 10."
+                },
+                {
+                    "label": "B",
+                    "text": "11",
+                    "soluzione": false,
+                    "feedback": "Non è il numero corretto. Usa la formula dei divisori: 60 = 2² · 3¹ · 5¹, quindi (2+1)(1+1)(1+1) = 12."
+                },
+                {
+                    "label": "C",
+                    "text": "12",
+                    "soluzione": true,
+                    "feedback": "Corretto! 60 = 2² · 3 · 5. Il numero di divisori è (2+1)(1+1)(1+1) = 3·2·2 = 12. I divisori sono: 1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60."
+                },
+                {
+                    "label": "D",
+                    "text": "8",
+                    "soluzione": false,
+                    "feedback": "8 sarebbe corretto per potenze di 2, come 2⁷ = 128, che ha 8 divisori. Per 60 la risposta è 12."
+                },
+                {
+                    "label": "E",
+                    "text": "6",
+                    "soluzione": false,
+                    "feedback": "6 è il numero di divisori di 12 = 2²·3, non di 60."
+                }
+            ]
+        },
+        {
+            "id": "M04",
+            "question": "La somma di tutti gli angoli interni di un poligono convesso con 8 lati vale:",
+            "image": null,
+            "imageExplanation": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "900°",
+                    "soluzione": false,
+                    "feedback": "La formula è (n-2)·180°. Per n=8: (8-2)·180° = 6·180° = 1080°, non 900°."
+                },
+                {
+                    "label": "B",
+                    "text": "1080°",
+                    "soluzione": true,
+                    "feedback": "Corretto! La somma degli angoli interni di un poligono con n lati è (n-2)·180°. Per n=8: (6)·180° = 1080°."
+                },
+                {
+                    "label": "C",
+                    "text": "1260°",
+                    "soluzione": false,
+                    "feedback": "1260° = 7·180°, che corrisponde a un ennagono (9 lati), non a un ottagono."
+                },
+                {
+                    "label": "D",
+                    "text": "720°",
+                    "soluzione": false,
+                    "feedback": "720° è la somma degli angoli di un esagono (n=6): (6-2)·180° = 720°."
+                },
+                {
+                    "label": "E",
+                    "text": "1440°",
+                    "soluzione": false,
+                    "feedback": "1440° corrisponde a (n-2)·180° = 1440°, quindi n-2 = 8, n = 10: è un decagono, non un ottagono."
+                }
+            ]
+        },
+        {
+            "id": "M05",
+            "question": "Se 2x - 3 > x + 5, allora:",
+            "image": null,
+            "imageExplanation": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "x > 2",
+                    "soluzione": false,
+                    "feedback": "Risolvi: 2x - 3 > x + 5 → 2x - x > 5 + 3 → x > 8."
+                },
+                {
+                    "label": "B",
+                    "text": "x < 8",
+                    "soluzione": false,
+                    "feedback": "Il verso della disuguaglianza non si inverte (non si divide per negativi). Risultato: x > 8."
+                },
+                {
+                    "label": "C",
+                    "text": "x > 8",
+                    "soluzione": true,
+                    "feedback": "Corretto! 2x - 3 > x + 5 → x > 8. La disequazione ha come soluzione tutti i reali maggiori di 8."
+                },
+                {
+                    "label": "D",
+                    "text": "x ≥ 8",
+                    "soluzione": false,
+                    "feedback": "La disuguaglianza è stretta (>), non ≥, quindi il valore x=8 è escluso."
+                },
+                {
+                    "label": "E",
+                    "text": "x > -8",
+                    "soluzione": false,
+                    "feedback": "Errore algebrico. Trasponendo: 2x - x > 5 + 3 → x > 8, non x > -8."
+                }
+            ]
+        },
+        {
+            "id": "M06",
+            "question": "Qual è il valore di √(75) semplificato?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "5√3",
+                    "soluzione": true,
+                    "feedback": "Corretto! √75 = √(25·3) = √25 · √3 = 5√3."
+                },
+                {
+                    "label": "B",
+                    "text": "3√5",
+                    "soluzione": false,
+                    "feedback": "3√5 = √9·√5 = √45 ≠ √75."
+                },
+                {
+                    "label": "C",
+                    "text": "5√5",
+                    "soluzione": false,
+                    "feedback": "5√5 = √25·√5 = √125 ≠ √75."
+                },
+                {
+                    "label": "D",
+                    "text": "15",
+                    "soluzione": false,
+                    "feedback": "15² = 225 ≠ 75. √75 non è intero."
+                },
+                {
+                    "label": "E",
+                    "text": "7,5",
+                    "soluzione": false,
+                    "feedback": "7,5² = 56,25 ≠ 75."
+                }
+            ]
+        },
+        {
+            "id": "M07",
+            "question": "Le soluzioni dell'equazione x² - 5x + 6 = 0 sono:",
+            "image": null,
+            "imageExplanation": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "x = 2 e x = 3",
+                    "soluzione": true,
+                    "feedback": "Corretto! Applicando la formula quadratica: discriminante = 25 - 24 = 1, x = (5±1)/2. Quindi x = 3 o x = 2. Verifica: (x-2)(x-3) = x²-5x+6. ✓"
+                },
+                {
+                    "label": "B",
+                    "text": "x = -2 e x = -3",
+                    "soluzione": false,
+                    "feedback": "(-2)·(-3) = 6 ✓, ma (-2)+(-3) = -5 ≠ 5 (la somma delle radici deve essere +5, non -5)."
+                },
+                {
+                    "label": "C",
+                    "text": "x = 1 e x = 6",
+                    "soluzione": false,
+                    "feedback": "1·6 = 6 ✓, ma 1+6 = 7 ≠ 5. Le radici non soddisfano le relazioni di Viète."
+                },
+                {
+                    "label": "D",
+                    "text": "x = 2 e x = -3",
+                    "soluzione": false,
+                    "feedback": "2·(-3) = -6 ≠ 6. Il prodotto delle radici deve essere +6."
+                },
+                {
+                    "label": "E",
+                    "text": "Non esistono soluzioni reali",
+                    "soluzione": false,
+                    "feedback": "Il discriminante è Δ = 25-24 = 1 > 0, quindi esistono due soluzioni reali distinte."
+                }
+            ]
+        },
+        {
+            "id": "M08",
+            "question": "Quanto vale sin(30°) · cos(60°) + cos(30°) · sin(60°)?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "0",
+                    "soluzione": false,
+                    "feedback": "Questa espressione è la formula di addizione del seno: sin(30°+60°) = sin(90°) = 1."
+                },
+                {
+                    "label": "B",
+                    "text": "1/2",
+                    "soluzione": false,
+                    "feedback": "Riconosci la formula: sin(α+β) = sinα·cosβ + cosα·sinβ. Quindi il risultato è sin(30°+60°) = sin(90°) = 1."
+                },
+                {
+                    "label": "C",
+                    "text": "√3/2",
+                    "soluzione": false,
+                    "feedback": "√3/2 = sin(60°) = cos(30°). L'espressione è sin(90°) = 1."
+                },
+                {
+                    "label": "D",
+                    "text": "1",
+                    "soluzione": true,
+                    "feedback": "Corretto! L'espressione è la formula di addizione: sin(30°+60°) = sin(90°) = 1. Alternativamente: (1/2)(1/2) + (√3/2)(√3/2) = 1/4 + 3/4 = 1."
+                },
+                {
+                    "label": "E",
+                    "text": "√2/2",
+                    "soluzione": false,
+                    "feedback": "√2/2 = sin(45°) = cos(45°). Il calcolo diretto dà: 1/4 + 3/4 = 1."
+                }
+            ]
+        },
+        {
+            "id": "M09",
+            "question": "Una urna contiene 4 palline rosse e 6 palline blu. Estraendo una pallina a caso, qual è la probabilità di estrarre una rossa?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "2/5",
+                    "soluzione": true,
+                    "feedback": "Corretto! P(rossa) = 4/10 = 2/5. Ci sono 4 palline rosse su 10 totali."
+                },
+                {
+                    "label": "B",
+                    "text": "3/5",
+                    "soluzione": false,
+                    "feedback": "3/5 è la probabilità di estrarre una pallina BLU (6/10), non rossa."
+                },
+                {
+                    "label": "C",
+                    "text": "4/6",
+                    "soluzione": false,
+                    "feedback": "Il denominatore deve essere il numero totale di palline (10), non solo le blu. P = 4/10 = 2/5."
+                },
+                {
+                    "label": "D",
+                    "text": "1/4",
+                    "soluzione": false,
+                    "feedback": "1/4 sarebbe corretto se ci fossero 1 rossa su 4. Qui ci sono 4 rosse su 10 totali."
+                },
+                {
+                    "label": "E",
+                    "text": "4/5",
+                    "soluzione": false,
+                    "feedback": "4/5 equivale a 8/10, che è troppo alto. Solo 4 palline su 10 sono rosse."
+                }
+            ]
+        },
+        {
+            "id": "M10",
+            "question": "Il discriminante dell'equazione 3x² + bx + 3 = 0 è negativo quando:",
+            "image": null,
+            "imageExplanation": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "|b| < 6",
+                    "soluzione": true,
+                    "feedback": "Corretto! Δ = b² - 4·3·3 = b² - 36. Perché sia Δ < 0, deve essere b² < 36, cioè |b| < 6."
+                },
+                {
+                    "label": "B",
+                    "text": "|b| > 6",
+                    "soluzione": false,
+                    "feedback": "Se |b| > 6 allora b² > 36 e Δ = b²-36 > 0: esisterebbero due radici reali distinte."
+                },
+                {
+                    "label": "C",
+                    "text": "b < -6",
+                    "soluzione": false,
+                    "feedback": "Se b < -6, ad esempio b = -7, allora b² = 49 > 36 e Δ > 0. La condizione corretta è |b| < 6."
+                },
+                {
+                    "label": "D",
+                    "text": "b > 0",
+                    "soluzione": false,
+                    "feedback": "b > 0 non è una condizione sufficiente. Per b = 10 (> 0), b² = 100 > 36 e Δ > 0."
+                },
+                {
+                    "label": "E",
+                    "text": "|b| = 6",
+                    "soluzione": false,
+                    "feedback": "Per |b| = 6 si ha b² = 36, quindi Δ = 36-36 = 0: l'equazione ha una soluzione doppia (non Δ < 0)."
+                }
+            ]
+        },
+        {
+            "id": "M11",
+            "question": "L'equazione della retta passante per i punti A(0, 3) e B(2, 7) è:",
+            "image": null,
+            "imageExplanation": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "y = 2x + 3",
+                    "soluzione": true,
+                    "feedback": "Corretto! Pendenza: m = (7-3)/(2-0) = 4/2 = 2. Intercetta: q = 3 (il punto A è sull'asse y). Equazione: y = 2x + 3."
+                },
+                {
+                    "label": "B",
+                    "text": "y = 3x + 2",
+                    "soluzione": false,
+                    "feedback": "Verifica con A(0,3): y=3·0+2=2 ≠ 3. La retta non passa per A."
+                },
+                {
+                    "label": "C",
+                    "text": "y = 2x - 3",
+                    "soluzione": false,
+                    "feedback": "Per x=0: y = -3 ≠ 3. L'intercetta è sbagliata."
+                },
+                {
+                    "label": "D",
+                    "text": "y = 4x + 3",
+                    "soluzione": false,
+                    "feedback": "Per x=2: y = 4·2+3 = 11 ≠ 7. La pendenza è sbagliata (m=4 invece di m=2)."
+                },
+                {
+                    "label": "E",
+                    "text": "y = x + 3",
+                    "soluzione": false,
+                    "feedback": "Per x=2: y = 2+3 = 5 ≠ 7. La pendenza dovrebbe essere 2, non 1."
+                }
+            ]
+        },
+        {
+            "id": "M12",
+            "question": "In un triangolo rettangolo i cateti misurano 6 e 8. Quanto misura l'ipotenusa?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "10",
+                    "soluzione": true,
+                    "feedback": "Corretto! Per il teorema di Pitagora: c = √(6² + 8²) = √(36 + 64) = √100 = 10. (6, 8, 10) è la terna pitagorica doppia di (3, 4, 5)."
+                },
+                {
+                    "label": "B",
+                    "text": "14",
+                    "soluzione": false,
+                    "feedback": "14 è la somma dei cateti, non l'ipotenusa. Usa il teorema di Pitagora: c = √(36+64) = 10."
+                },
+                {
+                    "label": "C",
+                    "text": "√(48)",
+                    "soluzione": false,
+                    "feedback": "√48 ≈ 6,93. L'ipotenusa deve essere maggiore di ciascun cateto. Il risultato corretto è 10."
+                },
+                {
+                    "label": "D",
+                    "text": "100",
+                    "soluzione": false,
+                    "feedback": "100 = 6² + 8² è il quadrato dell'ipotenusa, non l'ipotenusa stessa. c = √100 = 10."
+                },
+                {
+                    "label": "E",
+                    "text": "√(28)",
+                    "soluzione": false,
+                    "feedback": "√28 ≈ 5,29 < 8. L'ipotenusa non può essere minore di un cateto."
+                }
+            ]
+        },
+        {
+            "id": "M13",
+            "question": "Qual è il valore di (2³)² ?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "12",
+                    "soluzione": false,
+                    "feedback": "Errore: non si moltiplicano le basi. (2³)² = 2^(3·2) = 2⁶ = 64."
+                },
+                {
+                    "label": "B",
+                    "text": "36",
+                    "soluzione": false,
+                    "feedback": "Potresti aver confuso con (2+3)² = 25 o 6² = 36. La risposta è (2³)² = 2⁶ = 64."
+                },
+                {
+                    "label": "C",
+                    "text": "64",
+                    "soluzione": true,
+                    "feedback": "Corretto! Potenza di potenza: (2³)² = 2^(3×2) = 2⁶ = 64."
+                },
+                {
+                    "label": "D",
+                    "text": "512",
+                    "soluzione": false,
+                    "feedback": "512 = 2⁹. Potresti aver sommato gli esponenti invece di moltiplicarli."
+                },
+                {
+                    "label": "E",
+                    "text": "16",
+                    "soluzione": false,
+                    "feedback": "16 = 2⁴. Qui l'esponente risultante è 3×2 = 6, non 4."
+                }
+            ]
+        },
+        {
+            "id": "M14",
+            "question": "Quale delle seguenti espressioni è equivalente a log(a) - log(b)?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "log(a - b)",
+                    "soluzione": false,
+                    "feedback": "La differenza di logaritmi non è il logaritmo della differenza. log(a) - log(b) = log(a/b)."
+                },
+                {
+                    "label": "B",
+                    "text": "log(a/b)",
+                    "soluzione": true,
+                    "feedback": "Corretto! Proprietà dei logaritmi: log(a) - log(b) = log(a/b). La differenza di log è il log del quoziente."
+                },
+                {
+                    "label": "C",
+                    "text": "log(a) / log(b)",
+                    "soluzione": false,
+                    "feedback": "Questo è il logaritmo in base b di a (cambio di base). Non è equivalente a log(a) - log(b)."
+                },
+                {
+                    "label": "D",
+                    "text": "log(a · b)",
+                    "soluzione": false,
+                    "feedback": "log(a·b) = log(a) + log(b), ovvero la SOMMA di logaritmi, non la differenza."
+                },
+                {
+                    "label": "E",
+                    "text": "a/b",
+                    "soluzione": false,
+                    "feedback": "log(a) - log(b) = log(a/b), non a/b. Il logaritmo della divisione, non la divisione stessa."
+                }
+            ]
+        },
+        {
+            "id": "M15",
+            "question": "Quanto vale la media aritmetica dei numeri 4, 7, 9, 12, 8?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "7",
+                    "soluzione": false,
+                    "feedback": "Somma = 4+7+9+12+8 = 40. Media = 40/5 = 8, non 7."
+                },
+                {
+                    "label": "B",
+                    "text": "8",
+                    "soluzione": true,
+                    "feedback": "Corretto! Somma = 4+7+9+12+8 = 40. Media = 40/5 = 8."
+                },
+                {
+                    "label": "C",
+                    "text": "9",
+                    "soluzione": false,
+                    "feedback": "9 è la mediana (il valore centrale dell'insieme ordinato: 4, 7, 8, 9, 12), non la media. Media = 40/5 = 8."
+                },
+                {
+                    "label": "D",
+                    "text": "8,5",
+                    "soluzione": false,
+                    "feedback": "La somma è 40 (pari), divisa per 5 dà esattamente 8, non 8,5."
+                },
+                {
+                    "label": "E",
+                    "text": "40",
+                    "soluzione": false,
+                    "feedback": "40 è la somma totale, non la media. La media si ottiene dividendo per il numero di elementi: 40/5 = 8."
+                }
+            ]
+        },
+        {
+            "id": "M16",
+            "question": "Il prodotto di due numeri è 48 e la loro somma è 14. Quali sono i due numeri?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "6 e 8",
+                    "soluzione": true,
+                    "feedback": "Corretto! 6+8 = 14 ✓ e 6·8 = 48 ✓. Si risolve con il sistema x+y=14, xy=48 → equazione t²-14t+48=0, da cui t=6 o t=8."
+                },
+                {
+                    "label": "B",
+                    "text": "4 e 12",
+                    "soluzione": false,
+                    "feedback": "4+12 = 16 ≠ 14. La somma non è soddisfatta."
+                },
+                {
+                    "label": "C",
+                    "text": "6 e 9",
+                    "soluzione": false,
+                    "feedback": "6·9 = 54 ≠ 48. Il prodotto non è soddisfatto."
+                },
+                {
+                    "label": "D",
+                    "text": "3 e 16",
+                    "soluzione": false,
+                    "feedback": "3+16 = 19 ≠ 14 e 3·16 = 48 ✓. Solo il prodotto è soddisfatto, non la somma."
+                },
+                {
+                    "label": "E",
+                    "text": "7 e 7",
+                    "soluzione": false,
+                    "feedback": "7·7 = 49 ≠ 48. Non soddisfa il prodotto."
+                }
+            ]
+        },
+        {
+            "id": "M17",
+            "question": "La parabola y = x² - 4x + 3 ha vertice in:",
+            "image": null,
+            "imageExplanation": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "(2, -1)",
+                    "soluzione": true,
+                    "feedback": "Corretto! x_V = -b/(2a) = 4/2 = 2. y_V = 4 - 8 + 3 = -1. Vertice in (2, -1)."
+                },
+                {
+                    "label": "B",
+                    "text": "(-2, -1)",
+                    "soluzione": false,
+                    "feedback": "x_V = -b/(2a) = -(-4)/(2·1) = 4/2 = +2, non -2."
+                },
+                {
+                    "label": "C",
+                    "text": "(2, 3)",
+                    "soluzione": false,
+                    "feedback": "L'ascissa del vertice è corretta (x=2), ma l'ordinata si calcola: y = 4-8+3 = -1, non 3."
+                },
+                {
+                    "label": "D",
+                    "text": "(0, 3)",
+                    "soluzione": false,
+                    "feedback": "(0,3) è il punto di intersezione con l'asse y (per x=0: y=3), non il vertice."
+                },
+                {
+                    "label": "E",
+                    "text": "(4, 3)",
+                    "soluzione": false,
+                    "feedback": "x_V = 4/2 = 2, non 4. Il vertice è in (2, -1)."
+                }
+            ]
+        },
+        {
+            "id": "M18",
+            "question": "In quanti modi si possono disporre 5 persone in fila (permutazioni)?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "25",
+                    "soluzione": false,
+                    "feedback": "25 = 5², non 5!. Le permutazioni di n elementi sono n! = 1·2·3·4·5 = 120."
+                },
+                {
+                    "label": "B",
+                    "text": "120",
+                    "soluzione": true,
+                    "feedback": "Corretto! P₅ = 5! = 5·4·3·2·1 = 120."
+                },
+                {
+                    "label": "C",
+                    "text": "60",
+                    "soluzione": false,
+                    "feedback": "60 = 5!/2. Il fattoriale di 5 è 120."
+                },
+                {
+                    "label": "D",
+                    "text": "20",
+                    "soluzione": false,
+                    "feedback": "Le permutazioni di 5 elementi sono 5! = 120, non 20."
+                },
+                {
+                    "label": "E",
+                    "text": "5",
+                    "soluzione": false,
+                    "feedback": "5 sarebbe il numero di scelte per il primo posto. Ma poi restano 4 scelte, poi 3, poi 2, poi 1: 5·4·3·2·1 = 120."
+                }
+            ]
+        },
+        {
+            "id": "M19",
+            "question": "Se f(x) = 2x² + 1, quanto vale f(-3)?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "-17",
+                    "soluzione": false,
+                    "feedback": "Attenzione al segno: (-3)² = +9, non -9. f(-3) = 2·9+1 = 19."
+                },
+                {
+                    "label": "B",
+                    "text": "17",
+                    "soluzione": false,
+                    "feedback": "Errore: f(-3) = 2·(-3)²+1 = 2·9+1 = 18+1 = 19, non 17."
+                },
+                {
+                    "label": "C",
+                    "text": "19",
+                    "soluzione": true,
+                    "feedback": "Corretto! f(-3) = 2·(-3)² + 1 = 2·9 + 1 = 18 + 1 = 19."
+                },
+                {
+                    "label": "D",
+                    "text": "-5",
+                    "soluzione": false,
+                    "feedback": "Potresti aver calcolato 2·(-3)+1 = -5, ma f è quadratica: f(-3) = 2(-3)²+1 = 19."
+                },
+                {
+                    "label": "E",
+                    "text": "7",
+                    "soluzione": false,
+                    "feedback": "7 = f(√3): √3² = 3, 2·3+1 = 7. Ma il punto richiesto è x = -3, non x = √3."
+                }
+            ]
+        },
+        {
+            "id": "M20",
+            "question": "Il cerchio di equazione x² + y² = 25 ha centro e raggio:",
+            "image": null,
+            "imageExplanation": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "Centro (0,0) e raggio 5",
+                    "soluzione": true,
+                    "feedback": "Corretto! L'equazione x² + y² = r² descrive un cerchio centrato nell'origine con raggio r = √25 = 5."
+                },
+                {
+                    "label": "B",
+                    "text": "Centro (0,0) e raggio 25",
+                    "soluzione": false,
+                    "feedback": "Il raggio è √25 = 5, non 25. Il 25 è r², non r."
+                },
+                {
+                    "label": "C",
+                    "text": "Centro (5,5) e raggio 5",
+                    "soluzione": false,
+                    "feedback": "Il centro è nell'origine (0,0). L'equazione x²+y²=25 non ha traslazioni."
+                },
+                {
+                    "label": "D",
+                    "text": "Centro (0,0) e raggio √5",
+                    "soluzione": false,
+                    "feedback": "√5 sarebbe corretto se l'equazione fosse x²+y²=5. Qui r² = 25, quindi r = 5."
+                },
+                {
+                    "label": "E",
+                    "text": "Centro (5,0) e raggio 5",
+                    "soluzione": false,
+                    "feedback": "Per un centro in (5,0) l'equazione sarebbe (x-5)²+y² = 25. L'equazione data ha centro nell'origine."
+                }
+            ]
+        },
+        {
+            "id": "M21",
+            "question": "Semplifica l'espressione: (a² · b³) / (a · b²)",
+            "image": null,
+            "imageExplanation": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "a · b",
+                    "soluzione": true,
+                    "feedback": "Corretto! Usando le proprietà delle potenze: a²/a = a^(2-1) = a e b³/b² = b^(3-2) = b. Risultato: a·b."
+                },
+                {
+                    "label": "B",
+                    "text": "a² · b",
+                    "soluzione": false,
+                    "feedback": "a²/a = a^(2-1) = a, non a². Risultato corretto: a·b."
+                },
+                {
+                    "label": "C",
+                    "text": "a · b²",
+                    "soluzione": false,
+                    "feedback": "b³/b² = b^(3-2) = b, non b². Risultato corretto: a·b."
+                },
+                {
+                    "label": "D",
+                    "text": "a³ · b⁵",
+                    "soluzione": false,
+                    "feedback": "Si dividono le potenze con stessa base sottraendo gli esponenti, non sommandoli."
+                },
+                {
+                    "label": "E",
+                    "text": "ab⁶",
+                    "soluzione": false,
+                    "feedback": "b³/b² = b¹ = b, non b⁶. Le operazioni sugli esponenti in divisione richiedono sottrazione."
+                }
+            ]
+        },
+        {
+            "id": "M22",
+            "question": "Una progressione aritmetica ha primo termine a₁ = 3 e ragione d = 4. Qual è il 10° termine?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "39",
+                    "soluzione": true,
+                    "feedback": "Corretto! Il termine n-esimo è aₙ = a₁ + (n-1)·d = 3 + 9·4 = 3 + 36 = 39."
+                },
+                {
+                    "label": "B",
+                    "text": "43",
+                    "soluzione": false,
+                    "feedback": "Potresti aver usato n invece di (n-1): 3 + 10·4 = 43. La formula corretta è a₁ + (n-1)·d = 3+36 = 39."
+                },
+                {
+                    "label": "C",
+                    "text": "40",
+                    "soluzione": false,
+                    "feedback": "Potrebbe essere un errore di calcolo. a₁₀ = 3 + (10-1)·4 = 3 + 36 = 39."
+                },
+                {
+                    "label": "D",
+                    "text": "36",
+                    "soluzione": false,
+                    "feedback": "36 = (10-1)·4 senza aggiungere il primo termine a₁ = 3. Risultato: 36+3 = 39."
+                },
+                {
+                    "label": "E",
+                    "text": "31",
+                    "soluzione": false,
+                    "feedback": "31 sarebbe il termine 8°: 3+(8-1)·4 = 31. Per il decimo: 3+36 = 39."
+                }
+            ]
+        },
+        {
+            "id": "M23",
+            "question": "Qual è l'area di un trapezio con basi 6 e 10 e altezza 4?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "32",
+                    "soluzione": true,
+                    "feedback": "Corretto! Area trapezio = (b₁+b₂)/2 · h = (6+10)/2 · 4 = 8 · 4 = 32."
+                },
+                {
+                    "label": "B",
+                    "text": "60",
+                    "soluzione": false,
+                    "feedback": "Potresti aver moltiplicato tutto senza dividere per 2. Area = (6+10)/2·4 = 32."
+                },
+                {
+                    "label": "C",
+                    "text": "24",
+                    "soluzione": false,
+                    "feedback": "24 = 6·4. Hai usato solo la base minore, non la media delle due basi."
+                },
+                {
+                    "label": "D",
+                    "text": "40",
+                    "soluzione": false,
+                    "feedback": "40 = 10·4. Hai usato solo la base maggiore. La formula richiede la semisomma delle basi."
+                },
+                {
+                    "label": "E",
+                    "text": "16",
+                    "soluzione": false,
+                    "feedback": "16 = (6+10)/2·2? Controllare: (6+10)/2 = 8, 8·4 = 32."
+                }
+            ]
+        },
+        {
+            "id": "M24",
+            "question": "Quale delle seguenti coppie NON rappresenta una funzione? (dove il primo elemento è x e il secondo y)",
+            "image": null,
+            "imageExplanation": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "{(1,2), (2,3), (3,4)}",
+                    "soluzione": false,
+                    "feedback": "È una funzione: ogni valore di x ha un unico valore di y."
+                },
+                {
+                    "label": "B",
+                    "text": "{(1,2), (2,2), (3,2)}",
+                    "soluzione": false,
+                    "feedback": "È una funzione (anche se non iniettiva): ogni x ha un unico y (tutti hanno y=2)."
+                },
+                {
+                    "label": "C",
+                    "text": "{(1,2), (1,3), (2,4)}",
+                    "soluzione": true,
+                    "feedback": "Corretto! Per x=1 ci sono due valori diversi di y (2 e 3). Questo viola la definizione di funzione (a ogni x deve corrispondere un unico y)."
+                },
+                {
+                    "label": "D",
+                    "text": "{(0,0), (1,1), (4,2)}",
+                    "soluzione": false,
+                    "feedback": "È una funzione: ogni x ha un unico y. Corrisponde a y=√x per x = 0,1,4."
+                },
+                {
+                    "label": "E",
+                    "text": "{(2,1), (3,1), (4,1)}",
+                    "soluzione": false,
+                    "feedback": "È una funzione: ogni x ha un unico y (tutti uguale a 1). Non è necessario che i valori di y siano diversi."
+                }
+            ]
+        },
+        {
+            "id": "M25",
+            "question": "Quanto vale l'angolo al centro che sottende un arco di 15 cm in un cerchio di raggio 5 cm?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "1 rad",
+                    "soluzione": false,
+                    "feedback": "θ = arco/raggio = 15/5 = 3 rad, non 1."
+                },
+                {
+                    "label": "B",
+                    "text": "3 rad",
+                    "soluzione": true,
+                    "feedback": "Corretto! La formula è θ (rad) = arco/raggio = 15/5 = 3 rad."
+                },
+                {
+                    "label": "C",
+                    "text": "75 rad",
+                    "soluzione": false,
+                    "feedback": "Non si moltiplicano arco e raggio. θ = arco/raggio = 15/5 = 3 rad."
+                },
+                {
+                    "label": "D",
+                    "text": "π rad",
+                    "soluzione": false,
+                    "feedback": "π ≈ 3,14 rad corrisponderebbe a un arco di 5π ≈ 15,7 cm. Qui l'arco è esattamente 15 cm, quindi θ = 3 rad."
+                },
+                {
+                    "label": "E",
+                    "text": "60°",
+                    "soluzione": false,
+                    "feedback": "60° = π/3 rad ≈ 1,05 rad. L'angolo richiesto è 3 rad ≈ 171,9°."
+                }
+            ]
+        },
+        {
+            "id": "M26",
+            "question": "Fattorizza il polinomio: x² - 9",
+            "image": null,
+            "imageExplanation": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "(x - 3)²",
+                    "soluzione": false,
+                    "feedback": "(x-3)² = x²-6x+9 ≠ x²-9. La differenza di quadrati NON è il quadrato di un binomio."
+                },
+                {
+                    "label": "B",
+                    "text": "(x + 3)(x - 3)",
+                    "soluzione": true,
+                    "feedback": "Corretto! x²-9 = x²-3² è una differenza di quadrati: a²-b² = (a+b)(a-b). Verifica: (x+3)(x-3) = x²-9."
+                },
+                {
+                    "label": "C",
+                    "text": "(x + 9)(x - 1)",
+                    "soluzione": false,
+                    "feedback": "(x+9)(x-1) = x²+8x-9 ≠ x²-9."
+                },
+                {
+                    "label": "D",
+                    "text": "x(x - 9)",
+                    "soluzione": false,
+                    "feedback": "x(x-9) = x²-9x ≠ x²-9."
+                },
+                {
+                    "label": "E",
+                    "text": "(x - 3)(x - 3)",
+                    "soluzione": false,
+                    "feedback": "(x-3)² = x²-6x+9 ≠ x²-9. Il termine di mezzo è sbagliato."
+                }
+            ]
+        },
+        {
+            "id": "M27",
+            "question": "Un rettangolo ha perimetro 36 cm e la lunghezza è il doppio della larghezza. Qual è l'area?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "72 cm²",
+                    "soluzione": true,
+                    "feedback": "Corretto! Detto l la larghezza, si ha 2(l + 2l) = 36 → 6l = 36 → l = 6. Lunghezza = 12. Area = 6·12 = 72 cm²."
+                },
+                {
+                    "label": "B",
+                    "text": "81 cm²",
+                    "soluzione": false,
+                    "feedback": "81 = 9². Non corrisponde. La larghezza è l=6, la lunghezza è 12. Area = 72 cm²."
+                },
+                {
+                    "label": "C",
+                    "text": "108 cm²",
+                    "soluzione": false,
+                    "feedback": "Con perimetro 36: l=6, L=12. Area = 72, non 108."
+                },
+                {
+                    "label": "D",
+                    "text": "36 cm²",
+                    "soluzione": false,
+                    "feedback": "36 è il perimetro, non l'area. L'area è base per altezza: 12·6 = 72 cm²."
+                },
+                {
+                    "label": "E",
+                    "text": "48 cm²",
+                    "soluzione": false,
+                    "feedback": "Con l=6 e L=12: area = 72, non 48."
+                }
+            ]
+        },
+        {
+            "id": "M28",
+            "question": "Qual è il valore di cos(0°)?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "0",
+                    "soluzione": false,
+                    "feedback": "cos(0°) = 1. È sin(0°) che vale 0."
+                },
+                {
+                    "label": "B",
+                    "text": "1/2",
+                    "soluzione": false,
+                    "feedback": "cos(60°) = 1/2, non cos(0°). Il coseno di 0° è 1."
+                },
+                {
+                    "label": "C",
+                    "text": "√2/2",
+                    "soluzione": false,
+                    "feedback": "√2/2 = cos(45°), non cos(0°)."
+                },
+                {
+                    "label": "D",
+                    "text": "√3/2",
+                    "soluzione": false,
+                    "feedback": "√3/2 = cos(30°), non cos(0°)."
+                },
+                {
+                    "label": "E",
+                    "text": "1",
+                    "soluzione": true,
+                    "feedback": "Corretto! cos(0°) = 1. Sulla circonferenza unitaria, il punto a 0° è (1, 0), quindi la coordinata x (coseno) è 1."
+                }
+            ]
+        },
+        {
+            "id": "M29",
+            "question": "Risolvi il sistema: { 2x + y = 7 ; x - y = 2 }",
+            "image": null,
+            "imageExplanation": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "x = 3, y = 1",
+                    "soluzione": true,
+                    "feedback": "Corretto! Sommando le equazioni: 3x = 9 → x = 3. Sostituendo: y = 7 - 2·3 = 1. Verifica: 3-1=2 ✓, 6+1=7 ✓."
+                },
+                {
+                    "label": "B",
+                    "text": "x = 2, y = 3",
+                    "soluzione": false,
+                    "feedback": "Verifica: 2·2+3=7 ✓, ma 2-3=-1 ≠ 2. La seconda equazione non è soddisfatta."
+                },
+                {
+                    "label": "C",
+                    "text": "x = 4, y = -1",
+                    "soluzione": false,
+                    "feedback": "Verifica: 2·4+(-1) = 7 ✓, ma 4-(-1) = 5 ≠ 2."
+                },
+                {
+                    "label": "D",
+                    "text": "x = 3, y = 2",
+                    "soluzione": false,
+                    "feedback": "Verifica: x-y = 3-2 = 1 ≠ 2. La seconda equazione non è soddisfatta."
+                },
+                {
+                    "label": "E",
+                    "text": "x = 1, y = 5",
+                    "soluzione": false,
+                    "feedback": "Verifica: 2·1+5=7 ✓, ma 1-5=-4 ≠ 2."
+                }
+            ]
+        },
+        {
+            "id": "M30",
+            "question": "Qual è il numero di combinazioni C(5,2)?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "10",
+                    "soluzione": true,
+                    "feedback": "Corretto! C(5,2) = 5!/(2!·3!) = (5·4)/(2·1) = 10."
+                },
+                {
+                    "label": "B",
+                    "text": "20",
+                    "soluzione": false,
+                    "feedback": "20 è il numero di disposizioni D(5,2) = 5·4 = 20. Le combinazioni dividono per 2! per eliminare l'ordine: 20/2 = 10."
+                },
+                {
+                    "label": "C",
+                    "text": "60",
+                    "soluzione": false,
+                    "feedback": "60 = C(5,3)·2 non è la formula corretta. C(5,2) = 10."
+                },
+                {
+                    "label": "D",
+                    "text": "5",
+                    "soluzione": false,
+                    "feedback": "C(5,1) = 5. Ma C(5,2) = 5!/(2!3!) = 10."
+                },
+                {
+                    "label": "E",
+                    "text": "120",
+                    "soluzione": false,
+                    "feedback": "120 = 5! = P₅ (permutazioni). Le combinazioni C(5,2) = 5!/(2!·3!) = 10."
+                }
+            ]
+        }
+    ]
+}

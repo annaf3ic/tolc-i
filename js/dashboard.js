@@ -50,10 +50,10 @@ function renderDashboard() {
 
     // Card materie
     const subjects = [
-        { id: 'logica', name: 'Logica', icon: '🧠', file: 'logica.html' },
-        { id: 'matematica1', name: 'Matematica 1', icon: '📐', file: 'matematica1.html' },
-        { id: 'matematica2', name: 'Matematica 2', icon: '📏', file: 'matematica2.html' },
-        { id: 'scienze', name: 'Scienze', icon: '🔬', file: 'scienze.html' }
+        { id: 'logica', name: 'Logica (tutor)', icon: '🧠', file: 'logica-tutor.html' },
+        { id: 'matematica1', name: 'Matematica 1 (tutor)', icon: '📐', file: 'matematica1-tutor.html' },
+        { id: 'matematica2', name: 'Matematica 2 (tutor)', icon: '📏', file: 'matematica2-tutor.html' },
+        { id: 'scienze', name: 'Scienze (tutor)', icon: '🔬', file: 'scienze-tutor.html' }
     ];
 
     const cardsEl = $('subject-cards');

@@ -1,0 +1,403 @@
+{
+    "_note": "Domande estratte da inggiovannigaleone.it — Test Facoltà Ingegneria: Fisica",
+    "_format": {
+        "id": "Identificatore univoco",
+        "sourcePage": "https://www.inggiovannigaleone.it/index.php/test-altre-facolta/52-test-facolta-ingegneria/52-test-facolta-ingegneria-fisica",
+        "question": "Testo della domanda",
+        "image": "null",
+        "category": "fisica",
+        "choices": "Array di 5 scelte (A-E). soluzione:true sulla risposta corretta."
+    },
+    "questions": [
+        {
+            "id": "GF01",
+            "question": "La differenza di potenziale tra le armature di un condensatore da 1 mF è di 200 V. Quanto vale la carica del condensatore?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "fisica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "500 mC",
+                    "soluzione": false,
+                    "feedback": "Q = C·V = 10⁻³ F · 200 V = 0,2 C = 200 mC. Non 500 mC."
+                },
+                {
+                    "label": "B",
+                    "text": "200.000 C",
+                    "soluzione": false,
+                    "feedback": "Errore di conversione: 1 mF = 10⁻³ F, non 1000 F. Q = 10⁻³ · 200 = 0,2 C = 200 mC."
+                },
+                {
+                    "label": "C",
+                    "text": "200 mC",
+                    "soluzione": true,
+                    "feedback": "Corretto! La formula è Q = C·V. Con C = 1 mF = 10⁻³ F e V = 200 V: Q = 10⁻³ · 200 = 0,2 C = 200 mC."
+                },
+                {
+                    "label": "D",
+                    "text": "20 C",
+                    "soluzione": false,
+                    "feedback": "20 C sarebbe corretto con C = 0,1 F. Qui C = 1 mF = 10⁻³ F: Q = 10⁻³ · 200 = 0,2 C = 200 mC."
+                },
+                {
+                    "label": "E",
+                    "text": "5 mC",
+                    "soluzione": false,
+                    "feedback": "5 mC = 0,005 C. Potresti aver diviso invece di moltiplicare: V/C = 200/10⁻³ ≠ Q. La formula è Q = C·V = 0,2 C."
+                }
+            ]
+        },
+        {
+            "id": "GF02",
+            "question": "Qual è l'unità di misura della resistività elettrica nel Sistema Internazionale?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "fisica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "ohm/m²",
+                    "soluzione": false,
+                    "feedback": "Dalla formula R = ρ·(L/S) si ricava ρ = R·(S/L) = Ω·m²/m = Ω·m. Non ohm/m²."
+                },
+                {
+                    "label": "B",
+                    "text": "ohm·m²",
+                    "soluzione": false,
+                    "feedback": "ρ = R·S/L = Ω · m² / m = Ω·m. Il metro al numeratore e al denominatore si semplificano parzialmente: rimane Ω·m, non Ω·m²."
+                },
+                {
+                    "label": "C",
+                    "text": "ohm/m",
+                    "soluzione": false,
+                    "feedback": "ρ = R·S/L. Le dimensioni di S sono m² e quelle di L sono m. Quindi: [ρ] = Ω · m²/m = Ω·m. Non ohm/m."
+                },
+                {
+                    "label": "D",
+                    "text": "ohm·m",
+                    "soluzione": true,
+                    "feedback": "Corretto! Dalla formula R = ρ·L/S si ricava ρ = R·S/L. Le unità sono: [ρ] = Ω · m² / m = Ω·m."
+                },
+                {
+                    "label": "E",
+                    "text": "ohm·m³",
+                    "soluzione": false,
+                    "feedback": "ρ = R·S/L = Ω·m²/m = Ω·m. Il volume m³ non compare nella formula dimensionale della resistività."
+                }
+            ]
+        },
+        {
+            "id": "GF03",
+            "question": "Una macchina termica di Carnot lavora tra due termostati a 600 K e 200 K. Qual è il rendimento massimo della macchina?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "fisica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "1",
+                    "soluzione": false,
+                    "feedback": "Il rendimento 1 (100%) sarebbe possibile solo se la sorgente fredda fosse a 0 K (zero assoluto), irraggiungibile per il terzo principio. η = 1 - 200/600 = 2/3."
+                },
+                {
+                    "label": "B",
+                    "text": "2/3",
+                    "soluzione": true,
+                    "feedback": "Corretto! Il rendimento di Carnot è η = 1 - T_fredda/T_calda = 1 - 200/600 = 1 - 1/3 = 2/3 ≈ 66,7%."
+                },
+                {
+                    "label": "C",
+                    "text": "1/3",
+                    "soluzione": false,
+                    "feedback": "1/3 = T_fredda/T_calda = 200/600. Questo è il termine che va SOTTRATTO a 1, non il rendimento: η = 1 - 1/3 = 2/3."
+                },
+                {
+                    "label": "D",
+                    "text": "1/4",
+                    "soluzione": false,
+                    "feedback": "1/4 non corrisponde a nessun calcolo corretto. η = 1 - T₂/T₁ = 1 - 200/600 = 2/3."
+                },
+                {
+                    "label": "E",
+                    "text": "3/4",
+                    "soluzione": false,
+                    "feedback": "3/4 sarebbe η = 1 - T₂/T₁ con T₂/T₁ = 1/4, cioè T₂ = T₁/4 = 150 K. Ma qui T₂ = 200 K e T₁ = 600 K: η = 2/3."
+                }
+            ]
+        },
+        {
+            "id": "GF04",
+            "question": "Un autotreno percorre una curva in autostrada e la velocità indicata dal tachimetro rimane costante. L'accelerazione del mezzo:",
+            "image": null,
+            "imageExplanation": null,
+            "category": "fisica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "È proporzionale al quadrato della velocità",
+                    "soluzione": true,
+                    "feedback": "Corretto! In moto circolare uniforme l'accelerazione centripeta è a = v²/r. A modulo di v costante e raggio r fisso, a è proporzionale a v². Il vettore velocità cambia direzione costantemente, quindi c'è accelerazione centripeta."
+                },
+                {
+                    "label": "B",
+                    "text": "È nulla",
+                    "soluzione": false,
+                    "feedback": "L'accelerazione nulla implicherebbe moto rettilineo uniforme (primo principio della dinamica). In curva, anche a velocità costante in modulo, la direzione del vettore velocità cambia → accelerazione centripeta ≠ 0."
+                },
+                {
+                    "label": "C",
+                    "text": "È diretta verso l'esterno della curva",
+                    "soluzione": false,
+                    "feedback": "L'accelerazione centripeta è diretta verso il CENTRO della curva (verso l'interno), non verso l'esterno. La forza centrifuga (verso l'esterno) è una forza apparente nel sistema di riferimento non inerziale."
+                },
+                {
+                    "label": "D",
+                    "text": "È proporzionale al raggio della curva",
+                    "soluzione": false,
+                    "feedback": "È inversamente proporzionale al raggio: a = v²/r. All'aumentare del raggio l'accelerazione diminuisce (curva più morbida)."
+                },
+                {
+                    "label": "E",
+                    "text": "È tangente alla traiettoria seguita",
+                    "soluzione": false,
+                    "feedback": "In moto circolare uniforme l'accelerazione è centripeta (perpendicolare alla velocità, diretta verso il centro). L'accelerazione tangenziale è nulla perché il modulo della velocità è costante."
+                }
+            ]
+        },
+        {
+            "id": "GF05",
+            "question": "Le linee di forza del campo elettrostatico:",
+            "image": null,
+            "imageExplanation": null,
+            "category": "fisica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "Non possono essere linee chiuse",
+                    "soluzione": true,
+                    "feedback": "Corretto! Il campo elettrostatico è conservativo: la sua circuitazione lungo qualsiasi percorso chiuso è zero. Se esistessero linee di campo chiuse, la circuitazione sarebbe non nulla — contraddizione. Le linee di forza partono da cariche positive e terminano su cariche negative (o all'infinito)."
+                },
+                {
+                    "label": "B",
+                    "text": "Sono sempre linee chiuse",
+                    "soluzione": false,
+                    "feedback": "Falso. Le linee di campo magnetico sono chiuse (campo solenoidale), ma quelle del campo elettrostatico no: partono da cariche positive e terminano su cariche negative."
+                },
+                {
+                    "label": "C",
+                    "text": "Sono sempre linee rette",
+                    "soluzione": false,
+                    "feedback": "Non necessariamente. Le linee di forza sono rette solo per cariche puntiformi isolate (o in casi altamente simmetrici). In presenza di più cariche, le linee sono curve."
+                },
+                {
+                    "label": "D",
+                    "text": "Si intersecano nei punti a potenziale massimo",
+                    "soluzione": false,
+                    "feedback": "Le linee di campo NON si intersecano mai: in ogni punto dello spazio esiste una sola direzione del campo. Se si intersecassero, il campo avrebbe due direzioni nello stesso punto — impossibile."
+                },
+                {
+                    "label": "E",
+                    "text": "Possono avere una forma qualsiasi",
+                    "soluzione": false,
+                    "feedback": "Le linee di campo hanno vincoli precisi: non si intersecano, non possono essere chiuse, e devono essere perpendicolari alle superfici equipotenziali. Non possono avere una forma qualsiasi."
+                }
+            ]
+        },
+        {
+            "id": "GF06",
+            "question": "Tre lampadine con resistenze R₁ < R₂ < R₃ vengono alimentate in parallelo dalla stessa linea. Qual è la relazione tra le potenze dissipate?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "fisica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "P₁ < P₂ e P₂ > P₃",
+                    "soluzione": false,
+                    "feedback": "In parallelo la tensione V è uguale per tutte. P = V²/R: la potenza è inversamente proporzionale a R. Poiché R₁ < R₂ < R₃, si ha P₁ > P₂ > P₃."
+                },
+                {
+                    "label": "B",
+                    "text": "P₁ = P₂ = P₃",
+                    "soluzione": false,
+                    "feedback": "Le potenze uguali si avrebbero con stessa resistenza (o in serie con stessa corrente). In parallelo con V uguale: P = V²/R → resistenze diverse danno potenze diverse."
+                },
+                {
+                    "label": "C",
+                    "text": "P₁ > P₃ e P₂ < P₃",
+                    "soluzione": false,
+                    "feedback": "La seconda parte è sbagliata. P = V²/R: dato che R₂ < R₃, si ha P₂ > P₃, non P₂ < P₃."
+                },
+                {
+                    "label": "D",
+                    "text": "P₁ > P₂ > P₃",
+                    "soluzione": true,
+                    "feedback": "Corretto! In parallelo la tensione è la stessa per tutte. La potenza dissipata è P = V²/R. Poiché R₁ < R₂ < R₃, la resistenza minore dissipa più potenza: P₁ > P₂ > P₃."
+                },
+                {
+                    "label": "E",
+                    "text": "P₁ < P₂ < P₃",
+                    "soluzione": false,
+                    "feedback": "Questa sarebbe la relazione se fossero in serie (stessa corrente I, P = I²R). In parallelo (stessa tensione V, P = V²/R) vale l'inverso: P₁ > P₂ > P₃."
+                }
+            ]
+        },
+        {
+            "id": "GF07",
+            "question": "Una camera d'aria di volume V contiene aria a 180 kPa. Viene compressa a temperatura costante fino al volume 3/5 V. Quanto vale la pressione finale (gas perfetto)?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "fisica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "500 kPa",
+                    "soluzione": false,
+                    "feedback": "Per la legge di Boyle: p₁V₁ = p₂V₂ → 180·V = p₂·(3/5)V → p₂ = 180·5/3 = 300 kPa. Non 500 kPa."
+                },
+                {
+                    "label": "B",
+                    "text": "160 kPa",
+                    "soluzione": false,
+                    "feedback": "160 kPa implicherebbe un aumento di volume, non una compressione. Comprimendo il gas la pressione deve aumentare: p₂ = 300 kPa > 180 kPa."
+                },
+                {
+                    "label": "C",
+                    "text": "300 kPa",
+                    "soluzione": true,
+                    "feedback": "Corretto! Processo isotermo, legge di Boyle-Mariotte: p₁V₁ = p₂V₂. Quindi 180·V = p₂·(3/5)V → p₂ = 180·(5/3) = 300 kPa."
+                },
+                {
+                    "label": "D",
+                    "text": "360 kPa",
+                    "soluzione": false,
+                    "feedback": "360 = 180·2. Sarebbe corretto se il volume si dimezzasse (V→V/2). Qui il volume diventa 3/5 V: p₂ = 180·(5/3) = 300 kPa."
+                },
+                {
+                    "label": "E",
+                    "text": "108 kPa",
+                    "soluzione": false,
+                    "feedback": "108 = 180·(3/5). Sembra che tu abbia moltiplicato la pressione per il rapporto dei volumi invece di dividerla: comprimendo il gas, la pressione AUMENTA. p₂ = 180·(5/3) = 300 kPa."
+                }
+            ]
+        },
+        {
+            "id": "GF08",
+            "question": "Un contenitore rigido contiene aria a pressione atmosferica e a 27 °C. Viene scaldato finché la pressione raddoppia. Quale temperatura ha raggiunto l'aria? (gas perfetto, volume costante)",
+            "image": null,
+            "imageExplanation": null,
+            "category": "fisica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "216 °C",
+                    "soluzione": false,
+                    "feedback": "A volume costante vale la Legge di Gay-Lussac: p/T = costante, con T in Kelvin. T₁ = 300 K, p₂ = 2p₁ → T₂ = 600 K = 327 °C. Non 216 °C."
+                },
+                {
+                    "label": "B",
+                    "text": "54 °C",
+                    "soluzione": false,
+                    "feedback": "⚠️ Attenzione: questa risposta è frutto di un errore nel calcolo originale (uso dei °C al posto dei Kelvin). T deve essere in Kelvin: T₁ = 27+273 = 300 K. Se p raddoppia, T₂ = 2·300 = 600 K = 327 °C. La risposta corretta è 327 °C."
+                },
+                {
+                    "label": "C",
+                    "text": "573 °C",
+                    "soluzione": false,
+                    "feedback": "573 °C = 846 K. Questo sarebbe T₂ se T₁ fosse 423 K (150°C). Con T₁ = 300 K e pressione raddoppiata: T₂ = 600 K = 327 °C."
+                },
+                {
+                    "label": "D",
+                    "text": "327 °C",
+                    "soluzione": true,
+                    "feedback": "Corretto! A volume costante: p₁/T₁ = p₂/T₂. T₁ = 27+273 = 300 K, p₂ = 2p₁. Quindi T₂ = T₁·(p₂/p₁) = 300·2 = 600 K = 327 °C. Nota: nel sito originale è indicata 54°C, ma è un errore (uso dei °C invece dei Kelvin)."
+                },
+                {
+                    "label": "E",
+                    "text": "Non si può rispondere perché non è noto il volume iniziale",
+                    "soluzione": false,
+                    "feedback": "Il volume non è necessario: a volume costante vale p/T = cost. Il volume si cancella nell'equazione di stato dei gas perfetti. T₂ = T₁·(p₂/p₁) = 300·2 = 600 K = 327 °C."
+                }
+            ]
+        },
+        {
+            "id": "GF09",
+            "question": "L'impulso di una forza costante può essere calcolato come:",
+            "image": null,
+            "imageExplanation": null,
+            "category": "fisica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "Il prodotto tra la forza e l'intervallo di tempo durante il quale essa agisce",
+                    "soluzione": true,
+                    "feedback": "Corretto! L'impulso è definito come I = F·Δt. Dal secondo principio: F = m·a = m·Δv/Δt → F·Δt = m·Δv = variazione della quantità di moto."
+                },
+                {
+                    "label": "B",
+                    "text": "Il prodotto tra la forza e lo spazio percorso",
+                    "soluzione": false,
+                    "feedback": "F·s è il LAVORO (in joule), non l'impulso. L'impulso si calcola come F·Δt (in N·s = kg·m/s)."
+                },
+                {
+                    "label": "C",
+                    "text": "Il rapporto tra la forza e lo spazio percorso",
+                    "soluzione": false,
+                    "feedback": "F/s non ha un nome fisico definito di uso comune. L'impulso è F·Δt, pari alla variazione della quantità di moto m·Δv."
+                },
+                {
+                    "label": "D",
+                    "text": "Il prodotto della forza per la velocità",
+                    "soluzione": false,
+                    "feedback": "F·v è la POTENZA (in watt), non l'impulso. L'impulso è I = F·Δt = Δ(mv)."
+                },
+                {
+                    "label": "E",
+                    "text": "Il rapporto tra la forza e l'intervallo di tempo durante il quale essa agisce",
+                    "soluzione": false,
+                    "feedback": "F/Δt è la derivata della forza nel tempo (variazione temporale della forza), non l'impulso. L'impulso è il PRODOTTO F·Δt."
+                }
+            ]
+        },
+        {
+            "id": "GF10",
+            "question": "Due buste contengono ciascuna 15 mele. Se 10 mele vengono trasferite da una busta all'altra, la forza di attrazione gravitazionale tra le due buste:",
+            "image": null,
+            "imageExplanation": null,
+            "category": "fisica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "Aumenta, divenendo i 5/3 di quella prima del trasferimento",
+                    "soluzione": false,
+                    "feedback": "F₁ = G·15·15/d², F₂ = G·25·5/d². Rapporto F₂/F₁ = (125)/(225) = 5/9 < 1. La forza diminuisce, non aumenta."
+                },
+                {
+                    "label": "B",
+                    "text": "Si riduce ai 5/9 di quella prima del trasferimento",
+                    "soluzione": true,
+                    "feedback": "Corretto! Legge di gravitazione universale: F = G·m₁·m₂/d². Prima: F₁ ∝ 15·15 = 225. Dopo (buste con 25 e 5 mele): F₂ ∝ 25·5 = 125. Rapporto: F₂/F₁ = 125/225 = 5/9."
+                },
+                {
+                    "label": "C",
+                    "text": "Rimane invariata",
+                    "soluzione": false,
+                    "feedback": "La forza gravitazionale dipende dal PRODOTTO delle masse. Prima: 15·15=225; dopo: 25·5=125. Il prodotto cambia, quindi la forza cambia."
+                },
+                {
+                    "label": "D",
+                    "text": "Aumenta, divenendo i 3/2 di quella prima del trasferimento",
+                    "soluzione": false,
+                    "feedback": "Per aumentare, il prodotto m₁·m₂ dovrebbe crescere. Ma 25·5=125 < 15·15=225. La forza diminuisce: F₂/F₁ = 125/225 = 5/9."
+                },
+                {
+                    "label": "E",
+                    "text": "Si riduce ai 2/5 di quella prima del trasferimento",
+                    "soluzione": false,
+                    "feedback": "2/5 = 0,4 ≠ 5/9 ≈ 0,556. Il rapporto corretto è F₂/F₁ = (25·5)/(15·15) = 125/225 = 5/9."
+                }
+            ]
+        }
+    ]
+}

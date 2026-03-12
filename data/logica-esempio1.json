@@ -1,0 +1,789 @@
+{
+    "_note": "Domande originali per l'allenamento al TOLC-I — Logica",
+    "_format": {
+        "id": "Identificatore univoco della domanda",
+        "category": "logica"
+    },
+    "questions": [
+        {
+            "id": "L01",
+            "question": "Tutti i medici sono laureati. Alcuni laureati sono professori. Da queste premesse si può dedurre che:",
+            "image": null,
+            "imageExplanation": null,
+            "category": "logica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "Tutti i medici sono professori",
+                    "soluzione": false,
+                    "feedback": "Non si può dedurre. Il fatto che alcuni laureati siano professori non garantisce che quei laureati siano anche medici."
+                },
+                {
+                    "label": "B",
+                    "text": "Nessun medico è professore",
+                    "soluzione": false,
+                    "feedback": "Non è deducibile: le due categorie potrebbero sovrapporsi parzialmente. Non possiamo però affermarlo con certezza."
+                },
+                {
+                    "label": "C",
+                    "text": "Alcuni medici potrebbero essere professori",
+                    "soluzione": true,
+                    "feedback": "Corretto! È logicamente possibile che alcuni dei laureati che sono professori siano anche medici. Non è certo, ma è compatibile con le premesse."
+                },
+                {
+                    "label": "D",
+                    "text": "Tutti i professori sono medici",
+                    "soluzione": false,
+                    "feedback": "Non è deducibile. I professori sono un sottoinsieme dei laureati, non necessariamente dei medici."
+                },
+                {
+                    "label": "E",
+                    "text": "Nessun professore è laureato",
+                    "soluzione": false,
+                    "feedback": "Contraddice la seconda premessa: alcuni laureati SONO professori."
+                }
+            ]
+        },
+        {
+            "id": "L02",
+            "question": "Se piove, allora Mario porta l'ombrello. Mario non porta l'ombrello. Cosa si può concludere?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "logica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "Non piove",
+                    "soluzione": true,
+                    "feedback": "Corretto! Questa è la regola del modus tollens: Se P → Q e ¬Q, allora ¬P. Se piove → ombrello. Non ombrello → non piove."
+                },
+                {
+                    "label": "B",
+                    "text": "Piove",
+                    "soluzione": false,
+                    "feedback": "Se piovesse, Mario porterebbe l'ombrello. Ma sappiamo che Mario non lo porta. Quindi non può piovere."
+                },
+                {
+                    "label": "C",
+                    "text": "Mario ha dimenticato l'ombrello",
+                    "soluzione": false,
+                    "feedback": "Questo è possibile nella realtà, ma non è una conclusione logicamente deducibile dalle premesse date."
+                },
+                {
+                    "label": "D",
+                    "text": "Se non piove, Mario porta comunque l'ombrello",
+                    "soluzione": false,
+                    "feedback": "Non è deducibile. La premessa dice solo cosa accade SE piove, non cosa accade se non piove."
+                },
+                {
+                    "label": "E",
+                    "text": "Non si può concludere nulla",
+                    "soluzione": false,
+                    "feedback": "Si può concludere! Il modus tollens è una forma di inferenza valida: ¬Q → ¬P quando P→Q."
+                }
+            ]
+        },
+        {
+            "id": "L03",
+            "question": "In una gara, Luca ha finito prima di Marco, Marco prima di Giulia, e Giulia prima di Anna. Chi è arrivato ultimo?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "logica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "Luca",
+                    "soluzione": false,
+                    "feedback": "Luca è arrivato primo! Ordine: Luca > Marco > Giulia > Anna."
+                },
+                {
+                    "label": "B",
+                    "text": "Marco",
+                    "soluzione": false,
+                    "feedback": "Marco è arrivato secondo. Ordine: Luca, Marco, Giulia, Anna."
+                },
+                {
+                    "label": "C",
+                    "text": "Giulia",
+                    "soluzione": false,
+                    "feedback": "Giulia è arrivata terza. Anna, che è dopo Giulia, è l'ultima."
+                },
+                {
+                    "label": "D",
+                    "text": "Anna",
+                    "soluzione": true,
+                    "feedback": "Corretto! La catena è: Luca > Marco > Giulia > Anna. Anna è l'ultima."
+                },
+                {
+                    "label": "E",
+                    "text": "Non si può determinare",
+                    "soluzione": false,
+                    "feedback": "L'ordine è completamente determinato: Luca (1°), Marco (2°), Giulia (3°), Anna (4°)."
+                }
+            ]
+        },
+        {
+            "id": "L04",
+            "question": "Tutti gli A sono B. Nessun B è C. Quindi:",
+            "image": null,
+            "imageExplanation": null,
+            "category": "logica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "Nessun A è C",
+                    "soluzione": true,
+                    "feedback": "Corretto! Se tutti gli A sono B, e nessun B è C, allora nessun A può essere C (sillogismo valido)."
+                },
+                {
+                    "label": "B",
+                    "text": "Tutti i C sono A",
+                    "soluzione": false,
+                    "feedback": "Non è deducibile. C potrebbe avere elementi che non sono né A né B."
+                },
+                {
+                    "label": "C",
+                    "text": "Alcuni A sono C",
+                    "soluzione": false,
+                    "feedback": "Contraddice la conclusione corretta. Poiché tutti gli A sono B e nessun B è C, nessun A può essere C."
+                },
+                {
+                    "label": "D",
+                    "text": "Alcuni C sono B",
+                    "soluzione": false,
+                    "feedback": "La premessa dice nessun B è C, il che implica anche nessun C è B."
+                },
+                {
+                    "label": "E",
+                    "text": "Nessun C è A",
+                    "soluzione": false,
+                    "feedback": "Anche questa è vera come conseguenza, ma 'Nessun A è C' è la deduzione diretta e più precisa."
+                }
+            ]
+        },
+        {
+            "id": "L05",
+            "question": "In una sequenza: 2, 4, 8, 16, ___, quale numero viene dopo?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "logica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "18",
+                    "soluzione": false,
+                    "feedback": "18 sarebbe +2, ma la sequenza non è additiva. Ogni termine è il doppio del precedente: 16×2 = 32."
+                },
+                {
+                    "label": "B",
+                    "text": "24",
+                    "soluzione": false,
+                    "feedback": "La differenza tra i termini non è costante (+2, +4, +8...). Il pattern è moltiplicativo (×2): il termine successivo è 32."
+                },
+                {
+                    "label": "C",
+                    "text": "32",
+                    "soluzione": true,
+                    "feedback": "Corretto! La sequenza raddoppia ogni volta (×2): 2, 4, 8, 16, 32. (Potenze di 2: 2¹, 2², 2³, 2⁴, 2⁵)."
+                },
+                {
+                    "label": "D",
+                    "text": "20",
+                    "soluzione": false,
+                    "feedback": "La sequenza non è aritmetica (+4). Il rapporto è 2: ogni termine è il doppio del precedente. 16×2 = 32."
+                },
+                {
+                    "label": "E",
+                    "text": "64",
+                    "soluzione": false,
+                    "feedback": "64 = 2⁶ sarebbe il sesto termine, non il quinto. Il termine dopo 16 è 32 = 2⁵."
+                }
+            ]
+        },
+        {
+            "id": "L06",
+            "question": "In un negozio, ogni prodotto in vetrina costa più di 10€. Il prodotto X costa 8€. Cosa si può dedurre?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "logica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "Il prodotto X non è in vetrina",
+                    "soluzione": true,
+                    "feedback": "Corretto! Contrapposizione: se tutti i prodotti in vetrina costano >10€, e X costa 8€ (≤10€), allora X non può essere in vetrina."
+                },
+                {
+                    "label": "B",
+                    "text": "Il prodotto X è di scarsa qualità",
+                    "soluzione": false,
+                    "feedback": "Il prezzo non implica la qualità. Nulla nelle premesse parla di qualità."
+                },
+                {
+                    "label": "C",
+                    "text": "Il prodotto X è in vetrina",
+                    "soluzione": false,
+                    "feedback": "Se fosse in vetrina, costerebbe più di 10€. Ma costa 8€, quindi non può essere in vetrina."
+                },
+                {
+                    "label": "D",
+                    "text": "Tutti i prodotti non in vetrina costano meno di 10€",
+                    "soluzione": false,
+                    "feedback": "Non si può dedurre. La premessa parla solo dei prodotti IN vetrina, non di quelli fuori."
+                },
+                {
+                    "label": "E",
+                    "text": "Il negozio ha prodotti a prezzi alti",
+                    "soluzione": false,
+                    "feedback": "Questa è un'inferenza vaga e non rigorosa. La deduzione logica corretta è che X non è in vetrina."
+                }
+            ]
+        },
+        {
+            "id": "L07",
+            "question": "La negazione dell'affermazione 'Tutti gli studenti hanno superato l'esame' è:",
+            "image": null,
+            "imageExplanation": null,
+            "category": "logica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "Nessuno studente ha superato l'esame",
+                    "soluzione": false,
+                    "feedback": "Questa è una negazione troppo forte. La negazione di 'tutti' è 'almeno uno non', non 'nessuno'."
+                },
+                {
+                    "label": "B",
+                    "text": "Almeno uno studente non ha superato l'esame",
+                    "soluzione": true,
+                    "feedback": "Corretto! ¬(∀x P(x)) = ∃x ¬P(x). La negazione di 'tutti hanno superato' è 'esiste almeno uno che non ha superato'."
+                },
+                {
+                    "label": "C",
+                    "text": "Tutti gli studenti non hanno superato l'esame",
+                    "soluzione": false,
+                    "feedback": "Questa è equivalente a 'nessuno ha superato', che è più forte della semplice negazione."
+                },
+                {
+                    "label": "D",
+                    "text": "Alcuni studenti non hanno superato e alcuni sì",
+                    "soluzione": false,
+                    "feedback": "Questa sarebbe una situazione possibile, ma non è la negazione logica dell'affermazione originale."
+                },
+                {
+                    "label": "E",
+                    "text": "La maggior parte degli studenti non ha superato",
+                    "soluzione": false,
+                    "feedback": "La negazione di 'tutti' richiede solo l'esistenza di UN'eccezione, non necessariamente la maggioranza."
+                }
+            ]
+        },
+        {
+            "id": "L08",
+            "question": "Andrea è più alto di Beatrice. Carlo è più basso di Beatrice. Daniele è alto quanto Andrea. Chi è il più basso?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "logica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "Andrea",
+                    "soluzione": false,
+                    "feedback": "Andrea è tra i più alti: Andrea = Daniele > Beatrice > Carlo."
+                },
+                {
+                    "label": "B",
+                    "text": "Beatrice",
+                    "soluzione": false,
+                    "feedback": "Beatrice è più alta di Carlo: Daniele = Andrea > Beatrice > Carlo."
+                },
+                {
+                    "label": "C",
+                    "text": "Carlo",
+                    "soluzione": true,
+                    "feedback": "Corretto! Ordine: Daniele = Andrea > Beatrice > Carlo. Carlo è il più basso."
+                },
+                {
+                    "label": "D",
+                    "text": "Daniele",
+                    "soluzione": false,
+                    "feedback": "Daniele è alto quanto Andrea, quindi tra i più alti, non il più basso."
+                },
+                {
+                    "label": "E",
+                    "text": "Non si può determinare",
+                    "soluzione": false,
+                    "feedback": "L'ordine è completamente determinato: Andrea=Daniele > Beatrice > Carlo."
+                }
+            ]
+        },
+        {
+            "id": "L09",
+            "question": "In una sequenza: A, C, E, G, ___, quale lettera viene dopo?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "logica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "H",
+                    "soluzione": false,
+                    "feedback": "La sequenza salta una lettera: A(1), C(3), E(5), G(7), I(9). Il passo è +2 posizioni nell'alfabeto."
+                },
+                {
+                    "label": "B",
+                    "text": "I",
+                    "soluzione": true,
+                    "feedback": "Corretto! La sequenza è formata dalle lettere in posizione dispari: A(1), C(3), E(5), G(7), I(9)."
+                },
+                {
+                    "label": "C",
+                    "text": "J",
+                    "soluzione": false,
+                    "feedback": "J è in posizione 10 (pari). La sequenza usa posizioni dispari: I(9) viene dopo G(7)."
+                },
+                {
+                    "label": "D",
+                    "text": "K",
+                    "soluzione": false,
+                    "feedback": "K è in posizione 11. La successiva nella sequenza è I(9), non K(11)."
+                },
+                {
+                    "label": "E",
+                    "text": "F",
+                    "soluzione": false,
+                    "feedback": "F viene prima di G, non dopo. La lettera successiva a G nella sequenza (+2) è I."
+                }
+            ]
+        },
+        {
+            "id": "L10",
+            "question": "Se affermi 'Non è vero che Mario studia e lavora', questo equivale a dire:",
+            "image": null,
+            "imageExplanation": null,
+            "category": "logica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "Mario non studia e non lavora",
+                    "soluzione": false,
+                    "feedback": "Questa è la negazione di 'Mario studia o lavora', non di 'studia e lavora'. Confonde De Morgan."
+                },
+                {
+                    "label": "B",
+                    "text": "Mario non studia oppure non lavora",
+                    "soluzione": true,
+                    "feedback": "Corretto! Per le leggi di De Morgan: ¬(P ∧ Q) = ¬P ∨ ¬Q. La negazione della congiunzione è la disgiunzione delle negazioni."
+                },
+                {
+                    "label": "C",
+                    "text": "Mario non studia",
+                    "soluzione": false,
+                    "feedback": "Non si può concludere solo 'Mario non studia'. Potrebbe essere che non lavora (o entrambe le cose)."
+                },
+                {
+                    "label": "D",
+                    "text": "Mario lavora ma non studia",
+                    "soluzione": false,
+                    "feedback": "Questa è solo una delle possibilità. La negazione corretta lascia aperte più opzioni: ¬studia ∨ ¬lavora."
+                },
+                {
+                    "label": "E",
+                    "text": "Mario né studia né lavora",
+                    "soluzione": false,
+                    "feedback": "Questa è un'affermazione più forte. La negazione di (studia E lavora) ammette che Mario possa fare una delle due cose."
+                }
+            ]
+        },
+        {
+            "id": "L11",
+            "question": "Tre amici (Aldo, Bruno, Carla) scelgono ciascuno un colore diverso tra rosso, blu e verde. Aldo non sceglie il rosso. Bruno non sceglie né il rosso né il verde. Quale colore sceglie Carla?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "logica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "Rosso",
+                    "soluzione": true,
+                    "feedback": "Corretto! Bruno non può scegliere rosso né verde → Bruno sceglie blu. Aldo non sceglie rosso → Aldo sceglie verde. Resta il rosso per Carla."
+                },
+                {
+                    "label": "B",
+                    "text": "Blu",
+                    "soluzione": false,
+                    "feedback": "Blu è già preso da Bruno (l'unico colore che può scegliere: non rosso, non verde → blu). Carla prende il rosso."
+                },
+                {
+                    "label": "C",
+                    "text": "Verde",
+                    "soluzione": false,
+                    "feedback": "Verde è già preso da Aldo (non rosso, e blu è di Bruno → verde). Carla prende il rosso."
+                },
+                {
+                    "label": "D",
+                    "text": "Qualsiasi colore",
+                    "soluzione": false,
+                    "feedback": "No, la situazione è completamente determinata: Bruno=blu, Aldo=verde, Carla=rosso."
+                },
+                {
+                    "label": "E",
+                    "text": "Non si può determinare",
+                    "soluzione": false,
+                    "feedback": "Si può determinare con certezza: Bruno→blu (solo opzione), Aldo→verde (non rosso, blu preso), Carla→rosso."
+                }
+            ]
+        },
+        {
+            "id": "L12",
+            "question": "In una sequenza: 1, 4, 9, 16, 25, ___. Quale numero viene dopo?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "logica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "30",
+                    "soluzione": false,
+                    "feedback": "I termini sono 1², 2², 3², 4², 5²... Il sesto termine è 6² = 36."
+                },
+                {
+                    "label": "B",
+                    "text": "34",
+                    "soluzione": false,
+                    "feedback": "La differenza tra termini successivi è 3, 5, 7, 9... Il prossimo incremento è +11: 25+11 = 36."
+                },
+                {
+                    "label": "C",
+                    "text": "36",
+                    "soluzione": true,
+                    "feedback": "Corretto! La sequenza è n²: 1², 2², 3², 4², 5², 6² = 36."
+                },
+                {
+                    "label": "D",
+                    "text": "49",
+                    "soluzione": false,
+                    "feedback": "49 = 7² è il settimo termine, non il sesto. Il sesto è 6² = 36."
+                },
+                {
+                    "label": "E",
+                    "text": "32",
+                    "soluzione": false,
+                    "feedback": "La sequenza non è legata a potenze di 2. Sono quadrati perfetti: 1, 4, 9, 16, 25, 36."
+                }
+            ]
+        },
+        {
+            "id": "L13",
+            "question": "La frase 'Solo i cittadini maggiorenni possono votare' implica che:",
+            "image": null,
+            "imageExplanation": null,
+            "category": "logica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "Tutti i maggiorenni votano",
+                    "soluzione": false,
+                    "feedback": "Non necessariamente. 'Solo i maggiorenni possono votare' dà una condizione necessaria per votare, non sufficiente."
+                },
+                {
+                    "label": "B",
+                    "text": "Chi non è maggiorenne non può votare",
+                    "soluzione": true,
+                    "feedback": "Corretto! 'Solo gli A fanno B' significa 'se non A, allora non B': la maggiore età è condizione necessaria per votare."
+                },
+                {
+                    "label": "C",
+                    "text": "Chi vota è necessariamente italiano",
+                    "soluzione": false,
+                    "feedback": "La nazionalità non è menzionata nelle premesse."
+                },
+                {
+                    "label": "D",
+                    "text": "Se voti, allora sei minorenne",
+                    "soluzione": false,
+                    "feedback": "È esattamente il contrario! Per votare devi essere maggiorenne."
+                },
+                {
+                    "label": "E",
+                    "text": "Alcuni minorenni possono votare in casi speciali",
+                    "soluzione": false,
+                    "feedback": "La premessa è categorica: 'SOLO i maggiorenni'. Non ammette eccezioni."
+                }
+            ]
+        },
+        {
+            "id": "L14",
+            "question": "Un treno parte ogni 20 minuti. L'ultimo è partito 5 minuti fa. Tra quanti minuti parte il prossimo?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "logica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "5 minuti",
+                    "soluzione": false,
+                    "feedback": "Sono già passati 5 minuti dall'ultimo treno. Ne mancano ancora 20-5 = 15."
+                },
+                {
+                    "label": "B",
+                    "text": "15 minuti",
+                    "soluzione": true,
+                    "feedback": "Corretto! Il treno parte ogni 20 minuti. Ne sono già passati 5, quindi mancano 20-5 = 15 minuti."
+                },
+                {
+                    "label": "C",
+                    "text": "20 minuti",
+                    "soluzione": false,
+                    "feedback": "20 minuti sarebbero corretti se il treno fosse appena partito. Ma ne sono già passati 5, quindi mancano 15."
+                },
+                {
+                    "label": "D",
+                    "text": "25 minuti",
+                    "soluzione": false,
+                    "feedback": "25 minuti sarebbe il tempo al secondo prossimo treno (15+20 dal futuro prossimo). Il prossimo è tra 15 minuti."
+                },
+                {
+                    "label": "E",
+                    "text": "10 minuti",
+                    "soluzione": false,
+                    "feedback": "Errore nel calcolo. Il treno parte ogni 20 minuti; già passati 5 minuti → mancano 15 minuti."
+                }
+            ]
+        },
+        {
+            "id": "L15",
+            "question": "In un gruppo di persone, chi ama leggere ama anche andare al cinema. Marta non ama andare al cinema. Quale conclusione è corretta?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "logica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "Marta non ama leggere",
+                    "soluzione": true,
+                    "feedback": "Corretto! Modus tollens: Legge → Cinema. Non Cinema → Non legge. Marta non ama il cinema, quindi non ama leggere."
+                },
+                {
+                    "label": "B",
+                    "text": "Marta ama leggere",
+                    "soluzione": false,
+                    "feedback": "Se Marta amasse leggere, allora dovrebbe amare il cinema. Ma sappiamo che non lo ama → contraddizione."
+                },
+                {
+                    "label": "C",
+                    "text": "Chi ama il cinema ama leggere",
+                    "soluzione": false,
+                    "feedback": "Non è deducibile. La premessa è: legge → cinema, non cinema → legge (non è bidirezionale)."
+                },
+                {
+                    "label": "D",
+                    "text": "Chi non ama leggere non ama il cinema",
+                    "soluzione": false,
+                    "feedback": "Non necessariamente. Una persona potrebbe amare il cinema senza amare la lettura."
+                },
+                {
+                    "label": "E",
+                    "text": "Non si può concludere nulla su Marta",
+                    "soluzione": false,
+                    "feedback": "Si può concludere! Modus tollens: (Legge → Cinema) + ¬Cinema → ¬Legge. Marta non ama leggere."
+                }
+            ]
+        },
+        {
+            "id": "L16",
+            "question": "Un commerciante acquista un prodotto a 80€ e lo vende con un guadagno del 25%. A quale prezzo lo vende?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "logica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "100€",
+                    "soluzione": true,
+                    "feedback": "Corretto! Il 25% di 80 è 20. Prezzo di vendita = 80 + 20 = 100€."
+                },
+                {
+                    "label": "B",
+                    "text": "105€",
+                    "soluzione": false,
+                    "feedback": "Il 25% di 80 = 20, non 25. Prezzo = 80 + 20 = 100€."
+                },
+                {
+                    "label": "C",
+                    "text": "60€",
+                    "soluzione": false,
+                    "feedback": "60€ sarebbe una perdita del 25%, non un guadagno."
+                },
+                {
+                    "label": "D",
+                    "text": "110€",
+                    "soluzione": false,
+                    "feedback": "Guadagno del 25% su 80€ = 20€. Prezzo finale = 100€, non 110€."
+                },
+                {
+                    "label": "E",
+                    "text": "96€",
+                    "soluzione": false,
+                    "feedback": "96€ = 80 × 1,2 (aumento del 20%). Con il 25%: 80 × 1,25 = 100€."
+                }
+            ]
+        },
+        {
+            "id": "L17",
+            "question": "Ogni volta che c'è nebbia, il volo viene cancellato. Oggi il volo non è stato cancellato. Cosa si può concludere?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "logica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "Oggi c'è nebbia",
+                    "soluzione": false,
+                    "feedback": "Se ci fosse nebbia, il volo sarebbe stato cancellato. Ma non lo è stato → non c'è nebbia."
+                },
+                {
+                    "label": "B",
+                    "text": "Oggi non c'è nebbia",
+                    "soluzione": true,
+                    "feedback": "Corretto! Modus tollens: Nebbia → Cancellazione. Non cancellazione → Non nebbia."
+                },
+                {
+                    "label": "C",
+                    "text": "Il volo potrebbe essere cancellato domani",
+                    "soluzione": false,
+                    "feedback": "Vero in senso generale, ma non è una conclusione logica delle premesse date."
+                },
+                {
+                    "label": "D",
+                    "text": "I voli non vengono mai cancellati",
+                    "soluzione": false,
+                    "feedback": "Troppo generalizzato. La premessa dice che vengono cancellati quando c'è nebbia. Oggi semplicemente non c'è nebbia."
+                },
+                {
+                    "label": "E",
+                    "text": "Non si può concludere nulla sul tempo",
+                    "soluzione": false,
+                    "feedback": "Si può concludere che oggi non c'è nebbia. Modus tollens permette questa deduzione."
+                }
+            ]
+        },
+        {
+            "id": "L18",
+            "question": "In una corsa ciclistica: se arrivi nei primi 3, vinci un premio. Marco non ha vinto un premio. Cosa si può concludere?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "logica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "Marco è arrivato primo",
+                    "soluzione": false,
+                    "feedback": "Se Marco fosse nei primi 3, avrebbe vinto un premio. Non ha vinto → non è nei primi 3."
+                },
+                {
+                    "label": "B",
+                    "text": "Marco non è arrivato nei primi 3",
+                    "soluzione": true,
+                    "feedback": "Corretto! Modus tollens: Primi 3 → Premio. Non premio → Non nei primi 3."
+                },
+                {
+                    "label": "C",
+                    "text": "Marco si è ritirato",
+                    "soluzione": false,
+                    "feedback": "Possibile, ma non deducibile logicamente dalle premesse. Potrebbe aver finito oltre il terzo posto."
+                },
+                {
+                    "label": "D",
+                    "text": "Marco ha vinto ma il premio era già assegnato",
+                    "soluzione": false,
+                    "feedback": "La premessa dice chiaramente 'non ha vinto un premio'. Questa risposta contraddice le premesse."
+                },
+                {
+                    "label": "E",
+                    "text": "I premi non erano disponibili",
+                    "soluzione": false,
+                    "feedback": "Non è deducibile. La premessa presuppone che i premi ci siano per chi finisce nei primi 3."
+                }
+            ]
+        },
+        {
+            "id": "L19",
+            "question": "In una città, il 60% delle persone ha un'auto, il 30% ha una bici e il 20% ha entrambi. Che percentuale ha almeno uno dei due?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "logica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "90%",
+                    "soluzione": false,
+                    "feedback": "Bisogna usare il principio di inclusione-esclusione: |A∪B| = |A|+|B|-|A∩B| = 60+30-20 = 70%."
+                },
+                {
+                    "label": "B",
+                    "text": "70%",
+                    "soluzione": true,
+                    "feedback": "Corretto! P(auto ∪ bici) = P(auto) + P(bici) - P(auto ∩ bici) = 60 + 30 - 20 = 70%."
+                },
+                {
+                    "label": "C",
+                    "text": "80%",
+                    "soluzione": false,
+                    "feedback": "Errore nel conteggio. La formula corretta è 60+30-20 = 70%."
+                },
+                {
+                    "label": "D",
+                    "text": "50%",
+                    "soluzione": false,
+                    "feedback": "50% = 60+30-20-20. Hai sottratto due volte l'intersezione. Va sottratta una sola volta: 70%."
+                },
+                {
+                    "label": "E",
+                    "text": "40%",
+                    "soluzione": false,
+                    "feedback": "40% non corrisponde a nessuna combinazione logica delle percentuali date. Il risultato è 70%."
+                }
+            ]
+        },
+        {
+            "id": "L20",
+            "question": "Qual è il numero mancante nella sequenza: 3, 6, 12, 24, ___?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "logica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "36",
+                    "soluzione": false,
+                    "feedback": "36 = 24+12 (differenza variabile). Ma il pattern è ×2: 3→6→12→24→48."
+                },
+                {
+                    "label": "B",
+                    "text": "48",
+                    "soluzione": true,
+                    "feedback": "Corretto! Ogni termine è il doppio del precedente: 3×2=6, 6×2=12, 12×2=24, 24×2=48."
+                },
+                {
+                    "label": "C",
+                    "text": "42",
+                    "soluzione": false,
+                    "feedback": "42 non segue il pattern ×2. Il termine successivo a 24 è 24×2 = 48."
+                },
+                {
+                    "label": "D",
+                    "text": "30",
+                    "soluzione": false,
+                    "feedback": "30 = 24+6. La progressione non è additiva ma geometrica con ragione 2."
+                },
+                {
+                    "label": "E",
+                    "text": "96",
+                    "soluzione": false,
+                    "feedback": "96 sarebbe il termine DOPO 48 (48×2). Il prossimo termine dopo 24 è 48."
+                }
+            ]
+        }
+    ]
+}

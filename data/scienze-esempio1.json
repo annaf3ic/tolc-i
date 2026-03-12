@@ -1,0 +1,1062 @@
+{
+    "_note": "Domande originali per l'allenamento al TOLC-I — Scienze (Fisica e Chimica)",
+    "_format": {
+        "id": "Identificatore univoco della domanda",
+        "category": "fisica | chimica"
+    },
+    "questions": [
+        {
+            "id": "F01",
+            "question": "Un oggetto cade dal quinto piano di un edificio (altezza: 15 m). Quanto tempo impiega a raggiungere il suolo? (g = 10 m/s²)",
+            "image": null,
+            "imageExplanation": null,
+            "category": "fisica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "1 s",
+                    "soluzione": false,
+                    "feedback": "In 1 s: h = ½·10·1² = 5 m, non 15 m."
+                },
+                {
+                    "label": "B",
+                    "text": "√3 s ≈ 1,73 s",
+                    "soluzione": true,
+                    "feedback": "Corretto! h = ½·g·t² → t = √(2h/g) = √(30/10) = √3 ≈ 1,73 s."
+                },
+                {
+                    "label": "C",
+                    "text": "2 s",
+                    "soluzione": false,
+                    "feedback": "In 2 s: h = ½·10·4 = 20 m ≠ 15 m."
+                },
+                {
+                    "label": "D",
+                    "text": "3 s",
+                    "soluzione": false,
+                    "feedback": "In 3 s: h = ½·10·9 = 45 m ≠ 15 m. Troppo."
+                },
+                {
+                    "label": "E",
+                    "text": "1,5 s",
+                    "soluzione": false,
+                    "feedback": "In 1,5 s: h = ½·10·2,25 = 11,25 m ≠ 15 m."
+                }
+            ]
+        },
+        {
+            "id": "F02",
+            "question": "Un'auto accelera uniformemente da 0 a 90 km/h in 10 s. Qual è la sua accelerazione?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "fisica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "9 km/h²",
+                    "soluzione": false,
+                    "feedback": "L'unità è sbagliata. 90 km/h = 25 m/s. a = Δv/Δt = 25/10 = 2,5 m/s²."
+                },
+                {
+                    "label": "B",
+                    "text": "2,5 m/s²",
+                    "soluzione": true,
+                    "feedback": "Corretto! 90 km/h = 25 m/s. a = Δv/Δt = 25/10 = 2,5 m/s²."
+                },
+                {
+                    "label": "C",
+                    "text": "9 m/s²",
+                    "soluzione": false,
+                    "feedback": "9 m/s² è circa g. Qui a = 25 m/s / 10 s = 2,5 m/s²."
+                },
+                {
+                    "label": "D",
+                    "text": "0,9 m/s²",
+                    "soluzione": false,
+                    "feedback": "Potresti aver diviso 9 (km/h/s) per 10. La conversione corretta dà a = 2,5 m/s²."
+                },
+                {
+                    "label": "E",
+                    "text": "25 m/s²",
+                    "soluzione": false,
+                    "feedback": "25 m/s è la velocità finale, non l'accelerazione. a = 25/10 = 2,5 m/s²."
+                }
+            ]
+        },
+        {
+            "id": "F03",
+            "question": "Un corpo di massa 5 kg è soggetto a una forza risultante di 20 N. Qual è la sua accelerazione?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "fisica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "100 m/s²",
+                    "soluzione": false,
+                    "feedback": "Hai moltiplicato invece di dividere. Secondo Newton: a = F/m = 20/5 = 4 m/s²."
+                },
+                {
+                    "label": "B",
+                    "text": "4 m/s²",
+                    "soluzione": true,
+                    "feedback": "Corretto! Secondo il secondo principio della dinamica (F = ma): a = F/m = 20/5 = 4 m/s²."
+                },
+                {
+                    "label": "C",
+                    "text": "25 m/s²",
+                    "soluzione": false,
+                    "feedback": "Hai diviso m/F invece di F/m. a = F/m = 20/5 = 4 m/s²."
+                },
+                {
+                    "label": "D",
+                    "text": "0,25 m/s²",
+                    "soluzione": false,
+                    "feedback": "0,25 = 5/20 = m/F. La formula corretta è a = F/m = 20/5 = 4 m/s²."
+                },
+                {
+                    "label": "E",
+                    "text": "15 m/s²",
+                    "soluzione": false,
+                    "feedback": "Non si sottraggono massa e forza. a = F/m = 20 N / 5 kg = 4 m/s²."
+                }
+            ]
+        },
+        {
+            "id": "F04",
+            "question": "Qual è l'energia cinetica di un oggetto di massa 2 kg che si muove a 6 m/s?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "fisica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "12 J",
+                    "soluzione": false,
+                    "feedback": "12 = ½·2·6·2. La formula è Ec = ½·m·v² = ½·2·36 = 36 J."
+                },
+                {
+                    "label": "B",
+                    "text": "36 J",
+                    "soluzione": true,
+                    "feedback": "Corretto! Ec = ½·m·v² = ½·2·6² = ½·2·36 = 36 J."
+                },
+                {
+                    "label": "C",
+                    "text": "72 J",
+                    "soluzione": false,
+                    "feedback": "Hai dimenticato il fattore ½. Ec = ½·2·36 = 36 J, non 72 J."
+                },
+                {
+                    "label": "D",
+                    "text": "6 J",
+                    "soluzione": false,
+                    "feedback": "6 = m·v/2 non è la formula dell'energia cinetica. Ec = ½·m·v² = 36 J."
+                },
+                {
+                    "label": "E",
+                    "text": "18 J",
+                    "soluzione": false,
+                    "feedback": "Potresti aver calcolato ½·2·(6)·3 = 18. La formula è ½·m·v²: 0,5·2·36 = 36 J."
+                }
+            ]
+        },
+        {
+            "id": "F05",
+            "question": "Due cariche di +2C e -3C si trovano a 1 m di distanza. La forza tra loro è:",
+            "image": null,
+            "imageExplanation": null,
+            "category": "fisica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "Repulsiva, pari a 6 N (circa)",
+                    "soluzione": false,
+                    "feedback": "Cariche di segno opposto si attraggono (non si respingono). La forza è attrattiva."
+                },
+                {
+                    "label": "B",
+                    "text": "Attrattiva, pari a 6·10¹⁰ N (circa)",
+                    "soluzione": true,
+                    "feedback": "Corretto! Cariche di segno opposto si attraggono. F = k·|q₁|·|q₂|/r² = 9·10⁹·2·3/1² = 54·10⁹ ≈ 5,4·10¹⁰ N. La forza è attrattiva."
+                },
+                {
+                    "label": "C",
+                    "text": "Nulla, perché le cariche si annullano",
+                    "soluzione": false,
+                    "feedback": "Le cariche non si 'annullano' spazialmente. La forza di Coulomb tra loro è enorme e attrattiva."
+                },
+                {
+                    "label": "D",
+                    "text": "Repulsiva, pari a 54·10⁹ N",
+                    "soluzione": false,
+                    "feedback": "Il valore numerico è corretto ma il verso no: cariche di segno OPPOSTO si ATTRAGGONO."
+                },
+                {
+                    "label": "E",
+                    "text": "Non si può calcolare senza conoscere la costante k",
+                    "soluzione": false,
+                    "feedback": "k è la costante di Coulomb, nota: k = 9·10⁹ N·m²/C². F = k·q₁·q₂/r² è calcolabile."
+                }
+            ]
+        },
+        {
+            "id": "F06",
+            "question": "Un gas ideale a pressione costante viene riscaldato da 27°C a 127°C. Il suo volume:",
+            "image": null,
+            "imageExplanation": null,
+            "category": "fisica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "Non varia",
+                    "soluzione": false,
+                    "feedback": "A pressione costante (processo isobaro), il volume è proporzionale alla temperatura assoluta (legge di Gay-Lussac): V₂/V₁ = T₂/T₁."
+                },
+                {
+                    "label": "B",
+                    "text": "Aumenta di 1/3",
+                    "soluzione": true,
+                    "feedback": "Corretto! T₁ = 300 K, T₂ = 400 K. V₂/V₁ = 400/300 = 4/3. Il volume aumenta di 1/3 (33,3%)."
+                },
+                {
+                    "label": "C",
+                    "text": "Raddoppia",
+                    "soluzione": false,
+                    "feedback": "Per raddoppiare occorrerebbe T₂ = 2·T₁ = 600 K = 327°C. A 127°C si ha solo un aumento di 1/3."
+                },
+                {
+                    "label": "D",
+                    "text": "Aumenta di 100/27",
+                    "soluzione": false,
+                    "feedback": "L'errore è usare i Celsius invece dei Kelvin. In Kelvin: 27°C=300K, 127°C=400K. V₂/V₁ = 400/300 = 4/3."
+                },
+                {
+                    "label": "E",
+                    "text": "Si dimezza",
+                    "soluzione": false,
+                    "feedback": "Il volume si dimezzerebbe se la temperatura si dimezzasse (in Kelvin). Qui la temperatura aumenta."
+                }
+            ]
+        },
+        {
+            "id": "F07",
+            "question": "Un resistore da 10 Ω è collegato a una batteria da 20 V. Qual è la corrente che lo percorre?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "fisica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "200 A",
+                    "soluzione": false,
+                    "feedback": "Hai moltiplicato invece di dividere. Legge di Ohm: I = V/R = 20/10 = 2 A."
+                },
+                {
+                    "label": "B",
+                    "text": "0,5 A",
+                    "soluzione": false,
+                    "feedback": "0,5 = R/V = 10/20. La legge di Ohm è I = V/R = 20/10 = 2 A."
+                },
+                {
+                    "label": "C",
+                    "text": "2 A",
+                    "soluzione": true,
+                    "feedback": "Corretto! Legge di Ohm: I = V/R = 20 V / 10 Ω = 2 A."
+                },
+                {
+                    "label": "D",
+                    "text": "10 A",
+                    "soluzione": false,
+                    "feedback": "I = V/R = 20/10 = 2 A, non 10 A."
+                },
+                {
+                    "label": "E",
+                    "text": "30 A",
+                    "soluzione": false,
+                    "feedback": "30 è la somma di V+R, non il quoziente. I = 20/10 = 2 A."
+                }
+            ]
+        },
+        {
+            "id": "F08",
+            "question": "Qual è la velocità del suono in aria a 0°C circa?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "fisica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "300 m/s",
+                    "soluzione": false,
+                    "feedback": "300 m/s è circa la velocità della luce (3·10⁸ m/s). La velocità del suono in aria a 0°C è circa 331 m/s."
+                },
+                {
+                    "label": "B",
+                    "text": "331 m/s",
+                    "soluzione": true,
+                    "feedback": "Corretto! La velocità del suono in aria a 0°C è circa 331 m/s. Aumenta con la temperatura di circa 0,6 m/s ogni grado."
+                },
+                {
+                    "label": "C",
+                    "text": "1500 m/s",
+                    "soluzione": false,
+                    "feedback": "1500 m/s è circa la velocità del suono nell'acqua, non nell'aria."
+                },
+                {
+                    "label": "D",
+                    "text": "100 m/s",
+                    "soluzione": false,
+                    "feedback": "Troppo basso. La velocità del suono in aria a 0°C è circa 331 m/s."
+                },
+                {
+                    "label": "E",
+                    "text": "3·10⁸ m/s",
+                    "soluzione": false,
+                    "feedback": "3·10⁸ m/s è la velocità della luce nel vuoto. La velocità del suono in aria è circa 331 m/s."
+                }
+            ]
+        },
+        {
+            "id": "F09",
+            "question": "Un oggetto di 2 kg viene sollevato di 5 m. Qual è l'energia potenziale acquisita? (g = 10 m/s²)",
+            "image": null,
+            "imageExplanation": null,
+            "category": "fisica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "10 J",
+                    "soluzione": false,
+                    "feedback": "Hai calcolato m·h o g·h. Ep = m·g·h = 2·10·5 = 100 J."
+                },
+                {
+                    "label": "B",
+                    "text": "100 J",
+                    "soluzione": true,
+                    "feedback": "Corretto! Ep = m·g·h = 2 kg · 10 m/s² · 5 m = 100 J."
+                },
+                {
+                    "label": "C",
+                    "text": "50 J",
+                    "soluzione": false,
+                    "feedback": "50 = m·h·g/2. Non c'è il fattore ½ nell'energia potenziale gravitazionale: Ep = mgh = 100 J."
+                },
+                {
+                    "label": "D",
+                    "text": "1000 J",
+                    "soluzione": false,
+                    "feedback": "Errore nel calcolo: 2·10·5 = 100, non 1000."
+                },
+                {
+                    "label": "E",
+                    "text": "25 J",
+                    "soluzione": false,
+                    "feedback": "25 = ½·m·g·h·? Non corrisponde alla formula. Ep = mgh = 2·10·5 = 100 J."
+                }
+            ]
+        },
+        {
+            "id": "F10",
+            "question": "Un onda sonora ha frequenza 440 Hz e si propaga a 330 m/s. Qual è la sua lunghezza d'onda?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "fisica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "0,75 m",
+                    "soluzione": true,
+                    "feedback": "Corretto! λ = v/f = 330/440 = 0,75 m. (La nota La₄ ha frequenza 440 Hz.)"
+                },
+                {
+                    "label": "B",
+                    "text": "1,33 m",
+                    "soluzione": false,
+                    "feedback": "1,33 = 440/330 = f/v. La formula corretta è λ = v/f = 330/440 = 0,75 m."
+                },
+                {
+                    "label": "C",
+                    "text": "145.200 m",
+                    "soluzione": false,
+                    "feedback": "Hai moltiplicato v·f. La formula è λ = v/f = 330/440 = 0,75 m."
+                },
+                {
+                    "label": "D",
+                    "text": "0,75 cm",
+                    "soluzione": false,
+                    "feedback": "Il valore è corretto ma l'unità no. λ = 330 m/s / 440 Hz = 0,75 m (non cm)."
+                },
+                {
+                    "label": "E",
+                    "text": "3 m",
+                    "soluzione": false,
+                    "feedback": "Forse hai usato 330/110? La frequenza è 440 Hz: λ = 330/440 = 0,75 m."
+                }
+            ]
+        },
+        {
+            "id": "F11",
+            "question": "In un circuito con due resistori da 6 Ω e 3 Ω collegati in parallelo, qual è la resistenza equivalente?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "fisica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "9 Ω",
+                    "soluzione": false,
+                    "feedback": "9 Ω è la resistenza equivalente in SERIE (6+3). In parallelo: 1/R = 1/6 + 1/3 = 1/6 + 2/6 = 3/6 → R = 2 Ω."
+                },
+                {
+                    "label": "B",
+                    "text": "2 Ω",
+                    "soluzione": true,
+                    "feedback": "Corretto! In parallelo: 1/R_eq = 1/6 + 1/3 = 1/6 + 2/6 = 3/6. R_eq = 6/3 = 2 Ω."
+                },
+                {
+                    "label": "C",
+                    "text": "4,5 Ω",
+                    "soluzione": false,
+                    "feedback": "4,5 = (6+3)/2 è la media aritmetica, non la resistenza equivalente in parallelo. R = 2 Ω."
+                },
+                {
+                    "label": "D",
+                    "text": "18 Ω",
+                    "soluzione": false,
+                    "feedback": "18 = 6·3 è il prodotto. La formula per il parallelo è R = (R₁·R₂)/(R₁+R₂) = 18/9 = 2 Ω."
+                },
+                {
+                    "label": "E",
+                    "text": "1 Ω",
+                    "soluzione": false,
+                    "feedback": "1/R = 1/6 + 1/3 = 3/6 → R = 2 Ω, non 1 Ω."
+                }
+            ]
+        },
+        {
+            "id": "F12",
+            "question": "Il primo principio della termodinamica afferma che:",
+            "image": null,
+            "imageExplanation": null,
+            "category": "fisica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "Il calore fluisce spontaneamente dai corpi freddi a quelli caldi",
+                    "soluzione": false,
+                    "feedback": "Questo enuncia (in modo errato) il secondo principio. Il calore fluisce spontaneamente dai corpi caldi a quelli freddi."
+                },
+                {
+                    "label": "B",
+                    "text": "La variazione di energia interna di un sistema è uguale al calore assorbito meno il lavoro compiuto",
+                    "soluzione": true,
+                    "feedback": "Corretto! Primo principio: ΔU = Q - L (o ΔU = Q + W, secondo la convenzione). Conservazione dell'energia."
+                },
+                {
+                    "label": "C",
+                    "text": "L'entropia di un sistema isolato può solo diminuire",
+                    "soluzione": false,
+                    "feedback": "È il secondo principio (in modo errato). L'entropia di un sistema isolato può solo aumentare o restare costante."
+                },
+                {
+                    "label": "D",
+                    "text": "La temperatura assoluta non può essere negativa",
+                    "soluzione": false,
+                    "feedback": "Questo è connesso al terzo principio (impossibilità di raggiungere lo zero assoluto), non al primo."
+                },
+                {
+                    "label": "E",
+                    "text": "Il lavoro compiuto è sempre uguale al calore assorbito",
+                    "soluzione": false,
+                    "feedback": "Questo vale solo per i cicli termodinamici reversibili. In generale: ΔU = Q - L (il lavoro può essere diverso dal calore)."
+                }
+            ]
+        },
+        {
+            "id": "F13",
+            "question": "La densità di un liquido è 800 kg/m³. Un oggetto di 1 kg galleggia completamente immerso. Qual è il volume dell'oggetto?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "fisica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "0,00125 m³",
+                    "soluzione": true,
+                    "feedback": "Corretto! Se galleggia completamente immerso, la spinta è uguale al peso: ρ_liquido·V·g = m·g → V = m/ρ_liquido = 1/800 = 0,00125 m³."
+                },
+                {
+                    "label": "B",
+                    "text": "800 m³",
+                    "soluzione": false,
+                    "feedback": "V = m/ρ = 1/800, non 800. Non si moltiplicano massa e densità."
+                },
+                {
+                    "label": "C",
+                    "text": "0,001 m³",
+                    "soluzione": false,
+                    "feedback": "0,001 = 1/1000 (densità acqua). Qui la densità è 800 kg/m³: V = 1/800 = 0,00125 m³."
+                },
+                {
+                    "label": "D",
+                    "text": "8 m³",
+                    "soluzione": false,
+                    "feedback": "Errore di calcolo. V = 1 kg / 800 kg/m³ = 0,00125 m³."
+                },
+                {
+                    "label": "E",
+                    "text": "Non si può determinare senza conoscere g",
+                    "soluzione": false,
+                    "feedback": "g si cancella nell'equazione ρ_L·V·g = m·g → V = m/ρ_L = 1/800 m³."
+                }
+            ]
+        },
+        {
+            "id": "F14",
+            "question": "Qual è il tipo di leva in cui il punto di appoggio (fulcro) è tra la forza applicata e il carico?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "fisica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "Leva di primo genere",
+                    "soluzione": true,
+                    "feedback": "Corretto! Nella leva di 1° genere il fulcro è tra la forza e il carico (es. forbici, altalena)."
+                },
+                {
+                    "label": "B",
+                    "text": "Leva di secondo genere",
+                    "soluzione": false,
+                    "feedback": "Nella leva di 2° genere il carico è tra fulcro e forza (es. carriola, schiaccianoci)."
+                },
+                {
+                    "label": "C",
+                    "text": "Leva di terzo genere",
+                    "soluzione": false,
+                    "feedback": "Nella leva di 3° genere la forza è tra fulcro e carico (es. pinzette, braccio umano nel sollevamento)."
+                },
+                {
+                    "label": "D",
+                    "text": "Puleggia fissa",
+                    "soluzione": false,
+                    "feedback": "La puleggia è una macchina semplice diversa dalla leva. La leva con fulcro al centro è di primo genere."
+                },
+                {
+                    "label": "E",
+                    "text": "Piano inclinato",
+                    "soluzione": false,
+                    "feedback": "Il piano inclinato è un'altra macchina semplice. La leva descritta è di primo genere."
+                }
+            ]
+        },
+        {
+            "id": "F15",
+            "question": "La velocità di un proiettile lanciato orizzontalmente non viene influenzata da:",
+            "image": null,
+            "imageExplanation": null,
+            "category": "fisica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "La gravità",
+                    "soluzione": false,
+                    "feedback": "La gravità influisce sulla componente verticale della velocità (la fa aumentare verso il basso). Non influisce su quella orizzontale, ma l'accelerazione totale cambia."
+                },
+                {
+                    "label": "B",
+                    "text": "La componente verticale della velocità",
+                    "soluzione": false,
+                    "feedback": "La componente verticale aumenta continuamente per effetto della gravità."
+                },
+                {
+                    "label": "C",
+                    "text": "La componente orizzontale della velocità (in assenza di resistenza dell'aria)",
+                    "soluzione": true,
+                    "feedback": "Corretto! In assenza di attrito con l'aria, la componente orizzontale rimane costante perché non ci sono forze orizzontali. Solo la componente verticale varia."
+                },
+                {
+                    "label": "D",
+                    "text": "L'altezza da cui viene lanciato",
+                    "soluzione": false,
+                    "feedback": "L'altezza influisce sul tempo di volo e sulla velocità verticale finale, ma non sulla componente orizzontale costante."
+                },
+                {
+                    "label": "E",
+                    "text": "La massa del proiettile",
+                    "soluzione": false,
+                    "feedback": "In assenza di resistenza dell'aria, la massa non influisce sull'accelerazione gravitazionale (g è uguale per tutti i corpi), ma questo non risponde alla domanda sulla componente orizzontale."
+                }
+            ]
+        },
+        {
+            "id": "C01",
+            "question": "Quanti protoni ha l'atomo di ossigeno?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "chimica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "6",
+                    "soluzione": false,
+                    "feedback": "6 protoni ha il carbonio (C, numero atomico 6). L'ossigeno ha numero atomico 8."
+                },
+                {
+                    "label": "B",
+                    "text": "7",
+                    "soluzione": false,
+                    "feedback": "7 protoni ha l'azoto (N, numero atomico 7). L'ossigeno ha numero atomico 8."
+                },
+                {
+                    "label": "C",
+                    "text": "8",
+                    "soluzione": true,
+                    "feedback": "Corretto! L'ossigeno ha numero atomico Z = 8, quindi 8 protoni nel nucleo."
+                },
+                {
+                    "label": "D",
+                    "text": "16",
+                    "soluzione": false,
+                    "feedback": "16 è il numero di massa dell'ossigeno più comune (¹⁶O), non il numero atomico. Il numero di protoni è 8."
+                },
+                {
+                    "label": "E",
+                    "text": "9",
+                    "soluzione": false,
+                    "feedback": "9 protoni ha il fluoro (F). L'ossigeno ha numero atomico 8."
+                }
+            ]
+        },
+        {
+            "id": "C02",
+            "question": "Qual è la formula chimica dell'acido solforico?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "chimica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "HCl",
+                    "soluzione": false,
+                    "feedback": "HCl è l'acido cloridrico, non l'acido solforico."
+                },
+                {
+                    "label": "B",
+                    "text": "H₂SO₄",
+                    "soluzione": true,
+                    "feedback": "Corretto! H₂SO₄ è la formula dell'acido solforico, un acido diprotico forte."
+                },
+                {
+                    "label": "C",
+                    "text": "H₂SO₃",
+                    "soluzione": false,
+                    "feedback": "H₂SO₃ è l'acido solforoso (con zolfo in stato di ossidazione +4). L'acido solforico ha S in stato +6."
+                },
+                {
+                    "label": "D",
+                    "text": "H₃PO₄",
+                    "soluzione": false,
+                    "feedback": "H₃PO₄ è l'acido fosforico, non l'acido solforico."
+                },
+                {
+                    "label": "E",
+                    "text": "HNO₃",
+                    "soluzione": false,
+                    "feedback": "HNO₃ è l'acido nitrico. L'acido solforico è H₂SO₄."
+                }
+            ]
+        },
+        {
+            "id": "C03",
+            "question": "In una reazione esotermica, l'entalpia del sistema:",
+            "image": null,
+            "imageExplanation": null,
+            "category": "chimica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "Aumenta (ΔH > 0)",
+                    "soluzione": false,
+                    "feedback": "Le reazioni con ΔH > 0 sono endotermiche (assorbono calore). Nelle reazioni esotermiche il sistema cede calore."
+                },
+                {
+                    "label": "B",
+                    "text": "Diminuisce (ΔH < 0)",
+                    "soluzione": true,
+                    "feedback": "Corretto! Nelle reazioni esotermiche l'entalpia del sistema diminuisce (ΔH < 0): il calore viene ceduto all'ambiente."
+                },
+                {
+                    "label": "C",
+                    "text": "Rimane invariata (ΔH = 0)",
+                    "soluzione": false,
+                    "feedback": "ΔH = 0 sarebbe una reazione atermica. Le reazioni esotermiche hanno ΔH < 0."
+                },
+                {
+                    "label": "D",
+                    "text": "Non è definita per reazioni chimiche",
+                    "soluzione": false,
+                    "feedback": "L'entalpia è perfettamente definita per le reazioni chimiche ed è uno dei concetti centrali della termochimica."
+                },
+                {
+                    "label": "E",
+                    "text": "Dipende dalla temperatura ma non dalla reazione",
+                    "soluzione": false,
+                    "feedback": "ΔH dipende dalla natura della reazione. Per una reazione esotermica, ΔH è sempre < 0 (a P costante)."
+                }
+            ]
+        },
+        {
+            "id": "C04",
+            "question": "Quante moli ci sono in 44 g di CO₂? (M_CO₂ = 44 g/mol)",
+            "image": null,
+            "imageExplanation": null,
+            "category": "chimica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "0,5 mol",
+                    "soluzione": false,
+                    "feedback": "n = massa/massa molare = 44/44 = 1 mol, non 0,5."
+                },
+                {
+                    "label": "B",
+                    "text": "1 mol",
+                    "soluzione": true,
+                    "feedback": "Corretto! n = m/M = 44 g / 44 g/mol = 1 mol."
+                },
+                {
+                    "label": "C",
+                    "text": "44 mol",
+                    "soluzione": false,
+                    "feedback": "Hai usato il valore numerico della massa come numero di moli. n = 44/44 = 1 mol."
+                },
+                {
+                    "label": "D",
+                    "text": "2 mol",
+                    "soluzione": false,
+                    "feedback": "2 mol corrisponderebbero a 88 g. 44 g di CO₂ = 1 mol."
+                },
+                {
+                    "label": "E",
+                    "text": "22 mol",
+                    "soluzione": false,
+                    "feedback": "22 è il volume molare in litri a STP, non il numero di moli. n = 44/44 = 1 mol."
+                }
+            ]
+        },
+        {
+            "id": "C05",
+            "question": "Quale dei seguenti è un legame covalente polare?",
+            "image": null,
+            "imageExplanazione": null,
+            "category": "chimica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "H-H",
+                    "soluzione": false,
+                    "feedback": "H-H è un legame covalente apolare: i due atomi identici hanno la stessa elettronegatività."
+                },
+                {
+                    "label": "B",
+                    "text": "Cl-Cl",
+                    "soluzione": false,
+                    "feedback": "Cl-Cl è apolare: due atomi identici con la stessa elettronegatività."
+                },
+                {
+                    "label": "C",
+                    "text": "O-H",
+                    "soluzione": true,
+                    "feedback": "Corretto! O-H è polare perché ossigeno (EN ≈ 3,44) e idrogeno (EN ≈ 2,20) hanno elettronegatività diverse: c'è un dipolo."
+                },
+                {
+                    "label": "D",
+                    "text": "Na-Cl (nel sale)",
+                    "soluzione": false,
+                    "feedback": "NaCl è un legame ionico, non covalente polare (la differenza di EN è > 1,7 circa)."
+                },
+                {
+                    "label": "E",
+                    "text": "N₂",
+                    "soluzione": false,
+                    "feedback": "N₂ ha un triplo legame covalente apolare tra due atomi identici."
+                }
+            ]
+        },
+        {
+            "id": "C06",
+            "question": "Una soluzione acquosa ha pH = 3. Qual è la concentrazione degli ioni H⁺?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "chimica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "10⁻³ mol/L",
+                    "soluzione": true,
+                    "feedback": "Corretto! pH = -log[H⁺] = 3 → [H⁺] = 10⁻³ mol/L."
+                },
+                {
+                    "label": "B",
+                    "text": "3 mol/L",
+                    "soluzione": false,
+                    "feedback": "pH = 3 non significa [H⁺] = 3. La relazione è [H⁺] = 10^(-pH) = 10⁻³ mol/L."
+                },
+                {
+                    "label": "C",
+                    "text": "10⁻¹¹ mol/L",
+                    "soluzione": false,
+                    "feedback": "10⁻¹¹ mol/L corrisponde a [OH⁻] in questa soluzione (da Kw = [H⁺][OH⁻] = 10⁻¹⁴). [H⁺] = 10⁻³."
+                },
+                {
+                    "label": "D",
+                    "text": "0,3 mol/L",
+                    "soluzione": false,
+                    "feedback": "[H⁺] = 10⁻³ = 0,001 mol/L, non 0,3."
+                },
+                {
+                    "label": "E",
+                    "text": "10³ mol/L",
+                    "soluzione": false,
+                    "feedback": "10³ mol/L sarebbe fisicamente impossibile. pH = -log[H⁺] → [H⁺] = 10⁻pH = 10⁻³."
+                }
+            ]
+        },
+        {
+            "id": "C07",
+            "question": "Nella tavola periodica, gli elementi del gruppo 1 (metalli alcalini) hanno tutti in comune:",
+            "image": null,
+            "imageExplanation": null,
+            "category": "chimica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "1 elettrone nell'ultimo livello (guscio di valenza)",
+                    "soluzione": true,
+                    "feedback": "Corretto! Li, Na, K, Rb, Cs, Fr hanno tutti un singolo elettrone nel guscio s esterno, da cui la loro elevata reattività."
+                },
+                {
+                    "label": "B",
+                    "text": "2 elettroni nell'ultimo livello",
+                    "soluzione": false,
+                    "feedback": "2 elettroni nel guscio esterno caratterizzano i metalli alcalino-terrosi (gruppo 2)."
+                },
+                {
+                    "label": "C",
+                    "text": "8 elettroni nel penultimo livello",
+                    "soluzione": false,
+                    "feedback": "Questo vale per molti non-metalli e gas nobili, non è una caratteristica distintiva dei metalli alcalini."
+                },
+                {
+                    "label": "D",
+                    "text": "Essere tutti inerti chimicamente",
+                    "soluzione": false,
+                    "feedback": "Sono esattamente il contrario! I metalli alcalini sono tra gli elementi più reattivi (cedono facilmente il loro unico elettrone di valenza)."
+                },
+                {
+                    "label": "E",
+                    "text": "Essere solidi a temperatura ambiente tranne uno",
+                    "soluzione": false,
+                    "feedback": "Quasi tutti sono solidi a temperatura ambiente, ma questa non è la caratteristica che li accomuna chimicamente. La caratteristica chimica è il singolo elettrone di valenza."
+                }
+            ]
+        },
+        {
+            "id": "C08",
+            "question": "Quale delle seguenti è una reazione di ossidoriduzione (redox)?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "chimica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "NaOH + HCl → NaCl + H₂O",
+                    "soluzione": false,
+                    "feedback": "È una reazione di neutralizzazione acido-base. Gli stati di ossidazione non cambiano."
+                },
+                {
+                    "label": "B",
+                    "text": "AgNO₃ + NaCl → AgCl + NaNO₃",
+                    "soluzione": false,
+                    "feedback": "È una reazione di scambio (precipitazione). Gli stati di ossidazione rimangono invariati."
+                },
+                {
+                    "label": "C",
+                    "text": "2 Fe + 3/2 O₂ → Fe₂O₃",
+                    "soluzione": true,
+                    "feedback": "Corretto! Fe passa da 0 a +3 (si ossida), O₂ passa da 0 a -2 (si riduce). È una reazione redox."
+                },
+                {
+                    "label": "D",
+                    "text": "CaCO₃ → CaO + CO₂",
+                    "soluzione": false,
+                    "feedback": "È una reazione di decomposizione termica. Gli stati di ossidazione del Ca (+2), C (+4) e O (-2) rimangono invariati."
+                },
+                {
+                    "label": "E",
+                    "text": "HCl + NaOH → NaCl + H₂O",
+                    "soluzione": false,
+                    "feedback": "Questa è la stessa reazione di neutralizzazione del punto A. Non è una reazione redox."
+                }
+            ]
+        },
+        {
+            "id": "C09",
+            "question": "Qual è la struttura di Lewis corretta per la molecola d'acqua (H₂O)?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "chimica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "O ha 2 doppietti solitari e 2 legami con H",
+                    "soluzione": true,
+                    "feedback": "Corretto! L'ossigeno ha 6 elettroni di valenza: 2 usati nei legami O-H, 4 rimasti come 2 coppie solitarie. Questo conferisce alla molecola la geometria angolare."
+                },
+                {
+                    "label": "B",
+                    "text": "O ha 3 doppietti solitari e 1 legame con H",
+                    "soluzione": false,
+                    "feedback": "Con 1 solo legame O avrebbe carica formale negativa e l'idrogeno positiva. La molecola H₂O ha 2 legami."
+                },
+                {
+                    "label": "C",
+                    "text": "O ha 1 doppietto solitario e 2 legami con H",
+                    "soluzione": false,
+                    "feedback": "Con solo 1 doppietto solitario, O avrebbe usato 5 elettroni (2 legami + 1 coppia), ma ne ha 6. Ci sono 2 coppie solitarie."
+                },
+                {
+                    "label": "D",
+                    "text": "H ha 2 legami e O è al centro con 4 legami",
+                    "soluzione": false,
+                    "feedback": "H può formare al massimo 1 legame (ha solo 1 elettrone di valenza). L'O forma 2 legami in H₂O."
+                },
+                {
+                    "label": "E",
+                    "text": "O ha 0 doppietti solitari e 4 legami con H",
+                    "soluzione": false,
+                    "feedback": "Questa sarebbe la formula H₄O, che non esiste stabile. L'acqua è H₂O con 2 legami."
+                }
+            ]
+        },
+        {
+            "id": "C10",
+            "question": "La reazione CH₄ + 2 O₂ → CO₂ + 2 H₂O è:",
+            "image": null,
+            "imageExplanation": null,
+            "category": "chimica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "Una reazione di sintesi",
+                    "soluzione": false,
+                    "feedback": "Le reazioni di sintesi combinano elementi o composti semplici in uno più complesso (A + B → AB). Questa è una combustione."
+                },
+                {
+                    "label": "B",
+                    "text": "Una reazione di combustione completa del metano",
+                    "soluzione": true,
+                    "feedback": "Corretto! È la combustione completa del metano (CH₄) in presenza di ossigeno in eccesso, che produce CO₂ e H₂O."
+                },
+                {
+                    "label": "C",
+                    "text": "Una reazione acido-base",
+                    "soluzione": false,
+                    "feedback": "Le reazioni acido-base coinvolgono trasferimento di protoni (H⁺). Questa è una combustione redox."
+                },
+                {
+                    "label": "D",
+                    "text": "Una reazione endotermica",
+                    "soluzione": false,
+                    "feedback": "Le combustioni sono esotermiche (liberano energia). Questa reazione rilascia energia termica."
+                },
+                {
+                    "label": "E",
+                    "text": "Una reazione di precipitazione",
+                    "soluzione": false,
+                    "feedback": "Le reazioni di precipitazione formano un solido insolubile. Questa è una combustione gassosa."
+                }
+            ]
+        },
+        {
+            "id": "C11",
+            "question": "Qual è la carica dello ione sodio (Na⁺)?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "chimica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "+2",
+                    "soluzione": false,
+                    "feedback": "La carica +2 è tipica dei metalli alcalino-terrosi (Mg²⁺, Ca²⁺). Il sodio perde 1 solo elettrone → Na⁺."
+                },
+                {
+                    "label": "B",
+                    "text": "-1",
+                    "soluzione": false,
+                    "feedback": "-1 è la carica dello ione cloruro Cl⁻. Na⁺ ha carica +1."
+                },
+                {
+                    "label": "C",
+                    "text": "+1",
+                    "soluzione": true,
+                    "feedback": "Corretto! Il sodio ha numero atomico 11 (configurazione [Ne]3s¹). Perde 1 elettrone formando Na⁺ con configurazione del gas nobile neon."
+                },
+                {
+                    "label": "D",
+                    "text": "0",
+                    "soluzione": false,
+                    "feedback": "Na⁰ è l'atomo neutro di sodio. Na⁺ è lo ione che ha perso 1 elettrone, con carica +1."
+                },
+                {
+                    "label": "E",
+                    "text": "-2",
+                    "soluzione": false,
+                    "feedback": "-2 è la carica dello ione ossido O²⁻. Lo ione sodio ha carica +1."
+                }
+            ]
+        },
+        {
+            "id": "C12",
+            "question": "Quale proprietà permette al carbonio di formare molecole organiche così varie e complesse?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "chimica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "La capacità di formare legami con 4 atomi diversi (tetravalenza) e di catenare con altri carboni",
+                    "soluzione": true,
+                    "feedback": "Corretto! Il carbonio è tetravalente (4 elettroni di valenza) e può formare catene, anelli e strutture tridimensionali grazie alla sua capacità di legarsi ad altri atomi di carbonio (catenazione)."
+                },
+                {
+                    "label": "B",
+                    "text": "La piccola massa atomica che lo rende leggero",
+                    "soluzione": false,
+                    "feedback": "La massa atomica non è la ragione della varietà dei composti organici. È la tetravalenza e la catenazione la chiave."
+                },
+                {
+                    "label": "C",
+                    "text": "La capacità di esistere solo in forma diamante o grafite",
+                    "soluzione": false,
+                    "feedback": "Queste sono le forme allotropiche del carbonio elementare. La varietà dei composti organici dipende dalla tetravalenza e catenazione."
+                },
+                {
+                    "label": "D",
+                    "text": "L'essere il quarto elemento più abbondante nell'universo",
+                    "soluzione": false,
+                    "feedback": "L'abbondanza non spiega la varietà chimica. È la struttura elettronica che conta."
+                },
+                {
+                    "label": "E",
+                    "text": "La capacità di formare solo legami ionici con l'idrogeno",
+                    "soluzione": false,
+                    "feedback": "Falso: il carbonio forma legami COVALENTI con l'idrogeno. E non solo con l'idrogeno, ma con molti altri elementi."
+                }
+            ]
+        }
+    ]
+}
