@@ -1,0 +1,1250 @@
+% ============================================================
+%  TOLC-I — Manuale Completo di Preparazione
+%  Compilare con: pdflatex tolc_i_libro.tex  (2 passaggi)
+% ============================================================
+\documentclass[12pt, a4paper, twoside, openright]{book}
+
+% ── Encoding & lingua ───────────────────────────────────────
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
+
+% ── Font ────────────────────────────────────────────────────
+\usepackage{lmodern}
+\usepackage{microtype}
+
+% ── Layout ──────────────────────────────────────────────────
+\usepackage[
+  a4paper,
+  top=2.5cm, bottom=2.8cm,
+  inner=2.8cm, outer=2.2cm,
+  headheight=14pt
+]{geometry}
+\usepackage{emptypage}
+
+% ── Intestazioni ────────────────────────────────────────────
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE]{\small\leftmark}
+\fancyhead[RO]{\small\rightmark}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% ── Colori & grafica ────────────────────────────────────────
+\usepackage[dvipsnames, table]{xcolor}
+\definecolor{tolcblue}{RGB}{30, 90, 180}
+\definecolor{tolcteal}{RGB}{15, 110, 86}
+\definecolor{tolcamber}{RGB}{186, 117, 23}
+\definecolor{tolcred}{RGB}{163, 45, 45}
+\definecolor{lightgray}{RGB}{245, 245, 245}
+\definecolor{midgray}{RGB}{200, 200, 200}
+
+% ── Matematica ──────────────────────────────────────────────
+\usepackage{amsmath, amssymb, amsthm, mathtools}
+\usepackage{cancel}
+\usepackage{siunitx}
+\sisetup{output-decimal-marker={,}, group-separator={\,}}
+
+% ── Tabelle & elenchi ───────────────────────────────────────
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=1.5em, itemsep=2pt}
+\setlist[enumerate]{leftmargin=1.8em, itemsep=2pt}
+
+% ── Box colorati ────────────────────────────────────────────
+\usepackage[most]{tcolorbox}
+\tcbset{
+  fonttitle=\bfseries,
+  colback=lightgray,
+  colframe=midgray,
+  arc=4pt,
+  boxrule=0.6pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{defbox}[1][]{
+  colback=tolcblue!6,
+  colframe=tolcblue!60,
+  title={#1},
+  fonttitle=\bfseries\color{tolcblue}
+}
+
+\newtcolorbox{teorema}[1][]{
+  colback=tolcteal!6,
+  colframe=tolcteal!60,
+  title={#1},
+  fonttitle=\bfseries\color{tolcteal}
+}
+
+\newtcolorbox{attenzione}[1][Attenzione]{
+  colback=tolcamber!8,
+  colframe=tolcamber!70,
+  title={#1},
+  fonttitle=\bfseries\color{tolcamber}
+}
+
+\newtcolorbox{esercizio}[1][Esercizio]{
+  colback=white,
+  colframe=tolcred!60,
+  title={#1},
+  fonttitle=\bfseries\color{tolcred}
+}
+
+\newtcolorbox{soluzione}[1][Soluzione]{
+  colback=tolcred!4,
+  colframe=tolcred!30,
+  title={#1},
+  fonttitle=\bfseries\color{tolcred!80}
+}
+
+\newtcolorbox{formulario}{
+  colback=tolcblue!4,
+  colframe=tolcblue!40,
+  title={Formulario rapido},
+  fonttitle=\bfseries\color{tolcblue}
+}
+
+% ── Teoremi ─────────────────────────────────────────────────
+\theoremstyle{definition}
+\newtheorem{esempio}{Esempio}[section]
+\newtheorem{proprieta}{Proprieta}[section]
+
+% ── Hyperlink ───────────────────────────────────────────────
+\usepackage[
+  colorlinks=true,
+  linkcolor=tolcblue,
+  urlcolor=tolcteal,
+  pdftitle={TOLC-I -- Manuale Completo},
+  pdfauthor={Preparazione TOLC-I},
+  bookmarksnumbered=true
+]{hyperref}
+
+% ── Capitoli stilizzati ─────────────────────────────────────
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries\color{tolcblue}}
+  {\chaptertitlename\ \thechapter}{16pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{-10pt}{30pt}
+
+\titleformat{\section}
+  {\normalfont\Large\bfseries\color{tolcblue!80}}
+  {\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\color{tolcteal}}
+  {\thesubsection}{1em}{}
+
+% ── Comandi utili ───────────────────────────────────────────
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\abs}[1]{\left|#1\right|}
+
+% ============================================================
+\begin{document}
+% ============================================================
+
+\frontmatter
+
+% ── Frontespizio ────────────────────────────────────────────
+\begin{titlepage}
+\centering
+\vspace*{2cm}
+{\color{tolcblue}\fontsize{52}{56}\selectfont\bfseries TOLC-I}\\[12pt]
+{\Large\color{tolcteal} Manuale Completo di Preparazione}\\[8pt]
+{\normalsize\color{gray} Matematica \,\textbullet\, Logica \,\textbullet\, Scienze \,\textbullet\, Comprensione Verbale}\\[3cm]
+\hrule height 0.6pt
+\vspace{6pt}
+{\small Piano di studio 6+ mesi \,|\, Livello: fondamenta $\to$ simulazione d'esame}
+\vspace{6pt}
+\hrule height 0.6pt
+\vfill
+{\small Anno accademico 2025--2026}
+\end{titlepage}
+
+% ── Nota introduttiva ───────────────────────────────────────
+\clearpage\thispagestyle{empty}
+\vspace*{\fill}
+\begin{center}
+  \small
+  Questo manuale e organizzato in quattro parti corrispondenti\\
+  alle sezioni del TOLC-I: Matematica, Logica, Scienze e Comprensione Verbale.\\[6pt]
+  Per ogni argomento trovi: teoria essenziale $\cdot$ formule $\cdot$ esempi risolti $\cdot$ esercizi.\\[6pt]
+  \textbf{Punteggio TOLC-I:} $+1$ risposta corretta \quad $-0{,}25$ risposta errata \quad $0$ omessa.
+\end{center}
+\vspace*{\fill}
+
+% ── Indice ──────────────────────────────────────────────────
+\tableofcontents
+
+% ── Prefazione ──────────────────────────────────────────────
+\chapter*{Come usare questo manuale}
+\addcontentsline{toc}{chapter}{Come usare questo manuale}
+
+Il \textbf{TOLC-I} (Test Online per l'ingresso alle lauree in Ingegneria) e somministrato
+dal CISIA ed e strutturato in cinque sezioni:
+
+\begin{center}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Sezione} & \textbf{Quesiti} & \textbf{Tempo (min)} \\
+\midrule
+Matematica & 20 & 50 \\
+Logica & 10 & 20 \\
+Scienze & 12 & 24 \\
+Comprensione verbale & 10 & 20 \\
+Inglese (opzionale) & 30 & 35 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\medskip
+\begin{attenzione}[Strategia sul punteggio]
+Non rispondere a caso: ogni risposta errata vale $-0{,}25$ punti.
+Se hai meno del 33\% di certezza, \textbf{lascia in bianco}.
+Se sei ragionevolmente sicuro, rispondi sempre.
+\end{attenzione}
+
+\medskip
+\noindent\textbf{Piano di utilizzo consigliato}
+
+\begin{enumerate}
+  \item Leggi la teoria di ogni capitolo senza saltare i box \emph{Attenzione}.
+  \item Risolvi tutti gli esempi con carta e penna prima di leggere la soluzione.
+  \item Completa gli esercizi simulando le condizioni d'esame (niente appunti, cronometro).
+  \item Usa il formulario in Appendice come riferimento rapido nelle ultime settimane.
+\end{enumerate}
+
+% ============================================================
+\mainmatter
+% ============================================================
+
+%% ███████████████████████████████████████
+%%  PARTE I — MATEMATICA
+%% ███████████████████████████████████████
+\part{Matematica}
+
+% ============================================================
+\chapter{Aritmetica e Algebra}
+% ============================================================
+
+\section{Insiemi numerici}
+
+\begin{defbox}[Insiemi numerici fondamentali]
+\begin{itemize}
+  \item $\N = \{0, 1, 2, 3, \ldots\}$ --- naturali
+  \item $\Z = \{\ldots, -2, -1, 0, 1, 2, \ldots\}$ --- interi
+  \item $\Q = \left\{\dfrac{p}{q} \mid p,q \in \Z,\; q \neq 0\right\}$ --- razionali
+  \item $\R$ --- reali (include irrazionali come $\sqrt{2}$, $\pi$, $e$)
+\end{itemize}
+Ogni insieme e contenuto nel successivo: $\N \subset \Z \subset \Q \subset \R$.
+\end{defbox}
+
+\section{Potenze e radici}
+
+\begin{formulario}
+\[
+a^m \cdot a^n = a^{m+n} \qquad
+\frac{a^m}{a^n} = a^{m-n} \qquad
+(a^m)^n = a^{mn}
+\]
+\[
+(ab)^n = a^n b^n \qquad
+a^0 = 1 \quad (a \neq 0) \qquad
+a^{-n} = \frac{1}{a^n}
+\]
+\[
+\sqrt[n]{a} = a^{1/n} \qquad
+\sqrt[n]{a \cdot b} = \sqrt[n]{a} \cdot \sqrt[n]{b}
+\]
+\end{formulario}
+
+\begin{esempio}
+Semplificare $\dfrac{2^5 \cdot 4^2}{8^3}$.
+
+\textit{Soluzione:} Scrivi tutto in base 2:
+\[
+\frac{2^5 \cdot (2^2)^2}{(2^3)^3} = \frac{2^5 \cdot 2^4}{2^9} = \frac{2^9}{2^9} = 1
+\]
+\end{esempio}
+
+\section{Prodotti notevoli}
+
+\begin{formulario}
+\[
+(a+b)^2 = a^2 + 2ab + b^2
+\]
+\[
+(a-b)^2 = a^2 - 2ab + b^2
+\]
+\[
+(a+b)(a-b) = a^2 - b^2
+\]
+\[
+(a+b)^3 = a^3 + 3a^2b + 3ab^2 + b^3
+\]
+\end{formulario}
+
+\section{Equazioni di primo grado}
+
+\begin{formulario}
+Forma standard: $ax + b = 0$, con $a \neq 0$.
+\[
+x = -\frac{b}{a}
+\]
+\end{formulario}
+
+\begin{esempio}
+Risolvere $3x - 7 = 2(x + 1)$.
+\[
+3x - 7 = 2x + 2 \implies x = 9
+\]
+\end{esempio}
+
+\section{Equazioni di secondo grado}
+
+\begin{formulario}
+Forma: $ax^2 + bx + c = 0$, con $a \neq 0$.
+\[
+x_{1,2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\]
+\textbf{Discriminante} $\Delta = b^2 - 4ac$:
+\begin{itemize}
+  \item $\Delta > 0$: due soluzioni reali distinte
+  \item $\Delta = 0$: una soluzione reale doppia $x = -b/(2a)$
+  \item $\Delta < 0$: nessuna soluzione reale
+\end{itemize}
+\textbf{Relazioni di Vieta:} $x_1 + x_2 = -b/a$ \quad $x_1 \cdot x_2 = c/a$
+\end{formulario}
+
+\begin{esempio}
+Risolvere $x^2 - 5x + 6 = 0$.
+
+$\Delta = 25 - 24 = 1 > 0$, quindi:
+\[
+x_{1,2} = \frac{5 \pm 1}{2} \implies x_1 = 3, \quad x_2 = 2
+\]
+\end{esempio}
+
+\begin{esercizio}
+Risolvere le seguenti equazioni:
+\begin{enumerate}[label=\alph*)]
+  \item $2x^2 + 3x - 2 = 0$
+  \item $x^2 + 4x + 4 = 0$
+  \item $x^2 + 1 = 0$
+  \item $3x^2 - 12 = 0$
+\end{enumerate}
+\end{esercizio}
+\begin{soluzione}
+a) $\Delta = 9 + 16 = 25$;\quad $x_1 = 1/2$, $x_2 = -2$.\\
+b) $\Delta = 0$;\quad $x = -2$ (radice doppia).\\
+c) $\Delta = -4 < 0$;\quad nessuna soluzione reale.\\
+d) $x^2 = 4$;\quad $x = \pm 2$.
+\end{soluzione}
+
+\section{Sistemi di equazioni}
+
+\begin{defbox}[Metodi di risoluzione]
+\begin{description}
+  \item[Sostituzione] Ricava una variabile da un'equazione e sostituisci nell'altra.
+  \item[Addizione/Sottrazione] Moltiplica le equazioni per opportuni coefficienti e sommale per eliminare una variabile.
+  \item[Cramer] Per sistemi $2 \times 2$: $x = D_x/D$, $y = D_y/D$ con determinanti.
+\end{description}
+\end{defbox}
+
+\begin{esercizio}
+Risolvere il sistema:
+\[
+\begin{cases} 2x + y = 7 \\ x - y = 2 \end{cases}
+\]
+\end{esercizio}
+\begin{soluzione}
+Sommando le due equazioni: $3x = 9 \Rightarrow x = 3$. Sostituendo: $y = 1$.
+\end{soluzione}
+
+\section{Disequazioni}
+
+\begin{attenzione}[Regola del cambio di segno]
+Moltiplicando o dividendo entrambi i membri di una disequazione per un numero
+\textbf{negativo}, il verso della disuguaglianza si \textbf{inverte}.
+\[
+-2x > 4 \implies x < -2
+\]
+\end{attenzione}
+
+\begin{defbox}[Disequazione di secondo grado $ax^2+bx+c > 0$]
+Traccia la parabola $y = ax^2+bx+c$:
+\begin{itemize}
+  \item Se $a > 0$: funzione positiva \emph{fuori} dalle radici.
+  \item Se $a < 0$: funzione positiva \emph{tra} le radici.
+  \item Se $\Delta \le 0$ e $a > 0$: la funzione e sempre $\ge 0$.
+\end{itemize}
+\end{defbox}
+
+% ============================================================
+\chapter{Logaritmi ed Esponenziali}
+% ============================================================
+
+\section{Funzione esponenziale}
+
+\begin{defbox}[Funzione esponenziale $f(x) = a^x$]
+con $a > 0$, $a \neq 1$.
+\begin{itemize}
+  \item Se $a > 1$: crescente; se $0 < a < 1$: decrescente.
+  \item Dominio: $\R$;\quad codominio: $(0, +\infty)$.
+  \item Sempre $a^x > 0$ per ogni $x \in \R$.
+  \item $a^0 = 1$;\quad $a^1 = a$.
+\end{itemize}
+\end{defbox}
+
+\section{Logaritmi}
+
+\begin{defbox}[Definizione]
+\[
+y = \log_a x \iff a^y = x \qquad (a > 0,\; a \neq 1,\; x > 0)
+\]
+Il logaritmo e l'operazione inversa dell'esponenziale.
+\end{defbox}
+
+\begin{formulario}
+\[
+\log_a(xy) = \log_a x + \log_a y
+\]
+\[
+\log_a\!\left(\frac{x}{y}\right) = \log_a x - \log_a y
+\]
+\[
+\log_a(x^n) = n \log_a x
+\]
+\[
+\log_a x = \frac{\log_b x}{\log_b a} \quad \text{(cambio di base)}
+\]
+\[
+\log_{10} x = \lg x \qquad \log_e x = \ln x \qquad e \approx 2{,}718
+\]
+\end{formulario}
+
+\begin{esempio}
+Calcolare $\log_2 32$.
+
+$32 = 2^5$, quindi $\log_2 32 = 5$.
+\end{esempio}
+
+\begin{esempio}
+Calcolare $\log_3 \dfrac{1}{9}$.
+
+$\dfrac{1}{9} = 3^{-2}$, quindi $\log_3 \dfrac{1}{9} = -2$.
+\end{esempio}
+
+\begin{esercizio}
+Risolvere le equazioni:
+\begin{enumerate}[label=\alph*)]
+  \item $2^x = 16$
+  \item $\log_3(x+1) + \log_3(x-1) = 2$
+  \item $\ln(e^{3x}) = 9$
+\end{enumerate}
+\end{esercizio}
+\begin{soluzione}
+a) $2^x = 2^4 \Rightarrow x = 4$.\\
+b) $\log_3[(x+1)(x-1)] = 2 \Rightarrow x^2-1 = 9 \Rightarrow x = \sqrt{10}$ (escluso $-\sqrt{10}$).\\
+c) $3x = 9 \Rightarrow x = 3$.
+\end{soluzione}
+
+% ============================================================
+\chapter{Geometria e Trigonometria}
+% ============================================================
+
+\section{Geometria piana}
+
+\begin{formulario}
+\textbf{Triangolo:} area $= \dfrac{bh}{2}$;\quad somma angoli interni $= 180°$.
+
+\textbf{Teorema di Pitagora:} $a^2 + b^2 = c^2$ (con $c$ ipotenusa).
+
+\textbf{Quadrato} lato $l$:\quad area $= l^2$;\quad perimetro $= 4l$.
+
+\textbf{Rettangolo} $b \times h$:\quad area $= bh$;\quad perimetro $= 2(b+h)$.
+
+\textbf{Cerchio} raggio $r$:\quad area $= \pi r^2$;\quad circonferenza $= 2\pi r$.
+
+\textbf{Trapezio} basi $B,b$ altezza $h$:\quad area $= \dfrac{(B+b)h}{2}$.
+\end{formulario}
+
+\section{Geometria solida}
+
+\begin{formulario}
+\textbf{Cubo} lato $l$:\quad $V = l^3$;\quad $S = 6l^2$.
+
+\textbf{Parallelepipedo} $a \times b \times c$:\quad $V = abc$.
+
+\textbf{Sfera} raggio $r$:\quad $V = \dfrac{4}{3}\pi r^3$;\quad $S = 4\pi r^2$.
+
+\textbf{Cilindro} raggio $r$, altezza $h$:\quad $V = \pi r^2 h$;\quad $S_\text{lat} = 2\pi r h$.
+
+\textbf{Cono} raggio $r$, altezza $h$:\quad $V = \dfrac{1}{3}\pi r^2 h$.
+\end{formulario}
+
+\section{Trigonometria}
+
+\begin{defbox}[Definizioni nel triangolo rettangolo]
+\[
+\sin\alpha = \frac{\text{cateto opposto}}{\text{ipotenusa}} \qquad
+\cos\alpha = \frac{\text{cateto adiacente}}{\text{ipotenusa}} \qquad
+\tan\alpha = \frac{\sin\alpha}{\cos\alpha}
+\]
+\end{defbox}
+
+\begin{defbox}[Valori notevoli]
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{cccc}
+\toprule
+$\alpha$ & $\sin\alpha$ & $\cos\alpha$ & $\tan\alpha$ \\
+\midrule
+$0°$ & $0$ & $1$ & $0$ \\
+$30°$ & $\dfrac{1}{2}$ & $\dfrac{\sqrt{3}}{2}$ & $\dfrac{1}{\sqrt{3}}$ \\
+$45°$ & $\dfrac{\sqrt{2}}{2}$ & $\dfrac{\sqrt{2}}{2}$ & $1$ \\
+$60°$ & $\dfrac{\sqrt{3}}{2}$ & $\dfrac{1}{2}$ & $\sqrt{3}$ \\
+$90°$ & $1$ & $0$ & $\nexists$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{defbox}
+
+\begin{formulario}
+\[
+\sin^2\alpha + \cos^2\alpha = 1
+\]
+\[
+\sin(A \pm B) = \sin A \cos B \pm \cos A \sin B
+\]
+\[
+\cos(A \pm B) = \cos A \cos B \mp \sin A \sin B
+\]
+\[
+\sin(2\alpha) = 2\sin\alpha\cos\alpha \qquad \cos(2\alpha) = \cos^2\alpha - \sin^2\alpha
+\]
+\end{formulario}
+
+\section{Geometria analitica}
+
+\begin{formulario}
+\textbf{Distanza} tra $P_1(x_1,y_1)$ e $P_2(x_2,y_2)$:
+\[
+d = \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}
+\]
+
+\textbf{Punto medio:}
+\[
+M = \left(\frac{x_1+x_2}{2},\,\frac{y_1+y_2}{2}\right)
+\]
+
+\textbf{Retta per due punti:}
+\[
+y - y_1 = \frac{y_2-y_1}{x_2-x_1}(x - x_1)
+\]
+
+\textbf{Rette parallele:} $m_1 = m_2$ \qquad \textbf{Perpendicolari:} $m_1 \cdot m_2 = -1$
+
+\textbf{Distanza punto--retta:} $d\!\left(P_0, ax+by+c=0\right) = \dfrac{|ax_0+by_0+c|}{\sqrt{a^2+b^2}}$
+
+\textbf{Circonferenza:} $(x - x_0)^2 + (y - y_0)^2 = r^2$
+
+\textbf{Parabola:} $y = ax^2 + bx + c$;\quad vertice in $x_V = -b/(2a)$.
+\end{formulario}
+
+% ============================================================
+\chapter{Probabilita e Combinatoria}
+% ============================================================
+
+\section{Probabilita classica}
+
+\begin{defbox}[Probabilita di un evento]
+\[
+P(A) = \frac{\text{casi favorevoli}}{\text{casi possibili totali}}
+\qquad 0 \le P(A) \le 1
+\]
+\end{defbox}
+
+\begin{formulario}
+\textbf{Complementare:} $P(\bar{A}) = 1 - P(A)$
+
+\textbf{Unione:} $P(A \cup B) = P(A) + P(B) - P(A \cap B)$
+
+\textbf{Intersezione (eventi indipendenti):} $P(A \cap B) = P(A) \cdot P(B)$
+
+\textbf{Probabilita condizionata:} $P(A|B) = \dfrac{P(A \cap B)}{P(B)}$
+\end{formulario}
+
+\begin{esempio}
+Lanciando un dado equilibrato, qual e la probabilita di ottenere un numero pari?
+
+Casi favorevoli: $\{2, 4, 6\}$, quindi $P = 3/6 = 1/2$.
+\end{esempio}
+
+\section{Calcolo combinatorio}
+
+\begin{formulario}
+\textbf{Fattoriale:} $n! = n \cdot (n-1) \cdots 2 \cdot 1$,\quad $0! = 1$
+
+\textbf{Permutazioni di $n$ elementi:} $P_n = n!$
+
+\textbf{Disposizioni semplici} ($k$ elementi scelti da $n$, con ordine):
+\[
+D_{n,k} = \frac{n!}{(n-k)!}
+\]
+
+\textbf{Combinazioni semplici} ($k$ elementi scelti da $n$, senza ordine):
+\[
+\binom{n}{k} = \frac{n!}{k!\,(n-k)!}
+\]
+\end{formulario}
+
+\begin{esercizio}
+\begin{enumerate}[label=\alph*)]
+  \item In quanti modi si possono scegliere 3 persone su 7 per una commissione?
+  \item In quanti modi si possono disporre 5 libri su uno scaffale?
+  \item Due carte vengono estratte da un mazzo di 52. Qual e la probabilita che siano entrambi assi?
+\end{enumerate}
+\end{esercizio}
+\begin{soluzione}
+a) $\dbinom{7}{3} = 35$.\\
+b) $5! = 120$.\\
+c) $\dfrac{\binom{4}{2}}{\binom{52}{2}} = \dfrac{6}{1326} = \dfrac{1}{221} \approx 0{,}45\%$.
+\end{soluzione}
+
+%% ███████████████████████████████████████
+%%  PARTE II — LOGICA
+%% ███████████████████████████████████████
+\part{Logica}
+
+% ============================================================
+\chapter{Logica proposizionale}
+% ============================================================
+
+\section{Proposizioni e connettivi}
+
+\begin{defbox}[Connettivi logici fondamentali]
+\begin{center}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{lll}
+\toprule
+\textbf{Nome} & \textbf{Simbolo} & \textbf{Lettura} \\
+\midrule
+Negazione & $\neg p$ & ``non $p$'' \\
+Congiunzione & $p \land q$ & ``$p$ e $q$'' \\
+Disgiunzione & $p \lor q$ & ``$p$ o $q$'' \\
+Implicazione & $p \Rightarrow q$ & ``se $p$ allora $q$'' \\
+Doppia implicazione & $p \Leftrightarrow q$ & ``$p$ sse $q$'' \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{defbox}
+
+\begin{defbox}[Tabella di verita -- implicazione]
+$p \Rightarrow q$ e \textbf{falso} solo quando $p$ e vero e $q$ e falso.
+\begin{center}
+\begin{tabular}{cc|c}
+\toprule
+$p$ & $q$ & $p \Rightarrow q$ \\
+\midrule
+V & V & V \\
+V & F & \textbf{F} \\
+F & V & V \\
+F & F & V \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{defbox}
+
+\begin{attenzione}[Contronominale]
+``$p \Rightarrow q$'' e logicamente equivalente a ``$\neg q \Rightarrow \neg p$''.
+Questo e uno degli strumenti piu potenti nei quesiti TOLC-I: per dimostrare
+che ``se $p$ allora $q$'' non vale, basta trovare un caso in cui $q$ e falso ma $p$ e vero.
+\end{attenzione}
+
+\begin{defbox}[Leggi di De Morgan]
+\[
+\neg(p \land q) \equiv \neg p \lor \neg q
+\]
+\[
+\neg(p \lor q) \equiv \neg p \land \neg q
+\]
+\end{defbox}
+
+\section{Sillogismi}
+
+\begin{defbox}[Sillogismo categorico]
+\textbf{Schema valido (Barbara):}
+\begin{enumerate}
+  \item Premessa maggiore: ``Tutti gli $A$ sono $B$''
+  \item Premessa minore: ``$x$ e un $A$''
+  \item Conclusione: ``$x$ e un $B$'' \checkmark
+\end{enumerate}
+\end{defbox}
+
+\begin{attenzione}[Sillogismi non validi]
+\begin{itemize}
+  \item ``Tutti gli $A$ sono $B$'' + ``$x$ e un $B$'' $\not\Rightarrow$ ``$x$ e un $A$'' (fallacia dell'affermazione del conseguente).
+  \item ``Alcuni $A$ sono $B$'' + ``$y$ e un $A$'' $\not\Rightarrow$ ``$y$ e un $B$''.
+\end{itemize}
+\end{attenzione}
+
+\begin{esercizio}
+Valutare la validita:
+\begin{enumerate}[label=\alph*)]
+  \item «Tutti i laureati hanno studiato. Marco non ha studiato. Conclusione: Marco non e laureato.»
+  \item «Alcuni medici sono sportivi. Anna e medico. Conclusione: Anna e sportiva.»
+  \item «Nessun rettile e a sangue caldo. Il cobra e un rettile. Conclusione: il cobra non e a sangue caldo.»
+\end{enumerate}
+\end{esercizio}
+\begin{soluzione}
+a) \textbf{Valida} (modus tollens / contronominale).\\
+b) \textbf{Non valida} (non si puo dedurre nulla su un singolo da ``alcuni'').\\
+c) \textbf{Valida} (sillogismo Barbara con negazione universale).
+\end{soluzione}
+
+\section{Sequenze numeriche e letterali}
+
+\begin{attenzione}[Tipi di sequenze frequenti al TOLC-I]
+\begin{itemize}
+  \item \textbf{Aritmetica:} differenza costante, es.\ $3, 7, 11, 15, \ldots$ (diff.\ $+4$).
+  \item \textbf{Geometrica:} rapporto costante, es.\ $2, 6, 18, 54, \ldots$ (rag.\ $\times 3$).
+  \item \textbf{Quadratica:} differenze seconde costanti.
+  \item \textbf{Fibonacci-like:} $a_n = a_{n-1} + a_{n-2}$.
+  \item \textbf{Alternata:} due sottosequenze interlacciate.
+\end{itemize}
+\textbf{Metodo:} calcola sempre le differenze prime, poi le seconde; se le seconde sono costanti, la sequenza e quadratica.
+\end{attenzione}
+
+\begin{esempio}
+Trovare il termine mancante: $2, 5, 10, 17, 26, \underline{\hspace{1em}}$
+
+Differenze prime: $3, 5, 7, 9, \ldots$ (dispari consecutivi)
+Prossima differenza: $11$. Risposta: $26 + 11 = \mathbf{37}$.
+\end{esempio}
+
+\begin{esercizio}
+Trovare il termine mancante:
+\begin{enumerate}[label=\alph*)]
+  \item $1, 4, 9, 16, 25, \underline{\hspace{1em}}$
+  \item $3, 6, 12, 24, \underline{\hspace{1em}}$
+  \item $1, 1, 2, 3, 5, 8, \underline{\hspace{1em}}$
+\end{enumerate}
+\end{esercizio}
+\begin{soluzione}
+a) Quadrati perfetti: $6^2 = 36$.\\
+b) Geometrica con ragione 2: $24 \times 2 = 48$.\\
+c) Fibonacci: $5 + 8 = 13$.
+\end{soluzione}
+
+\section{Logica deduttiva e insiemistica}
+
+\begin{defbox}[Schemi di inferenza valida]
+\begin{center}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{lll}
+\toprule
+\textbf{Schema} & \textbf{Forma} & \textbf{Esempio} \\
+\midrule
+Modus ponens & $p \Rightarrow q$,\; $p$ \; $\therefore q$ & Se piove, prendo l'ombrello.\\
+& & Piove. Quindi: prendo l'ombrello. \\
+\midrule
+Modus tollens & $p \Rightarrow q$,\; $\neg q$ \; $\therefore \neg p$ & Non prendo l'ombrello.\\
+& & Quindi: non piove. \\
+\midrule
+Sill.\ ipotetico & $p \Rightarrow q$,\; $q \Rightarrow r$ \; $\therefore p \Rightarrow r$ & Concatenazione di implicazioni. \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{defbox}
+
+%% ███████████████████████████████████████
+%%  PARTE III — SCIENZE
+%% ███████████████████████████████████████
+\part{Scienze}
+
+% ============================================================
+\chapter{Fisica}
+% ============================================================
+
+\section{Grandezze e unita di misura}
+
+\begin{defbox}[Grandezze fondamentali SI]
+\begin{center}
+\begin{tabular}{llll}
+\toprule
+\textbf{Grandezza} & \textbf{Simbolo} & \textbf{Unità} & \textbf{[U]} \\
+\midrule
+Lunghezza & l & metro & m \\
+Massa & m & chilogrammo & kg \\
+Tempo & t & secondo & s \\
+Temperatura & T & kelvin & K \\
+Intensità di corrente & I & ampere & A \\
+Quantità di sostanza & n & mole & mol \\
+Intensità luminosa & $i_v$ & candela & cd \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{defbox}
+
+\section{Cinematica}
+
+\begin{formulario}
+\textbf{Moto rettilineo uniforme (MRU):}
+\[
+x = x_0 + v t \qquad v = \text{cost}
+\]
+
+\textbf{Moto rettilineo uniformemente accelerato (MRUA):}
+\[
+v = v_0 + at \qquad
+x = x_0 + v_0 t + \tfrac{1}{2}at^2 \qquad
+v^2 = v_0^2 + 2a\Delta x
+\]
+
+\textbf{Caduta libera:} $g \approx 9{,}81\;\si{m/s^2}$ verso il basso.
+
+\textbf{Moto circolare uniforme:}
+\[
+v = \frac{2\pi r}{T} \qquad a_c = \frac{v^2}{r}
+\]
+\end{formulario}
+
+\begin{esempio}
+Un oggetto in caduta libera da fermo. Dopo $t = 3\;\si{s}$, qual e la velocita e lo spazio percorso?
+
+$v = 0 + 9{,}81 \cdot 3 = 29{,}4\;\si{m/s}$
+
+$h = \tfrac{1}{2} \cdot 9{,}81 \cdot 9 = 44{,}1\;\si{m}$
+\end{esempio}
+
+\section{Dinamica}
+
+\begin{formulario}
+\textbf{Prima legge (inerzia):} un corpo rimane in quiete o moto uniforme se la forza risultante e nulla.
+
+\textbf{Seconda legge:} $\vec{F} = m\vec{a}$
+
+\textbf{Terza legge:} $\vec{F}_{12} = -\vec{F}_{21}$
+
+\textbf{Peso:} $P = mg$
+
+\textbf{Forza di attrito:} $f = \mu N$ \quad ($\mu$ = coeff.\ di attrito, $N$ = forza normale)
+
+\textbf{Lavoro:} $W = F \cdot d \cdot \cos\theta$ \quad [J = N$\cdot$m]
+
+\textbf{Potenza:} $\mathcal{P} = W/t = F \cdot v$ \quad [W = J/s]
+\end{formulario}
+
+\section{Energia}
+
+\begin{formulario}
+\textbf{Energia cinetica:} $E_k = \dfrac{1}{2}mv^2$
+
+\textbf{Energia potenziale gravitazionale:} $E_p = mgh$
+
+\textbf{Conservazione dell'energia meccanica} (senza attrito):
+\[
+E_k + E_p = \text{costante}
+\]
+
+\textbf{Teorema lavoro-energia:} $W_\text{tot} = \Delta E_k$
+\end{formulario}
+
+\begin{esercizio}
+Un corpo di $m = 2\;\si{kg}$ scende da $h = 5\;\si{m}$ senza attrito.
+Trovare la velocita alla base.
+\end{esercizio}
+\begin{soluzione}
+$mgh = \tfrac{1}{2}mv^2 \Rightarrow v = \sqrt{2gh} = \sqrt{2 \cdot 9{,}81 \cdot 5} \approx 9{,}9\;\si{m/s}$
+\end{soluzione}
+
+% ============================================================
+\chapter{Chimica}
+% ============================================================
+
+\section{Struttura dell'atomo}
+
+\begin{defbox}[Particelle subatomiche]
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Particella} & \textbf{Carica} & \textbf{Massa (u)} & \textbf{Posizione} \\
+\midrule
+Protone & $+1$ & $\approx 1$ & Nucleo \\
+Neutrone & $0$ & $\approx 1$ & Nucleo \\
+Elettrone & $-1$ & $\approx 0$ & Orbitali \\
+\bottomrule
+\end{tabular}
+\end{center}
+\textbf{Numero atomico} $Z$ = protoni; \textbf{Numero di massa} $A$ = protoni + neutroni.
+\end{defbox}
+
+\begin{attenzione}[Isotopi e ioni]
+\textbf{Isotopi}: stesso $Z$, diversa $A$ (stesso elemento, diversi neutroni).
+
+\textbf{Ione}: atomo con elettroni in piu ($\to$ anione $-$) o in meno ($\to$ catione $+$).
+\end{attenzione}
+
+\section{Tavola periodica}
+
+\begin{attenzione}[Trend periodici fondamentali]
+\begin{itemize}
+  \item \textbf{Raggio atomico:} aumenta scendendo nel gruppo (piu livelli), diminuisce nel periodo (piu protoni attraggono).
+  \item \textbf{Elettronegatività:} aumenta lungo il periodo (sinistra $\to$ destra), diminuisce nel gruppo (dall'alto verso il basso). Massimo: $\mathrm{F}$.
+  \item \textbf{Energia di ionizzazione:} aumenta lungo il periodo, diminuisce nel gruppo.
+\end{itemize}
+\end{attenzione}
+
+\section{Stechiometria}
+
+\begin{defbox}[Concetti chiave]
+\[
+n = \frac{m}{M} \quad [\si{mol}]
+\]
+$N_A = 6{,}022 \times 10^{23}\;\si{mol^{-1}}$ (numero di Avogadro).
+
+Una mole di qualsiasi sostanza pura contiene $N_A$ entita elementari.
+\end{defbox}
+
+\begin{esempio}
+Quante moli di $\mathrm{H_2O}$ ci sono in $36\;\si{g}$?
+
+$M(\mathrm{H_2O}) = 2 \times 1 + 16 = 18\;\si{g/mol}$
+
+$n = \dfrac{36}{18} = 2\;\si{mol}$
+\end{esempio}
+
+\begin{esercizio}
+Quanti grammi di $\mathrm{NaOH}$ ($M = 40\;\si{g/mol}$) occorrono per preparare $0{,}5\;\si{mol}$?
+\end{esercizio}
+\begin{soluzione}
+$m = n \cdot M = 0{,}5 \times 40 = 20\;\si{g}$
+\end{soluzione}
+
+\section{Acidi, basi e pH}
+
+\begin{formulario}
+\[
+\mathrm{pH} = -\log[\mathrm{H^+}]
+\]
+\begin{itemize}
+  \item $\mathrm{pH} < 7$: soluzione acida
+  \item $\mathrm{pH} = 7$: soluzione neutra ($25°C$)
+  \item $\mathrm{pH} > 7$: soluzione basica
+\end{itemize}
+\[
+\mathrm{pH} + \mathrm{pOH} = 14 \quad \text{(a $25\,^{\circ}$C)}
+\]
+\end{formulario}
+
+\begin{esempio}
+Una soluzione ha $[\mathrm{H^+}] = 10^{-3}\;\si{mol/L}$. Calcola il pH.
+
+$\mathrm{pH} = -\log(10^{-3}) = 3$ (soluzione acida).
+\end{esempio}
+
+\section{Termodinamica chimica}
+
+\begin{defbox}[Legge dei gas ideali]
+\[
+PV = nRT
+\]
+$P$ in Pa, $V$ in m$^3$, $T$ in K, $R = 8{,}314\;\si{J/(mol \cdot K)}$.
+\end{defbox}
+
+\begin{attenzione}
+Ricorda: $T[\si{K}] = T[°C] + 273{,}15$. Non usare mai gradi Celsius nelle equazioni dei gas.
+\end{attenzione}
+
+% ============================================================
+\chapter{Biologia}
+% ============================================================
+
+\section{La cellula}
+
+\begin{defbox}[Cellule procariotiche vs eucariotiche]
+\begin{center}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Caratteristica} & \textbf{Procariote} & \textbf{Eucariote} \\
+\midrule
+Nucleo membranoso & Assente & Presente \\
+Mitocondri & Assenti & Presenti \\
+Ribosomi & $70\mathrm{S}$ & $80\mathrm{S}$ \\
+Dimensione tipica & $1$--$10\;\mu\mathrm{m}$ & $10$--$100\;\mu\mathrm{m}$ \\
+Esempi & Batteri, archea & Animali, piante, funghi \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{defbox}
+
+\section{Organelli cellulari}
+
+\begin{defbox}[Principali organelli eucariotici]
+\begin{description}
+  \item[Mitocondrio] Produzione di ATP (respirazione cellulare aerobica).
+  \item[Cloroplasto] Fotosintesi (solo cellule vegetali).
+  \item[Reticolo endoplasmatico ruvido] Sintesi proteica (porta i ribosomi).
+  \item[Apparato di Golgi] Smistamento e modifica di proteine e lipidi.
+  \item[Lisosoma] Digestione intracellulare (enzimi idrolitici).
+  \item[Nucleo] Contiene il DNA; sede della trascrizione.
+\end{description}
+\end{defbox}
+
+\section{DNA e flusso dell'informazione}
+
+\begin{defbox}[Struttura del DNA]
+Doppia elica antiparallela di nucleotidi. Basi accoppiate:
+\[
+\textbf{A}--\textbf{T} \quad \text{(2 legami H)} \qquad \textbf{G}--\textbf{C} \quad \text{(3 legami H)}
+\]
+\end{defbox}
+
+\begin{defbox}[Dogma centrale della biologia molecolare]
+\[
+\text{DNA} \xrightarrow{\text{trascrizione}} \text{mRNA} \xrightarrow{\text{traduzione}} \text{Proteina}
+\]
+\end{defbox}
+
+\section{Divisione cellulare}
+
+\begin{formulario}
+\textbf{Mitosi:} 1 cellula diploide ($2n$) $\to$ 2 cellule figlie \emph{identiche} ($2n$).
+
+\textbf{Meiosi:} 1 cellula diploide ($2n$) $\to$ 4 cellule aploidi ($n$), geneticamente diverse $\to$ gameti.
+\end{formulario}
+
+\begin{attenzione}
+Le fasi della mitosi sono: \textbf{profase, metafase, anafase, telofase} (mnemonica: PMAT). La citochinesi segue la telofase.
+\end{attenzione}
+
+\section{Genetica mendeliana}
+
+\begin{defbox}[Leggi di Mendel]
+\begin{enumerate}
+  \item \textbf{Dominanza:} in F1, il carattere dominante maschera quello recessivo.
+  \item \textbf{Segregazione:} i due alleli di un gene si separano durante la meiosi. Rapporto F2: \textbf{3 dominante : 1 recessivo} (fenotipico); \textbf{1:2:1} (genotipico).
+  \item \textbf{Assortimento indipendente:} geni su cromosomi diversi si trasmettono indipendentemente. Rapporto F2 dibrido: \textbf{9:3:3:1}.
+\end{enumerate}
+\end{defbox}
+
+\begin{esempio}
+Incrocio $Aa \times Aa$:
+\[
+\tfrac{1}{4}AA \quad \tfrac{2}{4}Aa \quad \tfrac{1}{4}aa
+\]
+Fenotipo: 3 dominante (A\textunderscore) : 1 recessivo (aa).
+\end{esempio}
+
+\begin{esercizio}
+Un individuo con genotipo $AaBb$ si incrocia con un altro $AaBb$.
+Quale frazione della progenie sara $aabb$?
+\end{esercizio}
+\begin{soluzione}
+Per la legge dell'assortimento indipendente:
+$P(aa) = 1/4$ e $P(bb) = 1/4$.
+Quindi $P(aabb) = 1/4 \times 1/4 = 1/16$.
+\end{soluzione}
+
+%% ███████████████████████████████████████
+%%  PARTE IV — COMPRENSIONE VERBALE
+%% ███████████████████████████████████████
+\part{Comprensione Verbale}
+
+% ============================================================
+\chapter{Strategie di lettura e analisi testuale}
+% ============================================================
+
+\section{Struttura del testo argomentativo}
+
+\begin{defbox}[Componenti di un testo argomentativo]
+\begin{enumerate}
+  \item \textbf{Tesi} (claim): posizione sostenuta dall'autore.
+  \item \textbf{Argomenti} (reasoning): ragioni a supporto.
+  \item \textbf{Prove/esempi} (evidence): dati, citazioni, aneddoti.
+  \item \textbf{Confutazione} (rebuttal): obiezioni considerate e superate.
+  \item \textbf{Conclusione}: sintesi o invito all'azione.
+\end{enumerate}
+\end{defbox}
+
+\section{Metodo di lettura efficace}
+
+\begin{defbox}[Metodo SQ3R]
+\begin{description}
+  \item[S --- Survey] Leggi titolo, sottotitoli e prime frasi di ogni paragrafo (30 sec).
+  \item[Q --- Question] Formula una domanda per ogni sezione.
+  \item[R --- Read] Leggi attivamente cercando le risposte.
+  \item[R --- Recite] Rispondi senza guardare il testo.
+  \item[R --- Review] Rivedi le parti che non ricordi.
+\end{description}
+\end{defbox}
+
+\section{Tipologie di quesiti TOLC-I}
+
+\begin{enumerate}[leftmargin=2em]
+  \item \textbf{Idea principale} --- Qual e il tema centrale del brano?
+        \begin{itemize}
+          \item Cerca la frase tematica (spesso nella prima/ultima frase di ogni paragrafo).
+        \end{itemize}
+
+  \item \textbf{Inferenza} --- Quale conclusione si puo trarre dal testo?
+        \begin{itemize}
+          \item La risposta deve essere \emph{implicita} nel testo, non solo vera in assoluto.
+        \end{itemize}
+
+  \item \textbf{Significato in contesto} --- Cosa significa questa parola nel brano?
+        \begin{itemize}
+          \item Sostituisci ogni opzione nella frase e verifica il senso.
+        \end{itemize}
+
+  \item \textbf{Scopo dell'autore} --- Perche l'autore include questa informazione?
+        \begin{itemize}
+          \item Considera il tono: informativo, persuasivo, critico?
+        \end{itemize}
+
+  \item \textbf{Titolo appropriato} --- Quale titolo rappresenta meglio il brano?
+        \begin{itemize}
+          \item Il titolo deve coprire \emph{tutto} il brano, non solo un dettaglio.
+        \end{itemize}
+\end{enumerate}
+
+\section{Errori frequenti da evitare}
+
+\begin{attenzione}[Le 5 trappole classiche]
+\begin{enumerate}
+  \item \textbf{Vero ma non supportato dal testo:} l'informazione e corretta nella realta ma il brano non la menziona.
+  \item \textbf{Troppo generale o troppo specifico:} il titolo/idea deve essere proporzionato al contenuto.
+  \item \textbf{Negazioni ignorate:} parole come ``non'', ``tranne'', ``mai'', ``eccetto'' cambiano completamente il significato.
+  \item \textbf{Sinonimo errato per registro:} una parola puo essere semanticamente vicina ma di registro diverso (formale/informale).
+  \item \textbf{Inferenza eccessiva:} non si deve andare oltre cio che e scritto.
+\end{enumerate}
+\end{attenzione}
+
+\section{Lessico e sinonimi in contesto}
+
+\begin{defbox}[Strategia a 3 passi per i sinonimi]
+\begin{enumerate}
+  \item Leggi tutta la frase e individua il campo semantico.
+  \item Sostituisci mentalmente ciascuna opzione.
+  \item Elimina le opzioni con connotazione diversa (positiva/negativa, formale/informale).
+\end{enumerate}
+\end{defbox}
+
+\begin{esempio}
+«Il nuovo provvedimento e stato \emph{accolto} con entusiasmo.»
+
+Opzioni: a) ricevuto \quad b) approvato \quad c) rifiutato \quad d) ignorato
+
+Contesto positivo («entusiasmo»): si eliminano c e d.
+Tra a e b, ``ricevuto'' e piu neutro; ``accolto con entusiasmo'' implica approvazione attiva.
+Risposta migliore: \textbf{b) approvato}.
+\end{esempio}
+
+\section{Esercizio di lettura guidata}
+
+\begin{esercizio}[Testo di esempio -- Biologia]
+\textit{Leggere il seguente testo e rispondere alle domande.}
+
+\medskip
+«La fotosintesi clorofilliana e il processo attraverso cui le piante, le alghe e alcuni batteri convertono l'energia luminosa in energia chimica, accumulata sotto forma di glucosio. Questo processo si svolge nei cloroplasti, organelli presenti nelle cellule vegetali, grazie all'azione della clorofilla. La reazione globale puo essere sintetizzata come segue: sei molecole di anidride carbonica e sei molecole di acqua, in presenza di luce, producono una molecola di glucosio e sei molecole di ossigeno. L'ossigeno e rilasciato come sottoprodotto ed e alla base dell'atmosfera respirabile che conosciamo. Senza la fotosintesi, la vita animale sulla Terra, inclusa quella umana, non sarebbe possibile.»
+
+\medskip
+\begin{enumerate}[label=\arabic*.]
+  \item Qual e l'idea principale del brano?
+  \item Dove avviene la fotosintesi nella cellula?
+  \item Quale affermazione si puo inferire dal brano?\\
+        a) Le piante non hanno bisogno di acqua.\\
+        b) L'ossigeno atmosferico deriva in gran parte dalla fotosintesi.\\
+        c) Il glucosio viene immediatamente consumato dalla pianta.\\
+        d) La clorofilla e presente in tutti gli organismi viventi.
+\end{enumerate}
+\end{esercizio}
+\begin{soluzione}
+1. La fotosintesi e il processo con cui alcuni organismi trasformano luce in energia chimica (glucosio), rendendo possibile la vita sulla Terra.\\
+2. Nei \textbf{cloroplasti}.\\
+3. \textbf{b)} --- il testo afferma che l'ossigeno rilasciato dalla fotosintesi e alla base dell'atmosfera respirabile.
+\end{soluzione}
+
+% ============================================================
+%  APPENDICE
+% ============================================================
+\backmatter
+
+\chapter*{Appendice: Formulario Generale}
+\addcontentsline{toc}{chapter}{Appendice: Formulario Generale}
+\markboth{Formulario Generale}{Formulario Generale}
+
+\section*{Matematica}
+
+\begin{formulario}
+\textbf{Algebra:}
+\[
+(a\pm b)^2 = a^2 \pm 2ab + b^2 \qquad (a+b)(a-b)=a^2-b^2
+\]
+\[
+x_{1,2} = \frac{-b\pm\sqrt{b^2-4ac}}{2a} \qquad \log_a x = \frac{\ln x}{\ln a}
+\]
+
+\textbf{Geometria piana:}
+\[
+A_\triangle = \tfrac{1}{2}bh \qquad A_\odot = \pi r^2 \qquad C_\odot = 2\pi r
+\]
+
+\textbf{Geometria solida:}
+\[
+V_\text{sfera} = \tfrac{4}{3}\pi r^3 \qquad V_\text{cil} = \pi r^2 h \qquad V_\text{cono} = \tfrac{1}{3}\pi r^2 h
+\]
+
+\textbf{Probabilita e combinatoria:}
+\[
+P(A\cup B) = P(A)+P(B)-P(A\cap B) \qquad \binom{n}{k}=\frac{n!}{k!(n-k)!}
+\]
+\end{formulario}
+
+\section*{Fisica}
+
+\begin{formulario}
+\[
+v = v_0 + at \qquad x = x_0 + v_0 t + \tfrac{1}{2}at^2 \qquad v^2 = v_0^2 + 2a\Delta x
+\]
+\[
+F = ma \qquad W = Fd\cos\theta \qquad E_k = \tfrac{1}{2}mv^2 \qquad E_p = mgh
+\]
+\end{formulario}
+
+\section*{Chimica}
+
+\begin{formulario}
+\[
+n = \frac{m}{M} \qquad N_A = 6{,}022\times10^{23}\;\si{mol^{-1}}
+\]
+\[
+\mathrm{pH} = -\log[\mathrm{H^+}] \qquad \mathrm{pH}+\mathrm{pOH}=14 \qquad PV = nRT
+\]
+\end{formulario}
+
+\section*{Logica --- Schemi di inferenza}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{lll}
+\toprule
+\textbf{Schema} & \textbf{Forma simbolica} \\
+\midrule
+Modus ponens & $p \Rightarrow q$,\; $p$ \; $\therefore q$ \\
+Modus tollens & $p \Rightarrow q$,\; $\neg q$ \; $\therefore \neg p$ \\
+Sillogismo ipotetico & $p\Rightarrow q$,\; $q\Rightarrow r$ \; $\therefore p\Rightarrow r$ \\
+De Morgan & $\neg(p \land q) \equiv \neg p \lor \neg q$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+% ============================================================
+\end{document}
+% ============================================================
