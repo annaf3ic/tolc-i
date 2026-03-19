@@ -27,6 +27,16 @@
     --glass: rgba(22, 27, 34, 0.7);
     /*--glass: radial-gradient(circle at 20% 20%, #0f2c2a, transparent 40%), radial-gradient(circle at 80% 60%, #0c1c2e, transparent 40%), #0d1117;*/
 
+    --l31: #0ea5e9;
+    --l8: #eab308;
+    --l9: #f97316;
+    --lm32: #8b5cf6;
+    --lm66: #ec4899;
+    --lmdata: #14b8a6;
+    --lm18: #6366f1;
+    --lm31: #f97316;
+    --interclasse: #a855f7;
+    --lm21: #06b6d4;
 }
 
 /* Light mode */
@@ -109,6 +119,67 @@ p {
 code,
 .mono {
     font-family: var(--font-mono);
+}
+
+/* Badge delle classi di laurea */
+.badge-l31 {
+    background: rgba(14, 165, 233, 0.15);
+    color: var(--l31);
+    border-color: var(--l31);
+}
+
+.badge-l8 {
+    background: rgba(234, 179, 8, 0.15);
+    color: var(--l8);
+    border-color: var(--l8);
+}
+
+.badge-l9 {
+    background: rgba(249, 115, 22, 0.15);
+    color: var(--l9);
+    border-color: var(--l9);
+}
+
+.badge-lm32 {
+    background: rgba(139, 92, 246, 0.15);
+    color: var(--lm32);
+    border-color: var(--lm32);
+}
+
+.badge-lm66 {
+    background: rgba(236, 72, 153, 0.15);
+    color: var(--lm66);
+    border-color: var(--lm66);
+}
+
+.badge-lmdata {
+    background: rgba(20, 184, 166, 0.15);
+    color: var(--lmdata);
+    border-color: var(--lmdata);
+}
+
+.badge-lm18 {
+    background: rgba(99, 102, 241, 0.15);
+    color: var(--lm18);
+    border-color: var(--lm18);
+}
+
+.badge-lm31 {
+    background: rgba(249, 115, 22, 0.15);
+    color: var(--lm31);
+    border-color: var(--lm31);
+}
+
+.badge-interclasse {
+    background: rgba(168, 85, 247, 0.15);
+    color: var(--interclasse);
+    border-color: var(--interclasse);
+}
+
+.badge-lm21 {
+    background: rgba(6, 182, 212, 0.15);
+    color: var(--lm21);
+    border-color: var(--lm21);
 }
 
 /* Layout */
@@ -1708,4 +1779,9 @@ input::placeholder {
 
 a {
     color: var(--accent);
+}
+
+.orientamento {
+    text-decoration: none;
+    color: var(--text);
 }
