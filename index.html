@@ -1,72 +1,11 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TOLC Trainer — Accedi</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta http-equiv="refresh" content="0; url=dashboard.html" />
+    <title>TOLC Trainer</title>
 </head>
-
 <body>
-    <div class="auth-wrap fade-in">
-        <div class="auth-card">
-            <div class="auth-logo">
-                <div class="logo-mark">[TOLC]</div>
-                <div class="logo-sub">Trainer per Ingegneria &amp; Informatica</div>
-            </div>
-            <div class="card card-accent">
-                <div class="form-group">
-                    <label for="input-name">Come ti chiami?</label>
-                    <input type="text" id="input-name" placeholder="es. Marco" autocomplete="given-name" autofocus />
-                </div>
-                <button class="btn btn-primary btn-full mt-md" id="btn-enter">→ Entra</button>
-                <div class="alert" id="enter-alert"></div>
-            </div>
-            <p class="text-center text-sm text-muted mt-md">
-                Dati salvati localmente · Nessun server
-            </p>
-        </div>
-    </div>
-
-    <button class="theme-toggle" id="theme-toggle" title="Cambia tema"
-        style="position:fixed;bottom:1.5rem;right:1.5rem;z-index:50">☀</button>
-
-    <script src="js/auth.js"></script>
-    <script>
-        'use strict';
-        Auth.applyTheme();
-
-        // Se ha già un nome salvato, vai diretto alla dashboard
-        if (Auth.getName()) window.location.replace('dashboard.html');
-
-        const input = document.getElementById('input-name');
-        const btn = document.getElementById('btn-enter');
-        const alert = document.getElementById('enter-alert');
-
-        function showAlert(msg) {
-            alert.className = 'alert alert-error show';
-            alert.textContent = msg;
-        }
-
-        function enter() {
-            const name = input.value.trim();
-            if (!name) { showAlert('Inserisci il tuo nome per continuare.'); return; }
-            Auth.setName(name);
-            window.location.href = 'dashboard.html';
-        }
-
-        btn.addEventListener('click', enter);
-        input.addEventListener('keydown', e => { if (e.key === 'Enter') enter(); });
-
-        document.getElementById('theme-toggle').addEventListener('click', () => {
-            Auth.toggleTheme();
-            document.getElementById('theme-toggle').textContent =
-                document.body.classList.contains('light') ? '☾' : '☀';
-        });
-        document.getElementById('theme-toggle').textContent =
-            document.body.classList.contains('light') ? '☾' : '☀';
-    </script>
+    <script>window.location.replace('dashboard.html');</script>
 </body>
-
 </html>
