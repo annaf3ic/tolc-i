@@ -2,24 +2,12 @@
 
 function $(id) { return document.getElementById(id); }
 
-function showMsg(msg, type = 'success') {
-    const el = $('dashboard-alert');
-    if (!el) return;
-    el.className = `alert alert-${type} show`;
-    el.textContent = msg;
-    setTimeout(() => el.classList.remove('show'), 4000);
-}
-
 function renderDashboard() {
     const user = Auth.getCurrentUser();
     if (!user) return;
 
-    const { username, data } = user;
+    const { data } = user;
     const stats = data.stats;
-
-    // Welcome name
-    const nameEl = $('welcome-name');
-    if (nameEl) nameEl.textContent = username;
 
     // Statistiche globali
     const global = stats.global || { total: 0, correct: 0, wrong: 0 };
@@ -59,7 +47,7 @@ function renderDashboard() {
         { id: 'matematica-esempio1', name: 'Matematica (Esempio 1)', icon: '🧮', file: 'matematica-esempio1.html' },
         { id: 'matematica-esempio2', name: 'Matematica (Esempio 2)', icon: '➗', file: 'matematica-esempio2.html' },
         { id: 'scienze-esempio1', name: 'Scienze (Esempio 1)', icon: '🧪', file: 'scienze-esempio1.html' },
-        { id: 'fisica-esempio1', name: 'Fisica (Esempio 2)', icon: '🧲', file: 'scienze-tutor.html' }
+        { id: 'fisica-esempio2', name: 'Fisica (Esempio 2)', icon: '🧲', file: 'fisica-esempio2.html' }
     ];
 
     const cardsEl = $('subject-cards');
@@ -69,7 +57,7 @@ function renderDashboard() {
             const subPct = subStats.total > 0 ? Math.round((subStats.correct / subStats.total) * 100) : 0;
             const errorsCount = subStats.wrongAnswers?.length || 0;
             return `
-        <div class="mode-card" data-subject="${sub.id}" data-file="${sub.file}" tabindex="0" role="button">
+        <div class="mode-card" data-file="${sub.file}" tabindex="0" role="button">
           <span class="mode-icon">${sub.icon}</span>
           <h3>${sub.name}</h3>
           <p>Precisione: ${subPct}% · Errori: ${errorsCount}</p>
@@ -77,8 +65,7 @@ function renderDashboard() {
       `;
         }).join('');
 
-        // Aggiungi listener
-        document.querySelectorAll('.mode-card').forEach(card => {
+        document.querySelectorAll('#subject-cards .mode-card').forEach(card => {
             card.addEventListener('click', () => {
                 const file = card.dataset.file;
                 if (file) window.location.href = `materie/${file}`;
@@ -86,7 +73,7 @@ function renderDashboard() {
         });
     }
 
-    // Storico recente (ultime 5 sessioni)
+    // Storico recente
     const history = data.history || [];
     const historyEl = $('recent-history');
     if (historyEl) {
@@ -116,14 +103,7 @@ function renderDashboard() {
             }).join('');
         }
     }
-
-    // Navbar username
-    const navUser = $('nav-username');
-    if (navUser) navUser.textContent = username;
 }
-
-// Logout
-$('btn-logout')?.addEventListener('click', () => Auth.logout());
 
 // Theme toggle
 $('theme-toggle')?.addEventListener('click', () => {
@@ -133,6 +113,5 @@ $('theme-toggle')?.addEventListener('click', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
     Auth.applyTheme();
-    if (!Auth.requireAuth()) return;
     renderDashboard();
 });
