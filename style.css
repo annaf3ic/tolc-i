@@ -1288,7 +1288,7 @@ input::placeholder {
     border-radius: 4px;
     padding: 0.2rem 0.6rem;
     display: inline-block;
-    margin: 1rem 0 0.6rem;
+    margin: 1.5rem 0 0.6rem;
 }
 
 /* ── Esami table ── */
@@ -1424,6 +1424,12 @@ input::placeholder {
     margin-top: 1rem;
 }
 
+.pro-contro ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 .pro-box,
 .contro-box {
     border-radius: var(--radius);
@@ -1488,12 +1494,41 @@ input::placeholder {
     font-family: var(--font-mono);
 }
 
+/* Collasso */
+.toggle-details-btn {
+    margin: 0.5rem 0 0 0;
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0.3rem 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--accent);
+    cursor: pointer;
+    transition: all var(--transition);
+    width: fit-content;
+}
+
+.toggle-details-btn:hover {
+    background: rgba(51, 199, 186, 0.1);
+    border-color: var(--accent);
+}
+
+.course-details {
+    margin-top: 1.2rem;
+    transition: all 0.2s ease;
+}
+
+.course-details.collapsed {
+    display: none;
+}
+
 /* ── Sbocchi ── */
 .sbocchi-list {
     display: flex;
     flex-wrap: wrap;
     gap: 0.4rem;
-    margin-top: 0.6rem;
 }
 
 .sbocco-tag {
@@ -1781,7 +1816,8 @@ a {
     color: var(--accent);
 }
 
-.orientamento, .materiale {
+.orientamento,
+.materiale {
     text-decoration: none;
     color: var(--text);
 }
@@ -1932,11 +1968,25 @@ a {
 }
 
 /* Applica il colore accent alle card in base al tipo */
-.file-card.compendio { --card-accent: var(--accent); }
-.file-card.tutor     { --card-accent: var(--accent2); }
-.file-card.politest  { --card-accent: var(--warn); }
-.file-card.test      { --card-accent: var(--danger); }
-.file-card.xls       { --card-accent: var(--success); }
+.file-card.compendio {
+    --card-accent: var(--accent);
+}
+
+.file-card.tutor {
+    --card-accent: var(--accent2);
+}
+
+.file-card.politest {
+    --card-accent: var(--warn);
+}
+
+.file-card.test {
+    --card-accent: var(--danger);
+}
+
+.file-card.xls {
+    --card-accent: var(--success);
+}
 
 .main-hero {
     padding: 2.5rem 0 2rem;
