@@ -42,7 +42,7 @@ function renderDashboard() {
         { id: 'matematica', name: 'Matematica (tutor)', icon: '📐', file: 'matematica-tutor.html' },
         { id: 'scienze-tutor', name: 'Scienze (tutor)', icon: '🔬', file: 'scienze-tutor.html' },
         { id: 'logica-esempio', name: 'Logica', icon: '🧩', file: 'logica.html' },
-        { id: 'matematica', name: 'Matematica', icon: '🧮', file: 'matematicahtml' },
+        { id: 'matematica', name: 'Matematica', icon: '🧮', file: 'matematica.html' },
         { id: 'scienze', name: 'Scienze', icon: '🧪', file: 'scienze.html' },
         { id: 'fisica', name: 'Fisica', icon: '🧲', file: 'fisica.html' }
     ];
