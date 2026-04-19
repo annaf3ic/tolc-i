@@ -13,6 +13,9 @@
     --border: #555555;
     --accent: #33C7BA;
     --accent2: #0ea5e9;
+    --accent3: #871fa7;
+    --accent4: #ffeb3b;
+    --accent5: #ed5494;
     --danger: #f43f5e;
     --warn: #f59e0b;
     --success: #22c55e;
@@ -27,20 +30,27 @@
     --glass: rgba(22, 27, 34, 0.7);
     /*--glass: radial-gradient(circle at 20% 20%, #0f2c2a, transparent 40%), radial-gradient(circle at 80% 60%, #0c1c2e, transparent 40%), #0d1117;*/
 
-    --l31: #0ea5e9;
-    --l8: #eab308;
-    --l9: #f97316;
-    --lm32: #8b5cf6;
-    --lm66: #ec4899;
-    --lmdata: #14b8a6;
-    --lm18: #6366f1;
-    --lm31: #f97316;
-    --interclasse: #a855f7;
-    --lm21: #06b6d4;
+
+
+    --l31: #28acea;          /* Scienze e Tecnologie Informatiche */
+    --lm18: #2072AF;         /* Informatica */
+
+    --l8: #FFBF00;           /* Ingegneria Informatica */
+    --lm32: #FF8000;         /* Ingegneria Informatica */
+
+    --l9: #e44896;           /* Ingegneria Gestionale */
+    --lm31: #9474d8;         /* Ingegneria Gestionale */
+
+    --lm66: #e12200;         /* Sicurezza Informatica */
+
+    --lmdata: #8DB600;       /* Data Science */
+
+    --lm21: #13cf29;         /* Ingegneria Biomedica */
+    --interclasse: #228B22;  /* Ingegneria Biomedica interclasse*/
 }
 
 /* Light mode */
-body.light {
+html.light {
     --bg: #f7fafb;
     --surface: #ffffff;
     --surface2: #dde5ed;
@@ -123,61 +133,61 @@ code,
 
 /* Badge delle classi di laurea */
 .badge-l31 {
-    background: rgba(14, 165, 233, 0.15);
+    background: #28acea26;
     color: var(--l31);
     border-color: var(--l31);
 }
 
 .badge-l8 {
-    background: rgba(234, 179, 8, 0.15);
+    background: #FFBF0026;
     color: var(--l8);
     border-color: var(--l8);
 }
 
 .badge-l9 {
-    background: rgba(249, 115, 22, 0.15);
+    background: #e4489626;
     color: var(--l9);
     border-color: var(--l9);
 }
 
 .badge-lm32 {
-    background: rgba(139, 92, 246, 0.15);
+    background: #FF800026;
     color: var(--lm32);
     border-color: var(--lm32);
 }
 
 .badge-lm66 {
-    background: rgba(236, 72, 153, 0.15);
+    background: #e1220026;
     color: var(--lm66);
     border-color: var(--lm66);
 }
 
 .badge-lmdata {
-    background: rgba(20, 184, 166, 0.15);
+    background: #8DB60026;
     color: var(--lmdata);
     border-color: var(--lmdata);
 }
 
 .badge-lm18 {
-    background: rgba(99, 102, 241, 0.15);
+    background: #2072AF26;
     color: var(--lm18);
     border-color: var(--lm18);
 }
 
 .badge-lm31 {
-    background: rgba(249, 115, 22, 0.15);
+    background: #9474d826;
     color: var(--lm31);
     border-color: var(--lm31);
 }
 
 .badge-interclasse {
-    background: rgba(168, 85, 247, 0.15);
+    background: #228B2226;
     color: var(--interclasse);
     border-color: var(--interclasse);
 }
 
 .badge-lm21 {
-    background: rgba(6, 182, 212, 0.15);
+    background: #13cf2926;
     color: var(--lm21);
     border-color: var(--lm21);
 }
@@ -208,7 +218,7 @@ code,
     padding: 0.75rem 1.5rem;
 }
 
-body.light .navbar {
+html.light .navbar {
     background: rgba(240, 244, 248, 0.92);
 }
 
@@ -1906,8 +1916,8 @@ a {
     font-weight: 600;
     color: var(--text);
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    overflow: scroll;
+    scrollbar-width: none;
     margin-bottom: 0.25rem;
 }
 
@@ -1969,11 +1979,15 @@ a {
 
 /* Applica il colore accent alle card in base al tipo */
 .file-card.compendio {
-    --card-accent: var(--accent);
+    --card-accent: var(--lm66);
 }
 
 .file-card.tutor {
     --card-accent: var(--accent2);
+}
+
+.file-card.test-cisia {
+    --card-accent: var(--lm32);
 }
 
 .file-card.politest {
